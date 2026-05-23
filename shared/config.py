@@ -37,12 +37,20 @@ MODEL_NAME = "gpt2"
 SINGLE_LETTER_POOL = ["a", "b", "c", "x", "y", "z"]
 
 # Tier 2: single-token names verified by GPT-2 tokenizer (Day 1 output).
-# Placeholder — update after running _day1_verify.
+# Generated 2026-05-23 by `python -m data._day1_verify` — 47 names confirmed
+# single-token after a leading-space encode. Re-run the verifier and update
+# this list if the tokenizer version changes.
 SINGLE_TOKEN_NAMES = [
-    "a", "b", "c", "d", "e", "x", "y", "z", "p", "q", "r", "s",
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+    "cat", "dog", "sun", "red", "blue", "book", "desk", "car", "tree",
+    "star", "apple", "banana", "mango", "lemon", "grape", "peach", "plum",
+    "alpha", "beta", "gamma", "delta",
 ]
 
-# Answer values: single-token integers only.
+# Answer values: single-token integers. Day 1 verifier confirms 1..19 are all
+# single-token under GPT-2 BPE; we keep 1..9 per datasets.md §4.6 so the
+# distribution stays balanced and the answer slot stays decimal-digit only.
 ANSWER_VALUES = list(range(1, 10))   # 1..9
 
 # ---- Paths ----

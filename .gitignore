@@ -1,6 +1,7 @@
-# Generated datasets — not versioned (regenerate via scripts in data/)
-datasets/*.pt
-datasets/*.jsonl
+# Generated datasets — tracked in git per team decision (sizes are small,
+# easier than re-running pipeline on every workstation). Regenerate via
+# scripts in data/ if you need to refresh; keep the report (_report.md)
+# updated when you do.
 
 # Circuit-analysis results
 results/*.json

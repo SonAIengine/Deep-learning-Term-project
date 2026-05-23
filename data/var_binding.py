@@ -32,10 +32,81 @@ def _get_tokenizer():
     return _TOK
 
 
+def _verify_single_token_vars(tok, target_var, source_var, distractors):
+    """Return 'passed' or 'failed:<reason>' for Tier 1/2 var-name constraint."""
+    for v in [target_var, source_var] + list(distractors):
+        if len(tok.encode(" " + v)) != 1:
+            return f"failed:var_{v}_multi_token"
+    return "passed"
+
+
+def _next_token_for_answer(tok, prompt, answer):
+    """Return (token_id, status). status is 'passed' when (prompt + str(answer))
+    tokenizes as prompt's tokens + exactly one extra token — i.e. the answer
+    fits as the next-token logit under this prefix.
+
+    In code context (prompt ends with `=`), GPT-2 BPE picks the no-space digit
+    (e.g. ID 18 for '3'), not the leading-space variant (ID 513 for ' 3').
+    Computing the answer id from the joined string avoids guessing that.
+    """
+    prompt_ids = tok.encode(prompt)
+    full_ids = tok.encode(prompt + str(answer))
+    if (len(full_ids) == len(prompt_ids) + 1
+            and full_ids[:len(prompt_ids)] == prompt_ids):
+        return full_ids[-1], "passed"
+    return None, f"failed:answer_{answer}_not_single_next_token"
+
+
+def _binding_source_token_pos(tok, prompt, target_var, source_var):
+    """Locate the source-var token inside the binding line.
+
+    For 1-hop Tier 1/2 the prompt contains exactly one occurrence of
+    "; {target}={source}" (the binding line). Re-tokenize the prefix up to
+    and including "{target}=" to get the 0-indexed position of the source
+    token. Returns None if the marker isn't found (e.g., multi-hop tier 3).
+    """
+    marker = f"; {target_var}={source_var}"
+    idx = prompt.find(marker)
+    if idx < 0:
+        return None
+    prefix_str = prompt[:idx] + f"; {target_var}="
+    return len(tok.encode(prefix_str))
+
+
 def _make_record(sid, cf_id, role, tier, prompt, answer,
                  n_vars, target_var, source_var, distractors, hop,
-                 tokenization_check="passed"):
+                 distractor_values=None):
     tok = _get_tokenizer()
+    answer_token_id, ans_status = _next_token_for_answer(tok, prompt, answer)
+
+    # Distractor answer token ids for logit-difference evaluation
+    # (Wang et al. 2022 IOI standard). Computed per-sample so the prompt
+    # context dictates the right BPE variant (no-space digit after `=`).
+    distractor_values = list(distractor_values or [])
+    distractor_answer_token_ids = []
+    for dv in distractor_values:
+        d_id, _ = _next_token_for_answer(tok, prompt, dv)
+        distractor_answer_token_ids.append(d_id)
+
+    if tier == 3:
+        # Multi-hop tier 3 is accuracy-only; we still want a usable answer id
+        # but skip the strict var-name and binding-line checks.
+        check = "multi_token_allowed"
+        source_pos = None
+        if answer_token_id is None:  # extremely unlikely (digits only)
+            answer_token_id = tok.encode(str(answer))[0]
+    else:
+        var_check = _verify_single_token_vars(tok, target_var, source_var,
+                                              distractors)
+        if var_check != "passed":
+            check = var_check
+        elif ans_status != "passed":
+            check = ans_status
+        else:
+            check = "passed"
+        source_pos = _binding_source_token_pos(tok, prompt,
+                                               target_var, source_var)
+
     return {
         "id": sid,
         "cf_id": cf_id,
@@ -43,17 +114,21 @@ def _make_record(sid, cf_id, role, tier, prompt, answer,
         "tier": tier,
         "prompt": prompt,
         "answer": answer,
-        "answer_token_id": tok.encode(" " + str(answer))[0],
+        "answer_token_id": answer_token_id,
         "n_vars": n_vars,
         "target_var": target_var,
         "source_var": source_var,
         "distractor_vars": distractors,
+        "distractor_values": distractor_values,
+        "distractor_answer_token_ids": distractor_answer_token_ids,
         "binding_hop": hop,
+        "source_var_token_pos": source_pos,
+        "answer_token_pos": len(tok.encode(prompt)),
         "var_name_token_lens": {
             v: len(tok.encode(" " + v))
             for v in [target_var, source_var] + distractors
         },
-        "tokenization_check": tokenization_check,
+        "tokenization_check": check,
     }
 
 
@@ -84,21 +159,33 @@ def gen_tier1_pair(n_vars: int, rng: random.Random, pair_idx: int):
     distractors = [v for v in names
                    if v not in (target, src_clean, src_corrupt)]
 
+    # Logit-diff distractors include the *other* counterfactual source value
+    # plus any pure distractors. For clean, the rival is src_corrupt's value;
+    # for corrupt, it's src_clean's value.
+    clean_distractor_vals = [values[src_corrupt]] + [values[d] for d in distractors]
+    corrupt_distractor_vals = [values[src_clean]] + [values[d] for d in distractors]
+
     return [
         _make_record(f"{cf_id}_clean", cf_id, "clean", 1, clean,
                      values[src_clean], n_vars, target, src_clean,
-                     distractors, 1),
+                     distractors, 1, clean_distractor_vals),
         _make_record(f"{cf_id}_corrupt", cf_id, "corrupt", 1, corrupt,
                      values[src_corrupt], n_vars, target, src_corrupt,
-                     distractors, 1),
+                     distractors, 1, corrupt_distractor_vals),
     ]
 
 
 def make_tier1(n_pairs=VB_TIER1_N_PAIRS, seed=SEED) -> List[Dict[str, Any]]:
+    """Tier 1 cf pairs.
+
+    n_vars alternates 3 and 4 — datasets.md §4.3 originally listed {2,3} but
+    counterfactual generation needs ≥2 non-target vars (src_clean, src_corrupt),
+    so the floor is 3. Deviation logged in datasets/_report.md.
+    """
     rng = random.Random(seed)
     samples = []
     for i in range(n_pairs):
-        n_vars = 2 + (i % 2)   # alternate 2, 3
+        n_vars = 3 + (i % 2)
         samples.extend(gen_tier1_pair(n_vars, rng, i))
     return samples
 
@@ -118,10 +205,11 @@ def make_tier2(n=VB_TIER2_N, seed=SEED + 1) -> List[Dict[str, Any]]:
         prefix = "; ".join(f"{v}={values[v]}" for v in names if v != target)
         prompt = f"{prefix}; {target}={source}; {target}="
         distractors = [v for v in names if v not in (target, source)]
+        distractor_vals = [values[d] for d in distractors]
         sid = f"vb2_{i:04d}"
         samples.append(_make_record(sid, sid, "single", 2, prompt,
                                     values[source], n_vars, target, source,
-                                    distractors, 1))
+                                    distractors, 1, distractor_vals))
     return samples
 
 
@@ -144,8 +232,7 @@ def make_tier3(n=VB_TIER3_N, seed=SEED + 2) -> List[Dict[str, Any]]:
         sid = f"vb3_{i:04d}"
         rec = _make_record(sid, sid, "single", 3, prompt, root_val,
                            len(names), target, names[0],
-                           names[1:-1], hop=len(names) - 1,
-                           tokenization_check="multi_token_allowed")
+                           names[1:-1], hop=len(names) - 1)
         samples.append(rec)
     return samples
 
