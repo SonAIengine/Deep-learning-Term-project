@@ -1,0 +1,22 @@
+# Generated datasets — not versioned (regenerate via scripts in data/)
+datasets/*.pt
+datasets/*.jsonl
+
+# Circuit-analysis results
+results/*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
