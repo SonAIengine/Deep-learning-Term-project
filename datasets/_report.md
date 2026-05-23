@@ -1,7 +1,7 @@
 # 데이터셋 보고서 — Transformer Circuit Analysis
 
 > **상태**: **FROZEN (2026-05-24)** — Day 1~3 데이터셋 + Day 4 sanity 완료
-> **freeze commit**: `<pending>` (이 commit 직후 hash로 stamp)
+> **freeze commit**: [`a3d4c82`](../../../commit/a3d4c82)
 > **최종 업데이트**: 2026-05-24
 > **담당**: 데이터셋 트랙 (yesul.min)
 > **관련**: [docs/datasets.md](../docs/datasets.md), [docs/candidates/sonsj-proposal.md](../docs/candidates/sonsj-proposal.md)
