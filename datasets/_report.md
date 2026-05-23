@@ -159,7 +159,9 @@ git pull origin main
 
 위 3개가 깔끔히 통과하면 시작점 정상. 하나라도 실패하면 그 원인부터 추적.
 
-### 7.1 Day 4 — Tier 3 sanity 검토
+> §7.1, §7.2는 2026-05-24 세션에서 **완료**. §10이 다음 세션 가이드.
+
+### 7.1 Day 4 — Tier 3 sanity 검토 ✅ (commit `d2c0db4`)
 
 **목표**: 현재 Tier 3 `top1=0%` 한 줄 외에 multi-hop 실패 양상을 한 번 들여다보고, Tier 3 데이터의 쓰임새를 명확히 확정.
 
@@ -179,7 +181,7 @@ git pull origin main
 
 **완료 기준**: §4에 Tier 3 실패 양상 한 단락 + 평가 정책 한 줄.
 
-### 7.2 Day 5 — 동결 선언
+### 7.2 Day 5 — 동결 선언 ✅ (commits `a3d4c82` + `aa8d3d4`)
 
 **목표**: 데이터셋·평가 코드의 canonical 버전을 명확히 못박고, 분석 트랙(P1/P2/P3)이 흔들리지 않을 기반을 제공.
 
@@ -283,3 +285,62 @@ python3 -m venv .venv
 - Tier 1 freeze gate: `_zero_shot_eval.py`가 Tier 1 clean에서 `pct_pos > 50%` AND `avg logit_diff > 0` 통과 시 exit 0. 현재 54.40% / +0.182.
 - Tier 2: chance 위 logit-diff signal 확인 (현재 53.75% / +0.143).
 - Tier 3: accuracy-only가 기본 (현재 0%), 보조로 rank-by-hop 분포 + Option-B logit-diff. §4.1, §5 D6 참조.
+
+---
+
+## 10. 다음 세션 가이드 — 분석 트랙 시작
+
+데이터셋은 freeze됨 (`a3d4c82`). 이제 `docs/candidates/sonsj-proposal.md`의 **Step 1~3 분석 트랙**이 시작점. 세션을 새로 열면 "분석 트랙 시작" 또는 "P1 grokking부터" 같은 식으로 진입.
+
+### 10.0 시작 시 부트스트랩 (5분)
+
+```bash
+git pull origin main
+
+# 환경 확인
+.venv/bin/python -c "import torch, transformers, transformer_lens, einops, plotly; \
+  print('cuda:', torch.cuda.is_available())"
+
+# 동결 가드 — 데이터 변경 없는지 확인 (--strict면 hash mismatch 시 실패)
+.venv/bin/python -m data._validate --strict
+
+# zero-shot eval regression
+.venv/bin/python -m data._zero_shot_eval
+```
+
+3개 모두 깨끗히 통과해야 분석 시작점 정상. 하나라도 실패하면 그 원인부터 추적 (특히 hash mismatch는 데이터 재생성된 신호 → §9.2 절차 위반).
+
+### 10.1 트랙 매핑 — proposal Step ↔ 코드/데이터
+
+| 트랙 | proposal | 사용 데이터 | 주요 산출물 |
+|---|---|---|---|
+| **P1 Grokking 학습** | Step 1 (Week 1) | `datasets/modular_{train,test}.pt` | 2-layer transformer, grokking loss curve |
+| **P1 Grokking 회로 분석** | Step 2 (Week 2) | (P1 학습 결과 모델) | Fourier 분해, attention pattern, ablation |
+| **P2 Var Binding 회로** | Step 3-2 (Week 3) | `datasets/var_binding_tier{1,2,3}.jsonl` | Tier 1 cf pair activation patching, binding head 식별 |
+| **P3 IOI 비교** | Step 3-3 (Week 3) | `data.ioi_loader` (N=500) | Wang et al. 26 head 목록과 P2 결과 overlap |
+
+각 트랙은 §9.3에 박제된 불변량(`answer_token_id`, `distractor_answer_token_ids`, `source_var_token_pos`)을 그대로 사용. 재토큰화나 prompt 가공 불필요.
+
+### 10.2 가장 자연스러운 진입 순서
+
+1. **P1 학습 먼저** (Step 1, Week 1). modular train으로 2-layer transformer를 scratch 학습 + grokking 곡선 확보. 결과는 `results/grokking_run.pt` 같은 형태로 저장 권장.
+2. **P1 회로 분석** (Step 2, Week 2). 학습된 모델에서 Fourier basis 검증 + 핵심 head ablation.
+3. **P2 var binding** (Step 3-2, Week 3). GPT-2 small + Tier 1 cf pair로 activation patching. **첫 결과 보고 §7.3 (자연어 variant) 필요 여부 판단**.
+4. **P3 IOI 비교** (Step 3-3, Week 3). P2 결과 + IOI 회로 overlap 계산.
+
+### 10.3 P2 시작 시 체크할 것 (가장 데이터-tight한 트랙)
+
+- Tier 1 clean 첫 5개 sample로 `model.run_with_cache` 호출해 cache shape 확인
+- `source_var_token_pos`로 binding line의 source variable 위치 잡고 그 위치에서 patching
+- metric은 `logit[answer] - mean(logit[distractor_answer_token_ids])` (Wang et al. IOI 스타일)
+- cf pair는 `cf_id`로 묶임, clean→corrupt patching의 단위
+
+### 10.4 §7.3 결정 게이트
+
+P2 첫 activation patching 결과가 나오면:
+- **회로 신호가 명확** (특정 head를 patching 했을 때 logit-diff가 의미 있게 회복) → §7.3 skip
+- **신호가 약함** (head 단위로 잡히지 않거나 logit-diff 변화가 noise 수준) → §7.3 자연어 wrap variant 생성 (`datasets/var_binding_natural.jsonl`, GPT-2 small이 더 강한 signal 보이는 형식)
+
+### 10.5 데이터 트랙 잔여 작업 — 없음
+
+분석 트랙 피드백 없는 한 데이터 트랙은 추가 작업 없음. §9.2 절차 거치지 않은 데이터 변경 금지.
