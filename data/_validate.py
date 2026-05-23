@@ -10,7 +10,10 @@ Checks (per tier):
   - Tier 1: answer-value distribution spread <= 20%
   - Tier 1: variable-name usage spread <= 30%
   - Tier 2: tokenization_check == "passed", answer distribution spread <= 25%
+  - Freeze guard: SHA-256 of frozen files must match FROZEN_HASHES below
+    (warning only — does not block exit unless --strict is passed).
 """
+import hashlib
 import json
 import os
 import sys
@@ -19,6 +22,20 @@ from typing import List, Dict, Any
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from shared.config import DATASETS_DIR
+
+
+# ============================================================
+# Freeze hashes — SHA-256 of canonical Day 1-3 datasets.
+# Stamped at freeze (datasets/_report.md §9). If you regenerate
+# data, either update these hashes (with team sign-off) or revert.
+# ============================================================
+FROZEN_HASHES = {
+    "modular_train.pt":        "2034d5a356c95d57c034b16fbda9c427d94ccdf5018caff4b8ab79f3c92589f0",
+    "modular_test.pt":         "99135adb90e06ec759d88077b4ffca093de7c2a0b5870c966449bf6242393918",
+    "var_binding_tier1.jsonl": "296dd2c9c69597de0227b996e1d35c0e8dc44b38db72a856cce61b7fa71275f7",
+    "var_binding_tier2.jsonl": "9024ccb99ed30c0f020cc4fe326d281c11934b1cd5ecd5e3f19007b0a69790c8",
+    "var_binding_tier3.jsonl": "a870214c01c0afbd11e3f9b5c9ae3a60a1415bb68c1dbdf73afef3ae56e11ce0",
+}
 
 
 def _load_jsonl(path: str) -> List[Dict[str, Any]]:
@@ -113,7 +130,40 @@ def check_name_distribution(samples, max_spread=0.30) -> bool:
     return True
 
 
+def check_freeze_hashes(strict: bool) -> bool:
+    """Compare SHA-256 of frozen files against FROZEN_HASHES.
+
+    Emits warnings on mismatch. Only fails the run when strict=True (used by
+    CI/the freeze gate). Day-to-day runs report drift without blocking, so
+    contributors can iterate locally before deciding to update the table.
+    """
+    print("\n=== Freeze guard (SHA-256) ===")
+    all_match = True
+    for fname, expected in FROZEN_HASHES.items():
+        path = os.path.join(DATASETS_DIR, fname)
+        if not os.path.exists(path):
+            print(f"  [WARN] {fname}: file missing (skipped)")
+            all_match = False
+            continue
+        h = hashlib.sha256()
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(1 << 20), b""):
+                h.update(chunk)
+        actual = h.hexdigest()
+        if actual == expected:
+            print(f"  [OK]   {fname}")
+        else:
+            print(f"  [WARN] {fname}: hash drift")
+            print(f"         expected {expected}")
+            print(f"         actual   {actual}")
+            all_match = False
+    if not all_match and strict:
+        print("[FAIL] Freeze hash mismatch and --strict was set.")
+    return all_match
+
+
 def main() -> int:
+    strict = "--strict" in sys.argv
     ok = True
 
     t1_path = os.path.join(DATASETS_DIR, "var_binding_tier1.jsonl")
@@ -137,6 +187,10 @@ def main() -> int:
         ok &= check_answer_distribution(t2, 0.25, "Tier 2 answers")
         # Tier 2 var-name distribution intentionally not enforced — larger
         # pool + variable n_vars makes uniform usage impractical.
+
+    hashes_match = check_freeze_hashes(strict=strict)
+    if strict and not hashes_match:
+        ok = False
 
     print()
     if not ok:

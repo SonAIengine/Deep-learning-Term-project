@@ -1,11 +1,12 @@
 # 데이터셋 보고서 — Transformer Circuit Analysis
 
-> **상태**: 진행 중 (Day 1~3 완료, Day 4~5는 다음 세션 — §7 참조)
+> **상태**: **FROZEN (2026-05-24)** — Day 1~3 데이터셋 + Day 4 sanity 완료
+> **freeze commit**: `<pending>` (이 commit 직후 hash로 stamp)
 > **최종 업데이트**: 2026-05-24
 > **담당**: 데이터셋 트랙 (yesul.min)
 > **관련**: [docs/datasets.md](../docs/datasets.md), [docs/candidates/sonsj-proposal.md](../docs/candidates/sonsj-proposal.md)
 
-본 문서는 무엇이 생성되었는지, 어떤 검증을 통과했는지, 그리고 `docs/datasets.md` v2와의 모든 일탈(deviation) 사항을 기록한다. 동결(freeze) 선언은 Tier 3 sanity 검토 후 별도 세션에서 이 보고서 상단에 추가된다.
+본 문서는 무엇이 생성되었는지, 어떤 검증을 통과했는지, 그리고 `docs/datasets.md` v2와의 모든 일탈(deviation) 사항을 기록한다. **동결 정책은 §9 참조** — 분석 트랙(P1/P2/P3)은 이 commit 시점의 데이터·`answer_token_id`·`distractor_answer_token_ids`를 신뢰하고 작업을 시작할 수 있다.
 
 ---
 
@@ -243,3 +244,42 @@ python3 -m venv .venv
 .venv/bin/python -m data._validate       # 성공 시 exit 0
 .venv/bin/python -m data._zero_shot_eval # Tier 1 pct_pos > 50% 통과 시 exit 0
 ```
+
+---
+
+## 9. 동결 정책 (2026-05-24)
+
+본 commit 시점의 데이터셋 + 평가 코드는 canonical이며, 분석 트랙(P1/P2/P3)은 이 상태를 신뢰하고 작업을 시작한다. 이후 변경은 **팀 sign-off 후**에만 허용한다.
+
+### 9.1 동결 대상
+
+| 파일 | SHA-256 |
+|---|---|
+| `datasets/modular_train.pt` | `2034d5a3…2589f0` |
+| `datasets/modular_test.pt` | `99135adb…393918` |
+| `datasets/var_binding_tier1.jsonl` | `296dd2c9…1275f7` |
+| `datasets/var_binding_tier2.jsonl` | `9024ccb9…9790c8` |
+| `datasets/var_binding_tier3.jsonl` | `a870214c…6e11ce0` |
+
+전체 해시는 `data/_validate.py`의 `FROZEN_HASHES`에 박제. 검증 시 자동 비교되며 mismatch면 경고 (`--strict` 플래그 시 실패).
+
+### 9.2 동결 후 변경 절차
+
+1. 변경 사유와 영향 범위(어떤 분석 결과가 무효화되는지)를 PR description에 명시.
+2. 분석 트랙 담당자 최소 1인의 sign-off (regression이 분석 트랙에 미치는 영향을 그쪽이 평가).
+3. regen 시 **seed 고정** (`shared/config.py`의 `SEED=0`). seed가 같으면 동일한 데이터가 나오는지 먼저 확인.
+4. `data/_validate.py`의 `FROZEN_HASHES`를 새 해시로 갱신 + 본 §9.1 표 갱신.
+5. commit 메시지에 "refreeze" 명시 + 이전 freeze commit hash를 참조.
+
+### 9.3 분석 트랙이 신뢰할 수 있는 불변량
+
+- `answer_token_id`: prompt 문맥에서 GPT-2 BPE가 실제로 생성할 token id (no-space digit). 재토큰화 없이 그대로 사용 가능.
+- `distractor_answer_token_ids` (Tier 1/2): logit-diff 계산용 rival token ids. Tier 1 clean의 rival 첫 번째 원소는 `src_corrupt`의 값 → counterfactual patching에서 의미 있는 비교.
+- `source_var_token_pos` (Tier 1/2): binding line 내 source variable token의 0-indexed 위치. cf pair에서 clean/corrupt가 일치 (`_validate.py`로 보장).
+- `tier`, `role`, `cf_id`, `binding_hop`: 분류/필터링 키.
+
+### 9.4 평가 기준 — 동결됨
+
+- Tier 1 freeze gate: `_zero_shot_eval.py`가 Tier 1 clean에서 `pct_pos > 50%` AND `avg logit_diff > 0` 통과 시 exit 0. 현재 54.40% / +0.182.
+- Tier 2: chance 위 logit-diff signal 확인 (현재 53.75% / +0.143).
+- Tier 3: accuracy-only가 기본 (현재 0%), 보조로 rank-by-hop 분포 + Option-B logit-diff. §4.1, §5 D6 참조.
