@@ -7,7 +7,6 @@
 results/*.json
 results/*.pt
 results/*.log
-results/**/*.png
 wandb/
 
 # Python
