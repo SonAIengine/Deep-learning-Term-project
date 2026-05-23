@@ -1,0 +1,59 @@
+{
+  "n_pairs": 500,
+  "clean_logit_diff_mean": 0.18242317962646484,
+  "clean_logit_diff_std": 1.4566952838151064,
+  "corrupt_logit_diff_mean": 0.09676981544494628,
+  "corrupt_logit_diff_std": 1.5223839549031406,
+  "clean_top1_acc": 0.008,
+  "corrupt_top1_acc": 0.02,
+  "clean_pct_pos": 0.544,
+  "corrupt_pct_pos": 0.492,
+  "clean_minus_corrupt_diff": 0.08565336418151856,
+  "examples": [
+    {
+      "cf_id": "vb1_0000",
+      "clean_prompt": "x=5; z=9; a=z; a=",
+      "corrupt_prompt": "x=5; z=9; a=x; a=",
+      "clean_logit_diff": -0.42702674865722656,
+      "corrupt_logit_diff": 0.9154891967773438,
+      "clean_answer": 9,
+      "corrupt_answer": 5
+    },
+    {
+      "cf_id": "vb1_0001",
+      "clean_prompt": "x=3; c=5; b=3; y=b; y=",
+      "corrupt_prompt": "x=3; c=5; b=3; y=c; y=",
+      "clean_logit_diff": 0.5240392684936523,
+      "corrupt_logit_diff": -0.8537673950195312,
+      "clean_answer": 3,
+      "corrupt_answer": 5
+    },
+    {
+      "cf_id": "vb1_0002",
+      "clean_prompt": "y=5; z=2; b=z; b=",
+      "corrupt_prompt": "y=5; z=2; b=y; b=",
+      "clean_logit_diff": 1.1307392120361328,
+      "corrupt_logit_diff": -0.7158784866333008,
+      "clean_answer": 2,
+      "corrupt_answer": 5
+    },
+    {
+      "cf_id": "vb1_0003",
+      "clean_prompt": "y=6; a=4; c=9; b=a; b=",
+      "corrupt_prompt": "y=6; a=4; c=9; b=c; b=",
+      "clean_logit_diff": -0.151214599609375,
+      "corrupt_logit_diff": -0.05545806884765625,
+      "clean_answer": 4,
+      "corrupt_answer": 9
+    },
+    {
+      "cf_id": "vb1_0004",
+      "clean_prompt": "a=2; y=7; z=y; z=",
+      "corrupt_prompt": "a=2; y=7; z=a; z=",
+      "clean_logit_diff": -2.487565040588379,
+      "corrupt_logit_diff": 2.5225391387939453,
+      "clean_answer": 7,
+      "corrupt_answer": 2
+    }
+  ]
+}
