@@ -1,0 +1,50 @@
+============================================================
+GROKKING CIRCUIT ANALYSIS REPORT
+============================================================
+
+1. FOURIER BASIS ANALYSIS
+----------------------------------------
+Top 10 frequencies by correlation:
+  Frequency  85: 0.8742
+  Frequency  28: 0.8742
+  Frequency 102: 0.8651
+  Frequency  11: 0.8651
+  Frequency  15: 0.8340
+  Frequency  98: 0.8340
+  Frequency 112: 0.8079
+  Frequency   1: 0.8079
+  Frequency  22: 0.4275
+  Frequency  91: 0.4275
+
+2. ATTENTION PATTERN ANALYSIS
+----------------------------------------
+
+Layer 0, Head 0:
+  Attention to a (pos 0):   [1.        0.5039307 0.5019893]
+  Attention to b (pos 1):   [0.         0.49606925 0.49654472]
+  Attention to = (pos 2):  [0.       0.       0.001466]
+
+Layer 0, Head 1:
+  Attention to a (pos 0):   [1.         0.49923807 0.547268  ]
+  Attention to b (pos 1):   [0.         0.50076187 0.45081827]
+  Attention to = (pos 2):  [0.         0.         0.00191374]
+
+Layer 0, Head 2:
+  Attention to a (pos 0):   [1.        0.5012539 0.4879571]
+  Attention to b (pos 1):   [0.        0.4987461 0.5103049]
+  Attention to = (pos 2):  [0.         0.         0.00173792]
+
+Layer 0, Head 3:
+  Attention to a (pos 0):   [1.        0.4983979 0.4772567]
+  Attention to b (pos 1):   [0.         0.5016021  0.52047735]
+  Attention to = (pos 2):  [0.         0.         0.00226591]
+
+3. HEAD ABLATION STUDY
+----------------------------------------
+Baseline accuracy (no ablation): 1.0000
+
+Accuracy after ablating each head:
+  Layer 0, Head 0: 0.7480 (-0.2520) [Important]
+  Layer 0, Head 1: 0.3800 (-0.6200) [CRITICAL]
+  Layer 0, Head 2: 0.5680 (-0.4320) [Important]
+  Layer 0, Head 3: 0.6040 (-0.3960) [Important]
