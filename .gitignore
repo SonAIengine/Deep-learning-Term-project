@@ -5,6 +5,10 @@
 
 # Circuit-analysis results
 results/*.json
+results/*.pt
+results/*.log
+results/**/*.png
+wandb/
 
 # Python
 __pycache__/
