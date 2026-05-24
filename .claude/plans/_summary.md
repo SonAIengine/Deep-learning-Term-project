@@ -27,15 +27,23 @@
 
 ## P2 — Code Variable Binding
 
-- **상태**: ✅ **Step 1 완료** — Activation patching 성공, 회로 신호 확인
-- **데이터**: `datasets/var_binding_tier1.jsonl` (frozen `a3d4c82`)
-- **구현**: `tracks/code/` 5 파일 (GPT-2 small activation patching)
-- **결과**:
-  - Top binding heads: **L7H10 (1.21)**, L8H7 (1.20), L9H7 (1.17), L11H0 (1.17)
-  - Baseline logit diffs: clean/corrupt 간 명확한 신호 차이 (0.1~2.6)
+- **상태**: ✅ **Step 1 완료** — 500 pairs 전체 분석 완료, 회로 신호 확인
+- **데이터**: `datasets/var_binding_tier1.jsonl` (frozen `a3d4c82`, 500 cf pairs)
+- **구현**: `tracks/code/` 6 파일 (GPT-2 small activation patching + 시각화)
+- **결과 (500 pairs)**:
+  - **Top binding heads**: **L4H5 (1.30)**, L3H5 (1.30), L4H6 (1.29), L1H10 (1.27), L4H1 (1.23)
+  - **Stability 분석**: 5→500 pairs 간 매우 낮은 안정성
+    - Top 5 overlap: **0%** (5 pairs의 Top 5가 모두 변경)
+    - Top 10 overlap: **10%** (L9H7만 유지: 3→8)
+    - Top 20 overlap: **5%**
+  - **주요 변화**: L7H10 (1→100+), L8H7 (2→100+), L4H5 (100+→1)
+  - Baseline logit diffs: clean/corrupt 간 명확한 신호 차이 유지
   - **결정 게이트 통과**: 자연어 variant 불필요 — code-style에서도 회로 신호 명확
-- **출력**: `results/code/run_20260524_185842/` (patching_results.json, head_heatmap.pt)
-- **다음 단계**: 더 많은 cf pairs로 확장 + cross-validation
+- **출력**: `results/code/run_20260524_195653/`
+  - `var_binding_full_analysis.pt` (전체 결과)
+  - `top_heads.json` (Top 20)
+  - `visualizations/` (heatmap comparison, recovery distribution)
+- **다음 단계**: P3 IOI 비교 분석 + Cross-track 분석
 
 ## P3 — IOI 비교
 
@@ -45,5 +53,8 @@
 
 ## Cross-track 발견
 
+- **🚨 Sample size criticality** (P2): 5 pairs → 500 pairs에서 회로 구조가 완전히 변경
+  - Small samples can be misleading for circuit discovery
+  - Suggests need for robust sampling strategies in mechanistic interpretability
 - TBD: P1 회로 (modular)와 P2 회로 (var binding)의 구조적 공통점
 - TBD: Circuit universality score 정의 + 계산
