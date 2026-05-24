@@ -11,7 +11,10 @@
 
 > **GPT-2 small의 IOI 회로(Wang 2022)는 코드 변수 바인딩 도메인에서 *선택적으로* 재사용된다.
 > 출력 단계 head(BNMH, NNMH, DTH)는 *기능적 부호(positive/negative)까지 보존*된 채 전이되지만,
-> 구조적 단계인 S-Inhibition Head(SIH)는 전이되지 않는다.**
+> 구조적 단계인 S-Inhibition Head(SIH)는 전이되지 않는다.
+> Pythia-160M에서도 같은 task에 대해 functional concentration·necessity는 보존되나,
+> layer-stage·head-coordinate는 보존되지 않아, universality가 *해부학적 수준*이 아닌
+> *기능적 수준*에서 성립함을 시사한다.**
 
 ---
 
@@ -202,6 +205,38 @@ Top-5 heads와 control 5개 head를 zero-ablate 후 baseline logit_diff 감소�
 > **정확히 동일**. 즉, IOI 회로 부품은 **기능적 부호(positive/negative)까지
 > 보존된 채** 코드 도메인에서 재사용됨.
 
+### 4.6 ⭐ Extra D — Cross-Model Replication (Pythia-160M, n=500)
+
+같은 width (12L × 12H, d_model=768)이지만 다른 아키텍처(rotary, parallel attn+MLP)와
+학습 데이터(Pile)인 Pythia-160M에서 동일 실험 반복.
+
+**Patching 결과:**
+
+| 측면 | GPT-2 small | Pythia-160M |
+|---|---|---|
+| Clean LD / Corrupt LD / Gap | +0.182 / +0.097 / +0.086 | +0.157 / +0.019 / **+0.138** |
+| Attention 전체 기여 | +0.133 | +0.145 |
+| Top head recovery (max) | +0.491 (L10H7) | **+1.015 (L5H9)** |
+| 상위 10 head 우세 layer | **L10, L11 (후반)** | **L5, L6 (중반)** |
+| Top-10 head 좌표 overlap | — | **1/10** (=L5H0, random expectation 0.69) |
+| Necessity: ablate top-10 drop | +0.065 (×1.9 vs random) | **+0.073 (×15 vs random)** |
+
+![Pythia heatmap (GPT-2 top-10 outlined)](../results/binding_pythia/pythia_heatmap.png)
+![Pythia necessity](../results/binding_pythia/pythia_necessity.png)
+
+**핵심 발견 — Universality의 4단계 분해:**
+
+| Universality 종류 | 결과 |
+|---|---|
+| ① **Functional concentration** (소수 head에 집중) | ✓ 두 모델 모두 보존 |
+| ② **Causal necessity** (top-K가 random보다 중요) | ✓ 두 모델 모두 보존 |
+| ③ **Layer-stage location** (어느 깊이에서 작동) | ✗ **GPT-2는 후반, Pythia는 중반** |
+| ④ **Head coordinate** (정확한 (L,H) 매칭) | ✗ random 수준 (예상됨) |
+
+> 즉 **"같은 task를 풀 때 같은 *원리*를 쓰지만 *해부학적 위치*는 모델마다 다름"**.
+> Wang 2022의 IOI 회로 layer 분포(late-layer NMH)는 GPT-2 specific 현상이며,
+> 회로 universality는 **architectural depth보다 functional decomposition 수준에서** 성립.
+
 ---
 
 ## 5. 본 연구의 기여 (Contribution)
@@ -227,6 +262,13 @@ Top-5 heads와 control 5개 head를 zero-ablate 후 baseline logit_diff 감소�
 5. **회로 크기 정량화 — IOI-26이 attention 기여의 87% 담당**
    - 144개 head 중 18%(IOI-26)만 ablate해도 attention 전체 기여의 87% 소실
    - GPT-2 small의 코드 바인딩 attention 회로 = IOI 회로의 sub-circuit
+
+6. **Cross-model universality의 4단계 분해 (GPT-2 small vs Pythia-160M)**
+   - ① Functional concentration ✓, ② Causal necessity ✓
+   - ③ Layer-stage location ✗ (GPT-2 후반 vs Pythia 중반)
+   - ④ Head coordinate ✗ (random 수준)
+   - → **"같은 원리, 다른 해부학적 위치"** — universality는 architecture 표면이
+     아닌 functional decomposition 수준에서 성립
 
 ### 한 줄 메시지
 
@@ -264,7 +306,8 @@ results/
 
 ## 7. 한계 및 향후 과제
 
-- **단일 모델 (GPT-2 small only)** — Pythia, GPT-2 medium 등에서 재현 시 universality 일반화 가능.
+- ~~**단일 모델 (GPT-2 small only)**~~ → Pythia-160M에서 재현 완료 (4.6절).
+  추가로 GPT-2 medium, Llama 등 더 큰/다양한 모델에서 검증하면 일반화 강화.
 - **Tier 3 (멀티홉) 분석 미완** — distractor가 정의되지 않아 logit_diff 메트릭 적용 불가.
 - **회로 간 composition 분석 부재** — DTH→SIH→NMH의 IOI 구조 중
   본 연구는 DTH/NMH의 *존재*만 보였고, head 간 *연결*은 미검증.
