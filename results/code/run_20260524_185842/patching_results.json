@@ -1,0 +1,4040 @@
+{
+  "cache_shapes": {
+    "hook_embed": [
+      1,
+      15,
+      768
+    ],
+    "hook_pos_embed": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.0.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.0.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.0.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.0.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.0.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.0.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.1.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.1.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.1.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.1.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.1.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.1.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.2.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.2.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.2.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.2.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.2.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.2.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.3.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.3.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.3.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.3.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.3.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.3.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.4.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.4.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.4.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.4.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.4.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.4.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.5.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.5.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.5.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.5.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.5.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.5.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.6.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.6.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.6.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.6.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.6.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.6.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.7.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.7.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.7.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.7.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.7.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.7.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.8.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.8.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.8.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.8.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.8.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.8.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.9.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.9.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.9.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.9.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.9.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.9.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.10.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.10.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.10.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.10.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.10.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.10.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.11.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.11.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.11.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.11.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.11.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.11.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "ln_final.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "ln_final.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "unembed.hook_in": [
+      1,
+      15,
+      768
+    ],
+    "unembed.hook_out": [
+      1,
+      15,
+      50257
+    ]
+  },
+  "baseline_logit_diffs": {
+    "vb1_0000": {
+      "clean": 0.13761520385742188,
+      "corrupt": 1.2215938568115234
+    },
+    "vb1_0001": {
+      "clean": 0.6617946624755859,
+      "corrupt": -0.8449325561523438
+    },
+    "vb1_0002": {
+      "clean": 1.108595848083496,
+      "corrupt": -0.6885356903076172
+    },
+    "vb1_0003": {
+      "clean": -0.05179595947265625,
+      "corrupt": -0.3200531005859375
+    },
+    "vb1_0004": {
+      "clean": -2.6410818099975586,
+      "corrupt": 2.182880401611328
+    }
+  },
+  "patch_effects": {
+    "vb1_0000": {
+      "L0H0": {
+        "patched_logit_diff": -0.14124679565429688,
+        "recovery": 1.2572578332163211
+      },
+      "L0H1": {
+        "patched_logit_diff": 0.07415199279785156,
+        "recovery": 1.05854655060468
+      },
+      "L0H2": {
+        "patched_logit_diff": 0.07417869567871094,
+        "recovery": 1.0585219164656345
+      },
+      "L0H3": {
+        "patched_logit_diff": -0.17798423767089844,
+        "recovery": 1.2911491297990383
+      },
+      "L0H4": {
+        "patched_logit_diff": -0.06139183044433594,
+        "recovery": 1.18358944040034
+      },
+      "L0H5": {
+        "patched_logit_diff": -0.04102516174316406,
+        "recovery": 1.1648006306339596
+      },
+      "L0H6": {
+        "patched_logit_diff": -0.10786628723144531,
+        "recovery": 1.2264633998279129
+      },
+      "L0H7": {
+        "patched_logit_diff": 0.09994316101074219,
+        "recovery": 1.0347534914493144
+      },
+      "L0H8": {
+        "patched_logit_diff": -0.07315635681152344,
+        "recovery": 1.194442538231304
+      },
+      "L0H9": {
+        "patched_logit_diff": -0.17495155334472656,
+        "recovery": 1.288351395435998
+      },
+      "L0H10": {
+        "patched_logit_diff": -0.12668800354003906,
+        "recovery": 1.2438269486923672
+      },
+      "L0H11": {
+        "patched_logit_diff": 0.059375762939453125,
+        "recovery": 1.07217802740372
+      },
+      "L1H0": {
+        "patched_logit_diff": 0.008138656616210938,
+        "recovery": 1.1194456614882187
+      },
+      "L1H1": {
+        "patched_logit_diff": 0.12889480590820312,
+        "recovery": 1.0080448059797613
+      },
+      "L1H2": {
+        "patched_logit_diff": -0.22127532958984375,
+        "recovery": 1.331086347936099
+      },
+      "L1H3": {
+        "patched_logit_diff": -0.22636985778808594,
+        "recovery": 1.3357861897497347
+      },
+      "L1H4": {
+        "patched_logit_diff": 0.08847808837890625,
+        "recovery": 1.0453303350066951
+      },
+      "L1H5": {
+        "patched_logit_diff": 0.15679359436035156,
+        "recovery": 0.9823074094211505
+      },
+      "L1H6": {
+        "patched_logit_diff": 0.09624099731445312,
+        "recovery": 1.038168838869856
+      },
+      "L1H7": {
+        "patched_logit_diff": 0.24937057495117188,
+        "recovery": 0.896902608931283
+      },
+      "L1H8": {
+        "patched_logit_diff": 0.2632770538330078,
+        "recovery": 0.8840735012325868
+      },
+      "L1H9": {
+        "patched_logit_diff": -0.25245094299316406,
+        "recovery": 1.3598467052718817
+      },
+      "L1H10": {
+        "patched_logit_diff": -0.35851287841796875,
+        "recovery": 1.4576917459797964
+      },
+      "L1H11": {
+        "patched_logit_diff": 0.08156204223632812,
+        "recovery": 1.0517105770195154
+      },
+      "L2H0": {
+        "patched_logit_diff": -0.016778945922851562,
+        "recovery": 1.14243283238052
+      },
+      "L2H1": {
+        "patched_logit_diff": -0.016313552856445312,
+        "recovery": 1.1420034945285817
+      },
+      "L2H2": {
+        "patched_logit_diff": 0.23905181884765625,
+        "recovery": 0.9064219440910618
+      },
+      "L2H3": {
+        "patched_logit_diff": -0.18914413452148438,
+        "recovery": 1.3014444403387546
+      },
+      "L2H4": {
+        "patched_logit_diff": 0.05695152282714844,
+        "recovery": 1.074414455312792
+      },
+      "L2H5": {
+        "patched_logit_diff": 0.20281410217285156,
+        "recovery": 0.9398522303573533
+      },
+      "L2H6": {
+        "patched_logit_diff": 0.096038818359375,
+        "recovery": 1.0383553544940587
+      },
+      "L2H7": {
+        "patched_logit_diff": 0.30766868591308594,
+        "recovery": 0.8431210046505735
+      },
+      "L2H8": {
+        "patched_logit_diff": 0.09698295593261719,
+        "recovery": 1.0374843617206595
+      },
+      "L2H9": {
+        "patched_logit_diff": -0.3072528839111328,
+        "recovery": 1.410402996918973
+      },
+      "L2H10": {
+        "patched_logit_diff": -0.1942920684814453,
+        "recovery": 1.3061935504304816
+      },
+      "L2H11": {
+        "patched_logit_diff": 0.07318878173828125,
+        "recovery": 1.0594351391916834
+      },
+      "L3H0": {
+        "patched_logit_diff": -0.00423431396484375,
+        "recovery": 1.1308600657731513
+      },
+      "L3H1": {
+        "patched_logit_diff": -0.16689109802246094,
+        "recovery": 1.280915404606936
+      },
+      "L3H2": {
+        "patched_logit_diff": 0.09987831115722656,
+        "recovery": 1.034813317215568
+      },
+      "L3H3": {
+        "patched_logit_diff": -0.20392990112304688,
+        "recovery": 1.3150847150445966
+      },
+      "L3H4": {
+        "patched_logit_diff": -0.041027069091796875,
+        "recovery": 1.16480239021532
+      },
+      "L3H5": {
+        "patched_logit_diff": 0.43407249450683594,
+        "recovery": 0.7265100287339636
+      },
+      "L3H6": {
+        "patched_logit_diff": 0.13992691040039062,
+        "recovery": 0.9978673873911919
+      },
+      "L3H7": {
+        "patched_logit_diff": 0.17035675048828125,
+        "recovery": 0.9697950263673267
+      },
+      "L3H8": {
+        "patched_logit_diff": 0.020605087280273438,
+        "recovery": 1.1079450377166264
+      },
+      "L3H9": {
+        "patched_logit_diff": -0.2395782470703125,
+        "recovery": 1.3479712906705237
+      },
+      "L3H10": {
+        "patched_logit_diff": -0.04673957824707031,
+        "recovery": 1.170072336389726
+      },
+      "L3H11": {
+        "patched_logit_diff": 0.10858917236328125,
+        "recovery": 1.026777309142609
+      },
+      "L4H0": {
+        "patched_logit_diff": -0.025995254516601562,
+        "recovery": 1.150935129513986
+      },
+      "L4H1": {
+        "patched_logit_diff": -0.19394683837890625,
+        "recovery": 1.3058750662042486
+      },
+      "L4H2": {
+        "patched_logit_diff": 0.09601020812988281,
+        "recovery": 1.0383817482144648
+      },
+      "L4H3": {
+        "patched_logit_diff": -0.2645149230957031,
+        "recovery": 1.370976057376429
+      },
+      "L4H4": {
+        "patched_logit_diff": -0.05624580383300781,
+        "recovery": 1.1788420898899734
+      },
+      "L4H5": {
+        "patched_logit_diff": 0.2958850860595703,
+        "recovery": 0.8539916982951417
+      },
+      "L4H6": {
+        "patched_logit_diff": 0.031856536865234375,
+        "recovery": 1.0975652672716107
+      },
+      "L4H7": {
+        "patched_logit_diff": 0.6905097961425781,
+        "recovery": 0.48993959357189737
+      },
+      "L4H8": {
+        "patched_logit_diff": 0.1503162384033203,
+        "recovery": 0.9882829477210782
+      },
+      "L4H9": {
+        "patched_logit_diff": -0.28370094299316406,
+        "recovery": 1.3886756862807201
+      },
+      "L4H10": {
+        "patched_logit_diff": -0.04522705078125,
+        "recovery": 1.1686769883709267
+      },
+      "L4H11": {
+        "patched_logit_diff": 0.2624626159667969,
+        "recovery": 0.8848248424734787
+      },
+      "L5H0": {
+        "patched_logit_diff": 0.012250900268554688,
+        "recovery": 1.1156520040751905
+      },
+      "L5H1": {
+        "patched_logit_diff": -0.1180877685546875,
+        "recovery": 1.2358929963383112
+      },
+      "L5H2": {
+        "patched_logit_diff": 0.23638534545898438,
+        "recovery": 0.9088818388329049
+      },
+      "L5H3": {
+        "patched_logit_diff": -0.2619190216064453,
+        "recovery": 1.368581267144921
+      },
+      "L5H4": {
+        "patched_logit_diff": -0.2141742706298828,
+        "recovery": 1.3245354265313196
+      },
+      "L5H5": {
+        "patched_logit_diff": 0.19268035888671875,
+        "recovery": 0.9492008861251731
+      },
+      "L5H6": {
+        "patched_logit_diff": 0.195037841796875,
+        "recovery": 0.9470260435637153
+      },
+      "L5H7": {
+        "patched_logit_diff": 0.1287822723388672,
+        "recovery": 1.008148621280025
+      },
+      "L5H8": {
+        "patched_logit_diff": 0.219512939453125,
+        "recovery": 0.9244470955470274
+      },
+      "L5H9": {
+        "patched_logit_diff": -0.055934906005859375,
+        "recovery": 1.1785552781282278
+      },
+      "L5H10": {
+        "patched_logit_diff": 0.07431221008300781,
+        "recovery": 1.0583987457704063
+      },
+      "L5H11": {
+        "patched_logit_diff": 0.2370452880859375,
+        "recovery": 0.9082730236822055
+      },
+      "L6H0": {
+        "patched_logit_diff": 0.1373291015625,
+        "recovery": 1.0002639372040605
+      },
+      "L6H1": {
+        "patched_logit_diff": 0.031238555908203125,
+        "recovery": 1.0981353716323812
+      },
+      "L6H2": {
+        "patched_logit_diff": 0.08659744262695312,
+        "recovery": 1.0470652822280524
+      },
+      "L6H3": {
+        "patched_logit_diff": 0.07486534118652344,
+        "recovery": 1.0578884671758895
+      },
+      "L6H4": {
+        "patched_logit_diff": -0.46286964416503906,
+        "recovery": 1.5539637209515111
+      },
+      "L6H5": {
+        "patched_logit_diff": 0.08690452575683594,
+        "recovery": 1.0467819896290274
+      },
+      "L6H6": {
+        "patched_logit_diff": 0.12591552734375,
+        "recovery": 1.0107932720647104
+      },
+      "L6H7": {
+        "patched_logit_diff": -0.03157234191894531,
+        "recovery": 1.1560801454118037
+      },
+      "L6H8": {
+        "patched_logit_diff": 0.07565879821777344,
+        "recovery": 1.0571564813299619
+      },
+      "L6H9": {
+        "patched_logit_diff": 0.030908584594726562,
+        "recovery": 1.098439779207731
+      },
+      "L6H10": {
+        "patched_logit_diff": -0.03928184509277344,
+        "recovery": 1.1631923732705514
+      },
+      "L6H11": {
+        "patched_logit_diff": 0.14025115966796875,
+        "recovery": 0.9975682585599234
+      },
+      "L7H0": {
+        "patched_logit_diff": 0.05101966857910156,
+        "recovery": 1.0798867533436445
+      },
+      "L7H1": {
+        "patched_logit_diff": -0.041896820068359375,
+        "recovery": 1.1656047593156635
+      },
+      "L7H2": {
+        "patched_logit_diff": 0.1779193878173828,
+        "recovery": 0.9628182862733299
+      },
+      "L7H3": {
+        "patched_logit_diff": 0.09119796752929688,
+        "recovery": 1.0428211719867608
+      },
+      "L7H4": {
+        "patched_logit_diff": -0.1954517364501953,
+        "recovery": 1.3072633758976064
+      },
+      "L7H5": {
+        "patched_logit_diff": 0.23488235473632812,
+        "recovery": 0.9102683889449023
+      },
+      "L7H6": {
+        "patched_logit_diff": 0.2320270538330078,
+        "recovery": 0.9129024822414251
+      },
+      "L7H7": {
+        "patched_logit_diff": -0.3872089385986328,
+        "recovery": 1.4841646475470556
+      },
+      "L7H8": {
+        "patched_logit_diff": 0.0442352294921875,
+        "recovery": 1.086145584242597
+      },
+      "L7H9": {
+        "patched_logit_diff": 0.14338302612304688,
+        "recovery": 0.9946790259661421
+      },
+      "L7H10": {
+        "patched_logit_diff": -0.31932640075683594,
+        "recovery": 1.4215411469303223
+      },
+      "L7H11": {
+        "patched_logit_diff": 0.3478984832763672,
+        "recovery": 0.8060079145969591
+      },
+      "L8H0": {
+        "patched_logit_diff": 0.06540679931640625,
+        "recovery": 1.0666142311421267
+      },
+      "L8H1": {
+        "patched_logit_diff": 0.019968032836914062,
+        "recovery": 1.108532737891001
+      },
+      "L8H2": {
+        "patched_logit_diff": 0.1055450439453125,
+        "recovery": 1.0295856009938116
+      },
+      "L8H3": {
+        "patched_logit_diff": 0.1385498046875,
+        "recovery": 0.9991378051334027
+      },
+      "L8H4": {
+        "patched_logit_diff": -0.0893096923828125,
+        "recovery": 1.2093444327725547
+      },
+      "L8H5": {
+        "patched_logit_diff": 0.5148963928222656,
+        "recovery": 0.6519477685868978
+      },
+      "L8H6": {
+        "patched_logit_diff": -0.0041294097900390625,
+        "recovery": 1.130763288798329
+      },
+      "L8H7": {
+        "patched_logit_diff": -0.5285129547119141,
+        "recovery": 1.6145214730511317
+      },
+      "L8H8": {
+        "patched_logit_diff": 0.03912544250488281,
+        "recovery": 1.090859502707116
+      },
+      "L8H9": {
+        "patched_logit_diff": 0.1537628173828125,
+        "recovery": 0.9851033842028305
+      },
+      "L8H10": {
+        "patched_logit_diff": -0.49158287048339844,
+        "recovery": 1.580452458751014
+      },
+      "L8H11": {
+        "patched_logit_diff": 0.25225257873535156,
+        "recovery": 0.8942438814957145
+      },
+      "L9H0": {
+        "patched_logit_diff": 0.33968353271484375,
+        "recovery": 0.8135864315162137
+      },
+      "L9H1": {
+        "patched_logit_diff": 0.14879608154296875,
+        "recovery": 0.9896853340653192
+      },
+      "L9H2": {
+        "patched_logit_diff": 0.1303424835205078,
+        "recovery": 1.0067092837272156
+      },
+      "L9H3": {
+        "patched_logit_diff": -0.181976318359375,
+        "recovery": 1.2948319335863612
+      },
+      "L9H4": {
+        "patched_logit_diff": -0.10509300231933594,
+        "recovery": 1.2239049685298873
+      },
+      "L9H5": {
+        "patched_logit_diff": 0.36841392517089844,
+        "recovery": 0.7870818574844674
+      },
+      "L9H6": {
+        "patched_logit_diff": -0.08349990844726562,
+        "recovery": 1.203984747948768
+      },
+      "L9H7": {
+        "patched_logit_diff": -0.6218738555908203,
+        "recovery": 1.7006494614801246
+      },
+      "L9H8": {
+        "patched_logit_diff": -0.0814666748046875,
+        "recovery": 1.2021090342185787
+      },
+      "L9H9": {
+        "patched_logit_diff": 0.20969772338867188,
+        "recovery": 0.93350190122766
+      },
+      "L9H10": {
+        "patched_logit_diff": 0.14636993408203125,
+        "recovery": 0.9919235215557515
+      },
+      "L9H11": {
+        "patched_logit_diff": 0.4242897033691406,
+        "recovery": 0.7355349215314693
+      },
+      "L10H0": {
+        "patched_logit_diff": 0.22122764587402344,
+        "recovery": 0.9228652319040254
+      },
+      "L10H1": {
+        "patched_logit_diff": -0.07545280456542969,
+        "recovery": 1.196561074189229
+      },
+      "L10H2": {
+        "patched_logit_diff": 0.11570549011230469,
+        "recovery": 1.020212311086946
+      },
+      "L10H3": {
+        "patched_logit_diff": -0.08061599731445312,
+        "recovery": 1.201324260931839
+      },
+      "L10H4": {
+        "patched_logit_diff": -0.18605804443359375,
+        "recovery": 1.298597437697623
+      },
+      "L10H5": {
+        "patched_logit_diff": 0.4053173065185547,
+        "recovery": 0.7530374773233952
+      },
+      "L10H6": {
+        "patched_logit_diff": -0.11666679382324219,
+        "recovery": 1.2345821082248112
+      },
+      "L10H7": {
+        "patched_logit_diff": -0.40888023376464844,
+        "recovery": 1.5041570109639515
+      },
+      "L10H8": {
+        "patched_logit_diff": -0.123565673828125,
+        "recovery": 1.240946514005388
+      },
+      "L10H9": {
+        "patched_logit_diff": 0.13840866088867188,
+        "recovery": 0.9992680141540725
+      },
+      "L10H10": {
+        "patched_logit_diff": 0.09059524536132812,
+        "recovery": 1.043377199696648
+      },
+      "L10H11": {
+        "patched_logit_diff": 0.24566078186035156,
+        "recovery": 0.9003249946772663
+      },
+      "L11H0": {
+        "patched_logit_diff": 0.18781280517578125,
+        "recovery": 0.9536913377569208
+      },
+      "L11H1": {
+        "patched_logit_diff": -0.09531211853027344,
+        "recovery": 1.214881835313742
+      },
+      "L11H2": {
+        "patched_logit_diff": -0.21640586853027344,
+        "recovery": 1.3265941367229908
+      },
+      "L11H3": {
+        "patched_logit_diff": 0.15468978881835938,
+        "recovery": 0.9842482276616747
+      },
+      "L11H4": {
+        "patched_logit_diff": -0.10759353637695312,
+        "recovery": 1.2262117796933754
+      },
+      "L11H5": {
+        "patched_logit_diff": 0.1570587158203125,
+        "recovery": 0.9820628276120545
+      },
+      "L11H6": {
+        "patched_logit_diff": 0.0023593902587890625,
+        "recovery": 1.124777193010239
+      },
+      "L11H7": {
+        "patched_logit_diff": -0.14685821533203125,
+        "recovery": 1.2624345215786261
+      },
+      "L11H8": {
+        "patched_logit_diff": -0.1788787841796875,
+        "recovery": 1.291974373457067
+      },
+      "L11H9": {
+        "patched_logit_diff": 0.17046165466308594,
+        "recovery": 0.9696982493925045
+      },
+      "L11H10": {
+        "patched_logit_diff": -0.09523391723632812,
+        "recovery": 1.2148096924779657
+      },
+      "L11H11": {
+        "patched_logit_diff": 0.30166053771972656,
+        "recovery": 0.8486636859358422
+      }
+    },
+    "vb1_0001": {
+      "L0H0": {
+        "patched_logit_diff": 0.6332912445068359,
+        "recovery": 0.981082562512738
+      },
+      "L0H1": {
+        "patched_logit_diff": 0.6778678894042969,
+        "recovery": 1.010667642244724
+      },
+      "L0H2": {
+        "patched_logit_diff": 0.6964817047119141,
+        "recovery": 1.0230214479485644
+      },
+      "L0H3": {
+        "patched_logit_diff": 0.6752147674560547,
+        "recovery": 1.0089067913651215
+      },
+      "L0H4": {
+        "patched_logit_diff": 0.6868667602539062,
+        "recovery": 1.0166401041066688
+      },
+      "L0H5": {
+        "patched_logit_diff": 0.6738986968994141,
+        "recovery": 1.0080333283119758
+      },
+      "L0H6": {
+        "patched_logit_diff": 0.6931343078613281,
+        "recovery": 1.0207998136612153
+      },
+      "L0H7": {
+        "patched_logit_diff": 0.6697654724121094,
+        "recovery": 1.0052901479697047
+      },
+      "L0H8": {
+        "patched_logit_diff": 0.6810531616210938,
+        "recovery": 1.0127816760110335
+      },
+      "L0H9": {
+        "patched_logit_diff": 0.64788818359375,
+        "recovery": 0.9907704070717595
+      },
+      "L0H10": {
+        "patched_logit_diff": 0.6904754638671875,
+        "recovery": 1.0190351651161642
+      },
+      "L0H11": {
+        "patched_logit_diff": 0.6812705993652344,
+        "recovery": 1.012925987298075
+      },
+      "L1H0": {
+        "patched_logit_diff": 0.6125564575195312,
+        "recovery": 0.9673210888160019
+      },
+      "L1H1": {
+        "patched_logit_diff": 0.6581764221191406,
+        "recovery": 0.9975986095480904
+      },
+      "L1H2": {
+        "patched_logit_diff": 0.7018318176269531,
+        "recovery": 1.0265722651428746
+      },
+      "L1H3": {
+        "patched_logit_diff": 0.6753196716308594,
+        "recovery": 1.0089764152316765
+      },
+      "L1H4": {
+        "patched_logit_diff": 0.6383838653564453,
+        "recovery": 0.9844624847618674
+      },
+      "L1H5": {
+        "patched_logit_diff": 0.6482448577880859,
+        "recovery": 0.9910071282180467
+      },
+      "L1H6": {
+        "patched_logit_diff": 0.6289901733398438,
+        "recovery": 0.9782279839839789
+      },
+      "L1H7": {
+        "patched_logit_diff": 0.675567626953125,
+        "recovery": 1.0091409807344431
+      },
+      "L1H8": {
+        "patched_logit_diff": 0.7135982513427734,
+        "recovery": 1.034381531193391
+      },
+      "L1H9": {
+        "patched_logit_diff": 0.6512737274169922,
+        "recovery": 0.9930173591287649
+      },
+      "L1H10": {
+        "patched_logit_diff": 0.6709957122802734,
+        "recovery": 1.0061066460411237
+      },
+      "L1H11": {
+        "patched_logit_diff": 0.7001876831054688,
+        "recovery": 1.0254810692706837
+      },
+      "L2H0": {
+        "patched_logit_diff": 0.6065349578857422,
+        "recovery": 0.9633246788757391
+      },
+      "L2H1": {
+        "patched_logit_diff": 0.6346092224121094,
+        "recovery": 0.9819572914543666
+      },
+      "L2H2": {
+        "patched_logit_diff": 0.7134132385253906,
+        "recovery": 1.0342587400105576
+      },
+      "L2H3": {
+        "patched_logit_diff": 0.65460205078125,
+        "recovery": 0.9952263345312858
+      },
+      "L2H4": {
+        "patched_logit_diff": 0.6635589599609375,
+        "recovery": 1.0011709468466086
+      },
+      "L2H5": {
+        "patched_logit_diff": 0.6327362060546875,
+        "recovery": 0.9807141889642373
+      },
+      "L2H6": {
+        "patched_logit_diff": 0.5982379913330078,
+        "recovery": 0.9578180639754721
+      },
+      "L2H7": {
+        "patched_logit_diff": 0.6477546691894531,
+        "recovery": 0.990681794877962
+      },
+      "L2H8": {
+        "patched_logit_diff": 0.6898212432861328,
+        "recovery": 1.018600965366557
+      },
+      "L2H9": {
+        "patched_logit_diff": 0.6586189270019531,
+        "recovery": 0.9978922956761047
+      },
+      "L2H10": {
+        "patched_logit_diff": 0.7187080383300781,
+        "recovery": 1.0377728464388658
+      },
+      "L2H11": {
+        "patched_logit_diff": 0.6773185729980469,
+        "recovery": 1.0103030663616719
+      },
+      "L3H0": {
+        "patched_logit_diff": 0.5903587341308594,
+        "recovery": 0.9525886786529427
+      },
+      "L3H1": {
+        "patched_logit_diff": 0.6519432067871094,
+        "recovery": 0.9934616859862347
+      },
+      "L3H2": {
+        "patched_logit_diff": 0.6760463714599609,
+        "recovery": 1.009458718743631
+      },
+      "L3H3": {
+        "patched_logit_diff": 0.6019783020019531,
+        "recovery": 0.9603004712902822
+      },
+      "L3H4": {
+        "patched_logit_diff": 0.6099872589111328,
+        "recovery": 0.9656159370296433
+      },
+      "L3H5": {
+        "patched_logit_diff": 0.6246986389160156,
+        "recovery": 0.975379734897634
+      },
+      "L3H6": {
+        "patched_logit_diff": 0.6148147583007812,
+        "recovery": 0.9688199007796607
+      },
+      "L3H7": {
+        "patched_logit_diff": 0.6621417999267578,
+        "recovery": 1.0002303917038733
+      },
+      "L3H8": {
+        "patched_logit_diff": 0.6629123687744141,
+        "recovery": 1.0007418106509325
+      },
+      "L3H9": {
+        "patched_logit_diff": 0.6620769500732422,
+        "recovery": 1.0001873514954573
+      },
+      "L3H10": {
+        "patched_logit_diff": 0.7506370544433594,
+        "recovery": 1.0589638196412725
+      },
+      "L3H11": {
+        "patched_logit_diff": 0.6557197570800781,
+        "recovery": 0.9959681451822183
+      },
+      "L4H0": {
+        "patched_logit_diff": 0.5390205383300781,
+        "recovery": 0.9185160242493597
+      },
+      "L4H1": {
+        "patched_logit_diff": 0.6990165710449219,
+        "recovery": 1.0247038137422322
+      },
+      "L4H2": {
+        "patched_logit_diff": 0.7189769744873047,
+        "recovery": 1.0379513367149433
+      },
+      "L4H3": {
+        "patched_logit_diff": 0.57891845703125,
+        "recovery": 0.9449958795329885
+      },
+      "L4H4": {
+        "patched_logit_diff": 0.6200447082519531,
+        "recovery": 0.9722909669995532
+      },
+      "L4H5": {
+        "patched_logit_diff": 0.6613540649414062,
+        "recovery": 0.9997075797604685
+      },
+      "L4H6": {
+        "patched_logit_diff": 0.6509609222412109,
+        "recovery": 0.9928097534175825
+      },
+      "L4H7": {
+        "patched_logit_diff": 0.6678447723388672,
+        "recovery": 1.004015398267505
+      },
+      "L4H8": {
+        "patched_logit_diff": 0.6414756774902344,
+        "recovery": 0.9865144899925186
+      },
+      "L4H9": {
+        "patched_logit_diff": 0.6682243347167969,
+        "recovery": 1.0042673100755861
+      },
+      "L4H10": {
+        "patched_logit_diff": 0.7761192321777344,
+        "recovery": 1.0758760897717476
+      },
+      "L4H11": {
+        "patched_logit_diff": 0.6380691528320312,
+        "recovery": 0.9842536131622021
+      },
+      "L5H0": {
+        "patched_logit_diff": 0.6808242797851562,
+        "recovery": 1.012629769393095
+      },
+      "L5H1": {
+        "patched_logit_diff": 0.6222496032714844,
+        "recovery": 0.973754334085693
+      },
+      "L5H2": {
+        "patched_logit_diff": 0.6588268280029297,
+        "recovery": 0.998030277520732
+      },
+      "L5H3": {
+        "patched_logit_diff": 0.5575046539306641,
+        "recovery": 0.9307837495363683
+      },
+      "L5H4": {
+        "patched_logit_diff": 0.6340961456298828,
+        "recovery": 0.981616767452488
+      },
+      "L5H5": {
+        "patched_logit_diff": 0.5908641815185547,
+        "recovery": 0.95292413910089
+      },
+      "L5H6": {
+        "patched_logit_diff": 0.7271938323974609,
+        "recovery": 1.043404784298932
+      },
+      "L5H7": {
+        "patched_logit_diff": 0.6616992950439453,
+        "recovery": 0.999936705575859
+      },
+      "L5H8": {
+        "patched_logit_diff": 0.7293300628662109,
+        "recovery": 1.0448225793996904
+      },
+      "L5H9": {
+        "patched_logit_diff": 0.6557636260986328,
+        "recovery": 0.9959972606173232
+      },
+      "L5H10": {
+        "patched_logit_diff": 0.6818351745605469,
+        "recovery": 1.0133006902889896
+      },
+      "L5H11": {
+        "patched_logit_diff": 0.6280651092529297,
+        "recovery": 0.9776140280698112
+      },
+      "L6H0": {
+        "patched_logit_diff": 0.6607093811035156,
+        "recovery": 0.9992797094532754
+      },
+      "L6H1": {
+        "patched_logit_diff": 0.6727523803710938,
+        "recovery": 1.007272529333801
+      },
+      "L6H2": {
+        "patched_logit_diff": 0.5988311767578125,
+        "recovery": 0.9582117552936291
+      },
+      "L6H3": {
+        "patched_logit_diff": 0.6256999969482422,
+        "recovery": 0.9760443263511144
+      },
+      "L6H4": {
+        "patched_logit_diff": 0.6489067077636719,
+        "recovery": 0.9914463915215853
+      },
+      "L6H5": {
+        "patched_logit_diff": 0.6164970397949219,
+        "recovery": 0.9699364144215079
+      },
+      "L6H6": {
+        "patched_logit_diff": 0.6456279754638672,
+        "recovery": 0.9892703292196178
+      },
+      "L6H7": {
+        "patched_logit_diff": 0.644744873046875,
+        "recovery": 0.988684222852072
+      },
+      "L6H8": {
+        "patched_logit_diff": 0.7324047088623047,
+        "recovery": 1.046863191633996
+      },
+      "L6H9": {
+        "patched_logit_diff": 0.6294536590576172,
+        "recovery": 0.9785355948853042
+      },
+      "L6H10": {
+        "patched_logit_diff": 0.7095470428466797,
+        "recovery": 1.0316927840558814
+      },
+      "L6H11": {
+        "patched_logit_diff": 0.6715450286865234,
+        "recovery": 1.0064712219241758
+      },
+      "L7H0": {
+        "patched_logit_diff": 0.6311740875244141,
+        "recovery": 0.9796774262968078
+      },
+      "L7H1": {
+        "patched_logit_diff": 0.7115802764892578,
+        "recovery": 1.0330422211785675
+      },
+      "L7H2": {
+        "patched_logit_diff": 0.6570625305175781,
+        "recovery": 0.9968593306741236
+      },
+      "L7H3": {
+        "patched_logit_diff": 0.6244163513183594,
+        "recovery": 0.9751923834021766
+      },
+      "L7H4": {
+        "patched_logit_diff": 0.6874752044677734,
+        "recovery": 1.0170439225326884
+      },
+      "L7H5": {
+        "patched_logit_diff": 0.6044387817382812,
+        "recovery": 0.9619334674331199
+      },
+      "L7H6": {
+        "patched_logit_diff": 0.6305484771728516,
+        "recovery": 0.9792622148744429
+      },
+      "L7H7": {
+        "patched_logit_diff": 0.6729698181152344,
+        "recovery": 1.0074168406208424
+      },
+      "L7H8": {
+        "patched_logit_diff": 0.6837043762207031,
+        "recovery": 1.0145412610021534
+      },
+      "L7H9": {
+        "patched_logit_diff": 0.6149005889892578,
+        "recovery": 0.9688768657613877
+      },
+      "L7H10": {
+        "patched_logit_diff": 0.7144222259521484,
+        "recovery": 1.0349283950179693
+      },
+      "L7H11": {
+        "patched_logit_diff": 0.6109962463378906,
+        "recovery": 0.9662855920370551
+      },
+      "L8H0": {
+        "patched_logit_diff": 0.6511344909667969,
+        "recovery": 0.992924949269519
+      },
+      "L8H1": {
+        "patched_logit_diff": 0.6798839569091797,
+        "recovery": 1.012005686371065
+      },
+      "L8H2": {
+        "patched_logit_diff": 0.6269149780273438,
+        "recovery": 0.9768506973146708
+      },
+      "L8H3": {
+        "patched_logit_diff": 0.6150188446044922,
+        "recovery": 0.9689553508473224
+      },
+      "L8H4": {
+        "patched_logit_diff": 0.674774169921875,
+        "recovery": 1.0086143711255902
+      },
+      "L8H5": {
+        "patched_logit_diff": 0.667327880859375,
+        "recovery": 1.0036723424886609
+      },
+      "L8H6": {
+        "patched_logit_diff": 0.6203727722167969,
+        "recovery": 0.9725086998185982
+      },
+      "L8H7": {
+        "patched_logit_diff": 0.7141494750976562,
+        "recovery": 1.0347473729649261
+      },
+      "L8H8": {
+        "patched_logit_diff": 0.69854736328125,
+        "recovery": 1.0243924051754585
+      },
+      "L8H9": {
+        "patched_logit_diff": 0.5703258514404297,
+        "recovery": 0.9392930519178844
+      },
+      "L8H10": {
+        "patched_logit_diff": 0.6903324127197266,
+        "recovery": 1.0189402234799527
+      },
+      "L8H11": {
+        "patched_logit_diff": 0.6537303924560547,
+        "recovery": 0.9946478234946371
+      },
+      "L9H0": {
+        "patched_logit_diff": 0.6915626525878906,
+        "recovery": 1.0197567215513716
+      },
+      "L9H1": {
+        "patched_logit_diff": 0.6465663909912109,
+        "recovery": 0.9898931463531652
+      },
+      "L9H2": {
+        "patched_logit_diff": 0.6650123596191406,
+        "recovery": 1.0021355538705172
+      },
+      "L9H3": {
+        "patched_logit_diff": 0.598388671875,
+        "recovery": 0.957918069165615
+      },
+      "L9H4": {
+        "patched_logit_diff": 0.6197738647460938,
+        "recovery": 0.9721112108349927
+      },
+      "L9H5": {
+        "patched_logit_diff": 0.6827831268310547,
+        "recovery": 1.0139298368649512
+      },
+      "L9H6": {
+        "patched_logit_diff": 0.5483856201171875,
+        "recovery": 0.924731536700006
+      },
+      "L9H7": {
+        "patched_logit_diff": 0.721954345703125,
+        "recovery": 1.0399273886366254
+      },
+      "L9H8": {
+        "patched_logit_diff": 0.6490974426269531,
+        "recovery": 0.9915729803698673
+      },
+      "L9H9": {
+        "patched_logit_diff": 0.5894374847412109,
+        "recovery": 0.9519772545157407
+      },
+      "L9H10": {
+        "patched_logit_diff": 0.6748085021972656,
+        "recovery": 1.0086371571182808
+      },
+      "L9H11": {
+        "patched_logit_diff": 0.6245613098144531,
+        "recovery": 0.9752885909268709
+      },
+      "L10H0": {
+        "patched_logit_diff": 0.7310695648193359,
+        "recovery": 1.0459770696960222
+      },
+      "L10H1": {
+        "patched_logit_diff": 0.6096935272216797,
+        "recovery": 0.9654209902032891
+      },
+      "L10H2": {
+        "patched_logit_diff": 0.5960578918457031,
+        "recovery": 0.9563711534396089
+      },
+      "L10H3": {
+        "patched_logit_diff": 0.6447200775146484,
+        "recovery": 0.9886677663017954
+      },
+      "L10H4": {
+        "patched_logit_diff": 0.650482177734375,
+        "recovery": 0.9924920154083946
+      },
+      "L10H5": {
+        "patched_logit_diff": 0.6286678314208984,
+        "recovery": 0.9780140488303823
+      },
+      "L10H6": {
+        "patched_logit_diff": 0.5704097747802734,
+        "recovery": 0.9393487510111285
+      },
+      "L10H7": {
+        "patched_logit_diff": 0.6795368194580078,
+        "recovery": 1.0117752946671916
+      },
+      "L10H8": {
+        "patched_logit_diff": 0.6297016143798828,
+        "recovery": 0.9787001603880707
+      },
+      "L10H9": {
+        "patched_logit_diff": 0.615997314453125,
+        "recovery": 0.9696047516390092
+      },
+      "L10H10": {
+        "patched_logit_diff": 0.6799774169921875,
+        "recovery": 1.012067714906723
+      },
+      "L10H11": {
+        "patched_logit_diff": 0.6434516906738281,
+        "recovery": 0.9878259504607201
+      },
+      "L11H0": {
+        "patched_logit_diff": 0.7114944458007812,
+        "recovery": 1.0329852561968407
+      },
+      "L11H1": {
+        "patched_logit_diff": 0.6338272094726562,
+        "recovery": 0.9814382771764104
+      },
+      "L11H2": {
+        "patched_logit_diff": 0.5757312774658203,
+        "recovery": 0.9428805798781962
+      },
+      "L11H3": {
+        "patched_logit_diff": 0.6615200042724609,
+        "recovery": 0.9998177120584739
+      },
+      "L11H4": {
+        "patched_logit_diff": 0.6426544189453125,
+        "recovery": 0.9872968090749014
+      },
+      "L11H5": {
+        "patched_logit_diff": 0.6545829772949219,
+        "recovery": 0.9952136756464576
+      },
+      "L11H6": {
+        "patched_logit_diff": 0.5782032012939453,
+        "recovery": 0.9445211713519309
+      },
+      "L11H7": {
+        "patched_logit_diff": 0.6740646362304688,
+        "recovery": 1.008143460609981
+      },
+      "L11H8": {
+        "patched_logit_diff": 0.6305503845214844,
+        "recovery": 0.9792634807629257
+      },
+      "L11H9": {
+        "patched_logit_diff": 0.6492919921875,
+        "recovery": 0.9917021009951149
+      },
+      "L11H10": {
+        "patched_logit_diff": 0.6491737365722656,
+        "recovery": 0.9916236159091801
+      },
+      "L11H11": {
+        "patched_logit_diff": 0.6460514068603516,
+        "recovery": 0.9895513564628038
+      }
+    },
+    "vb1_0002": {
+      "L0H0": {
+        "patched_logit_diff": 0.9055070877075195,
+        "recovery": 0.8869928238209028
+      },
+      "L0H1": {
+        "patched_logit_diff": 1.0548906326293945,
+        "recovery": 0.9701161465887014
+      },
+      "L0H2": {
+        "patched_logit_diff": 1.218008041381836,
+        "recovery": 1.060881572083639
+      },
+      "L0H3": {
+        "patched_logit_diff": 0.9757375717163086,
+        "recovery": 0.9260720356139711
+      },
+      "L0H4": {
+        "patched_logit_diff": 1.128809928894043,
+        "recovery": 1.01124796954409
+      },
+      "L0H5": {
+        "patched_logit_diff": 0.9795217514038086,
+        "recovery": 0.928177713248947
+      },
+      "L0H6": {
+        "patched_logit_diff": 0.9853439331054688,
+        "recovery": 0.9314174214045741
+      },
+      "L0H7": {
+        "patched_logit_diff": 0.8612823486328125,
+        "recovery": 0.8623843084563017
+      },
+      "L0H8": {
+        "patched_logit_diff": 1.0836458206176758,
+        "recovery": 0.9861167494238308
+      },
+      "L0H9": {
+        "patched_logit_diff": 1.0535783767700195,
+        "recovery": 0.9693859519249598
+      },
+      "L0H10": {
+        "patched_logit_diff": 0.961024284362793,
+        "recovery": 0.9178849402126585
+      },
+      "L0H11": {
+        "patched_logit_diff": 0.9958915710449219,
+        "recovery": 0.9372865732802881
+      },
+      "L1H0": {
+        "patched_logit_diff": 0.9278030395507812,
+        "recovery": 0.8993992344630655
+      },
+      "L1H1": {
+        "patched_logit_diff": 1.3288164138793945,
+        "recovery": 1.122540037326957
+      },
+      "L1H2": {
+        "patched_logit_diff": 1.3262147903442383,
+        "recovery": 1.121092383952911
+      },
+      "L1H3": {
+        "patched_logit_diff": 0.988581657409668,
+        "recovery": 0.933219028151233
+      },
+      "L1H4": {
+        "patched_logit_diff": 1.262711524963379,
+        "recovery": 1.0857564811409717
+      },
+      "L1H5": {
+        "patched_logit_diff": 0.939997673034668,
+        "recovery": 0.9061848443215424
+      },
+      "L1H6": {
+        "patched_logit_diff": 1.0038213729858398,
+        "recovery": 0.9416990504816047
+      },
+      "L1H7": {
+        "patched_logit_diff": 0.8427915573120117,
+        "recovery": 0.852095250073099
+      },
+      "L1H8": {
+        "patched_logit_diff": 0.9964513778686523,
+        "recovery": 0.9375980734747767
+      },
+      "L1H9": {
+        "patched_logit_diff": 0.966517448425293,
+        "recovery": 0.9209415690376236
+      },
+      "L1H10": {
+        "patched_logit_diff": 1.0409259796142578,
+        "recovery": 0.9623456229977356
+      },
+      "L1H11": {
+        "patched_logit_diff": 1.0061330795288086,
+        "recovery": 0.9429853817787776
+      },
+      "L2H0": {
+        "patched_logit_diff": 0.8432149887084961,
+        "recovery": 0.8523308652116901
+      },
+      "L2H1": {
+        "patched_logit_diff": 1.1900568008422852,
+        "recovery": 1.0453283196129968
+      },
+      "L2H2": {
+        "patched_logit_diff": 1.2620229721069336,
+        "recovery": 1.085373341208398
+      },
+      "L2H3": {
+        "patched_logit_diff": 0.7978601455688477,
+        "recovery": 0.8270935121461196
+      },
+      "L2H4": {
+        "patched_logit_diff": 1.153390884399414,
+        "recovery": 1.0249258528710818
+      },
+      "L2H5": {
+        "patched_logit_diff": 0.951573371887207,
+        "recovery": 0.9126260527724844
+      },
+      "L2H6": {
+        "patched_logit_diff": 1.2456636428833008,
+        "recovery": 1.076270318489049
+      },
+      "L2H7": {
+        "patched_logit_diff": 0.852229118347168,
+        "recovery": 0.8573467082071015
+      },
+      "L2H8": {
+        "patched_logit_diff": 0.8907337188720703,
+        "recovery": 0.8787722965418172
+      },
+      "L2H9": {
+        "patched_logit_diff": 1.0451316833496094,
+        "recovery": 0.9646858544418495
+      },
+      "L2H10": {
+        "patched_logit_diff": 1.3844308853149414,
+        "recovery": 1.1534862815208213
+      },
+      "L2H11": {
+        "patched_logit_diff": 1.0287666320800781,
+        "recovery": 0.9555796477341412
+      },
+      "L3H0": {
+        "patched_logit_diff": 0.8515901565551758,
+        "recovery": 0.8569911628403086
+      },
+      "L3H1": {
+        "patched_logit_diff": 1.1204900741577148,
+        "recovery": 1.0066184504696118
+      },
+      "L3H2": {
+        "patched_logit_diff": 0.9769306182861328,
+        "recovery": 0.9267358971868932
+      },
+      "L3H3": {
+        "patched_logit_diff": 0.8125524520874023,
+        "recovery": 0.835268932923448
+      },
+      "L3H4": {
+        "patched_logit_diff": 1.214944839477539,
+        "recovery": 1.05917707698194
+      },
+      "L3H5": {
+        "patched_logit_diff": 0.9352502822875977,
+        "recovery": 0.9035431953127446
+      },
+      "L3H6": {
+        "patched_logit_diff": 1.1526212692260742,
+        "recovery": 1.0244976064367508
+      },
+      "L3H7": {
+        "patched_logit_diff": 0.7130212783813477,
+        "recovery": 0.7798855780716599
+      },
+      "L3H8": {
+        "patched_logit_diff": 0.813532829284668,
+        "recovery": 0.835814456262348
+      },
+      "L3H9": {
+        "patched_logit_diff": 1.168442726135254,
+        "recovery": 1.033301334250322
+      },
+      "L3H10": {
+        "patched_logit_diff": 1.934194564819336,
+        "recovery": 1.459398045774078
+      },
+      "L3H11": {
+        "patched_logit_diff": 0.9156770706176758,
+        "recovery": 0.8926518324649005
+      },
+      "L4H0": {
+        "patched_logit_diff": 0.9557409286499023,
+        "recovery": 0.914945057627536
+      },
+      "L4H1": {
+        "patched_logit_diff": 1.2161340713500977,
+        "recovery": 1.0598388158959557
+      },
+      "L4H2": {
+        "patched_logit_diff": 0.8685331344604492,
+        "recovery": 0.8664189523723101
+      },
+      "L4H3": {
+        "patched_logit_diff": 0.6854963302612305,
+        "recovery": 0.7645695327337884
+      },
+      "L4H4": {
+        "patched_logit_diff": 1.0759916305541992,
+        "recovery": 0.9818576343284889
+      },
+      "L4H5": {
+        "patched_logit_diff": 0.905085563659668,
+        "recovery": 0.8867582700117649
+      },
+      "L4H6": {
+        "patched_logit_diff": 1.2990007400512695,
+        "recovery": 1.1059493353158967
+      },
+      "L4H7": {
+        "patched_logit_diff": 0.5298643112182617,
+        "recovery": 0.677969294677592
+      },
+      "L4H8": {
+        "patched_logit_diff": 0.8224754333496094,
+        "recovery": 0.8407904994032676
+      },
+      "L4H9": {
+        "patched_logit_diff": 1.1931734085083008,
+        "recovery": 1.0470625319393831
+      },
+      "L4H10": {
+        "patched_logit_diff": 1.868673324584961,
+        "recovery": 1.4229392564007453
+      },
+      "L4H11": {
+        "patched_logit_diff": 0.9308185577392578,
+        "recovery": 0.9010771963284369
+      },
+      "L5H0": {
+        "patched_logit_diff": 0.9453363418579102,
+        "recovery": 0.9091555054608054
+      },
+      "L5H1": {
+        "patched_logit_diff": 1.359023094177246,
+        "recovery": 1.1393483118759051
+      },
+      "L5H2": {
+        "patched_logit_diff": 0.8816385269165039,
+        "recovery": 0.8737113470446486
+      },
+      "L5H3": {
+        "patched_logit_diff": 0.9738941192626953,
+        "recovery": 0.9250462606975376
+      },
+      "L5H4": {
+        "patched_logit_diff": 0.8446273803710938,
+        "recovery": 0.8531167796717202
+      },
+      "L5H5": {
+        "patched_logit_diff": 0.8141908645629883,
+        "recovery": 0.8361806149236718
+      },
+      "L5H6": {
+        "patched_logit_diff": 1.180781364440918,
+        "recovery": 1.0401670744825091
+      },
+      "L5H7": {
+        "patched_logit_diff": 0.7092819213867188,
+        "recovery": 0.7778048416788321
+      },
+      "L5H8": {
+        "patched_logit_diff": 0.8554182052612305,
+        "recovery": 0.8591212510527062
+      },
+      "L5H9": {
+        "patched_logit_diff": 1.2608928680419922,
+        "recovery": 1.0847445035074286
+      },
+      "L5H10": {
+        "patched_logit_diff": 1.4925575256347656,
+        "recovery": 1.2136525175530626
+      },
+      "L5H11": {
+        "patched_logit_diff": 1.1434106826782227,
+        "recovery": 1.019372446507669
+      },
+      "L6H0": {
+        "patched_logit_diff": 1.1689510345458984,
+        "recovery": 1.0335841785495765
+      },
+      "L6H1": {
+        "patched_logit_diff": 1.3268585205078125,
+        "recovery": 1.1214505826433365
+      },
+      "L6H2": {
+        "patched_logit_diff": 0.9089221954345703,
+        "recovery": 0.8888931342067014
+      },
+      "L6H3": {
+        "patched_logit_diff": 0.9901885986328125,
+        "recovery": 0.9341131982154807
+      },
+      "L6H4": {
+        "patched_logit_diff": 0.8400545120239258,
+        "recovery": 0.8505722423078821
+      },
+      "L6H5": {
+        "patched_logit_diff": 0.722203254699707,
+        "recovery": 0.7849948180589452
+      },
+      "L6H6": {
+        "patched_logit_diff": 1.5009984970092773,
+        "recovery": 1.2183494310478133
+      },
+      "L6H7": {
+        "patched_logit_diff": 0.7665481567382812,
+        "recovery": 0.8096701971790925
+      },
+      "L6H8": {
+        "patched_logit_diff": 0.9928884506225586,
+        "recovery": 0.9356155100563619
+      },
+      "L6H9": {
+        "patched_logit_diff": 1.2661848068237305,
+        "recovery": 1.0876891620750901
+      },
+      "L6H10": {
+        "patched_logit_diff": 1.146815299987793,
+        "recovery": 1.0212669195814754
+      },
+      "L6H11": {
+        "patched_logit_diff": 1.0849237442016602,
+        "recovery": 0.9868278401574164
+      },
+      "L7H0": {
+        "patched_logit_diff": 1.117690086364746,
+        "recovery": 1.0050604188324421
+      },
+      "L7H1": {
+        "patched_logit_diff": 1.4630041122436523,
+        "recovery": 1.1972077483418053
+      },
+      "L7H2": {
+        "patched_logit_diff": 1.0941133499145508,
+        "recovery": 0.9919413254625141
+      },
+      "L7H3": {
+        "patched_logit_diff": 1.0055456161499023,
+        "recovery": 0.9426584923072188
+      },
+      "L7H4": {
+        "patched_logit_diff": 1.1655073165893555,
+        "recovery": 1.0316679482219813
+      },
+      "L7H5": {
+        "patched_logit_diff": 0.7506952285766602,
+        "recovery": 0.800848957429545
+      },
+      "L7H6": {
+        "patched_logit_diff": 1.194249153137207,
+        "recovery": 1.0476611217509388
+      },
+      "L7H7": {
+        "patched_logit_diff": 0.7301969528198242,
+        "recovery": 0.7894428497969411
+      },
+      "L7H8": {
+        "patched_logit_diff": 0.9050569534301758,
+        "recovery": 0.8867423500699682
+      },
+      "L7H9": {
+        "patched_logit_diff": 1.0944547653198242,
+        "recovery": 0.9921313034346213
+      },
+      "L7H10": {
+        "patched_logit_diff": 1.2596435546875,
+        "recovery": 1.0840493327156395
+      },
+      "L7H11": {
+        "patched_logit_diff": 0.9227771759033203,
+        "recovery": 0.8966026313541131
+      },
+      "L8H0": {
+        "patched_logit_diff": 1.0856828689575195,
+        "recovery": 0.9872502492797554
+      },
+      "L8H1": {
+        "patched_logit_diff": 1.3311452865600586,
+        "recovery": 1.1238359205892077
+      },
+      "L8H2": {
+        "patched_logit_diff": 1.0141305923461914,
+        "recovery": 0.9474355361756798
+      },
+      "L8H3": {
+        "patched_logit_diff": 1.1619958877563477,
+        "recovery": 1.0297140406988006
+      },
+      "L8H4": {
+        "patched_logit_diff": 0.9350881576538086,
+        "recovery": 0.90345298230923
+      },
+      "L8H5": {
+        "patched_logit_diff": 0.9729833602905273,
+        "recovery": 0.9245394758836761
+      },
+      "L8H6": {
+        "patched_logit_diff": 1.2200937271118164,
+        "recovery": 1.062042135840618
+      },
+      "L8H7": {
+        "patched_logit_diff": 0.6654272079467773,
+        "recovery": 0.7534022242281349
+      },
+      "L8H8": {
+        "patched_logit_diff": 0.8167829513549805,
+        "recovery": 0.8376229616504522
+      },
+      "L8H9": {
+        "patched_logit_diff": 1.3172283172607422,
+        "recovery": 1.1160919302345698
+      },
+      "L8H10": {
+        "patched_logit_diff": 1.2569866180419922,
+        "recovery": 1.0825709007874533
+      },
+      "L8H11": {
+        "patched_logit_diff": 0.9570550918579102,
+        "recovery": 0.9156763136207308
+      },
+      "L9H0": {
+        "patched_logit_diff": 1.2545480728149414,
+        "recovery": 1.0812139910816485
+      },
+      "L9H1": {
+        "patched_logit_diff": 1.223525047302246,
+        "recovery": 1.063951467526768
+      },
+      "L9H2": {
+        "patched_logit_diff": 1.2221202850341797,
+        "recovery": 1.0631697983845505
+      },
+      "L9H3": {
+        "patched_logit_diff": 1.2376718521118164,
+        "recovery": 1.0718233480805062
+      },
+      "L9H4": {
+        "patched_logit_diff": 1.0589628219604492,
+        "recovery": 0.9723820849710973
+      },
+      "L9H5": {
+        "patched_logit_diff": 1.0895624160766602,
+        "recovery": 0.9894089933873869
+      },
+      "L9H6": {
+        "patched_logit_diff": 1.1627721786499023,
+        "recovery": 1.0301460017862174
+      },
+      "L9H7": {
+        "patched_logit_diff": 0.556828498840332,
+        "recovery": 0.6929733091562484
+      },
+      "L9H8": {
+        "patched_logit_diff": 0.7403402328491211,
+        "recovery": 0.7950869998285953
+      },
+      "L9H9": {
+        "patched_logit_diff": 1.3234682083129883,
+        "recovery": 1.1195640695404285
+      },
+      "L9H10": {
+        "patched_logit_diff": 1.1228227615356445,
+        "recovery": 1.0079164563907688
+      },
+      "L9H11": {
+        "patched_logit_diff": 1.1612043380737305,
+        "recovery": 1.0292735889757587
+      },
+      "L10H0": {
+        "patched_logit_diff": 1.1996393203735352,
+        "recovery": 1.0506604387854357
+      },
+      "L10H1": {
+        "patched_logit_diff": 1.0358800888061523,
+        "recovery": 0.9595378759295256
+      },
+      "L10H2": {
+        "patched_logit_diff": 1.0630998611450195,
+        "recovery": 0.9746841085548992
+      },
+      "L10H3": {
+        "patched_logit_diff": 1.3124361038208008,
+        "recovery": 1.1134253399836236
+      },
+      "L10H4": {
+        "patched_logit_diff": 0.8499860763549805,
+        "recovery": 0.8560985847702407
+      },
+      "L10H5": {
+        "patched_logit_diff": 1.5193958282470703,
+        "recovery": 1.2285864842878134
+      },
+      "L10H6": {
+        "patched_logit_diff": 0.9275674819946289,
+        "recovery": 0.8992681602756061
+      },
+      "L10H7": {
+        "patched_logit_diff": 0.7636861801147461,
+        "recovery": 0.8080776723346966
+      },
+      "L10H8": {
+        "patched_logit_diff": 0.6920928955078125,
+        "recovery": 0.7682401406473791
+      },
+      "L10H9": {
+        "patched_logit_diff": 1.338907241821289,
+        "recovery": 1.1281550007986505
+      },
+      "L10H10": {
+        "patched_logit_diff": 1.2136144638061523,
+        "recovery": 1.0584367996883937
+      },
+      "L10H11": {
+        "patched_logit_diff": 0.9627676010131836,
+        "recovery": 0.9188549953328037
+      },
+      "L11H0": {
+        "patched_logit_diff": 1.1516427993774414,
+        "recovery": 1.023953144427304
+      },
+      "L11H1": {
+        "patched_logit_diff": 1.036275863647461,
+        "recovery": 0.9597581017910465
+      },
+      "L11H2": {
+        "patched_logit_diff": 1.0287809371948242,
+        "recovery": 0.9555876077050396
+      },
+      "L11H3": {
+        "patched_logit_diff": 1.112412452697754,
+        "recovery": 1.0021237202356787
+      },
+      "L11H4": {
+        "patched_logit_diff": 0.8425350189208984,
+        "recovery": 0.8519525012616553
+      },
+      "L11H5": {
+        "patched_logit_diff": 1.452956199645996,
+        "recovery": 1.1916166647828068
+      },
+      "L11H6": {
+        "patched_logit_diff": 0.9083766937255859,
+        "recovery": 0.8885895939831111
+      },
+      "L11H7": {
+        "patched_logit_diff": 0.9838895797729492,
+        "recovery": 0.9306081576965755
+      },
+      "L11H8": {
+        "patched_logit_diff": 0.7972202301025391,
+        "recovery": 0.8267374361146003
+      },
+      "L11H9": {
+        "patched_logit_diff": 1.2861700057983398,
+        "recovery": 1.0988097720848067
+      },
+      "L11H10": {
+        "patched_logit_diff": 1.141775131225586,
+        "recovery": 1.0184623565016246
+      },
+      "L11H11": {
+        "patched_logit_diff": 1.0462331771850586,
+        "recovery": 0.9652987722010221
+      }
+    },
+    "vb1_0003": {
+      "L0H0": {
+        "patched_logit_diff": -0.03668022155761719,
+        "recovery": 1.0563479423224595
+      },
+      "L0H1": {
+        "patched_logit_diff": -0.09723091125488281,
+        "recovery": 0.8306291061118853
+      },
+      "L0H2": {
+        "patched_logit_diff": -0.058968544006347656,
+        "recovery": 0.9732622792298286
+      },
+      "L0H3": {
+        "patched_logit_diff": -0.060822486877441406,
+        "recovery": 0.9663512129916669
+      },
+      "L0H4": {
+        "patched_logit_diff": -0.06933212280273438,
+        "recovery": 0.9346292767554961
+      },
+      "L0H5": {
+        "patched_logit_diff": -0.054055213928222656,
+        "recovery": 0.9915780267910469
+      },
+      "L0H6": {
+        "patched_logit_diff": -0.07593345642089844,
+        "recovery": 0.9100210460453343
+      },
+      "L0H7": {
+        "patched_logit_diff": -0.04407501220703125,
+        "recovery": 1.0287818890247717
+      },
+      "L0H8": {
+        "patched_logit_diff": -0.04900360107421875,
+        "recovery": 1.010409260259947
+      },
+      "L0H9": {
+        "patched_logit_diff": -0.045235633850097656,
+        "recovery": 1.02445536247547
+      },
+      "L0H10": {
+        "patched_logit_diff": -0.07830524444580078,
+        "recovery": 0.901179573959785
+      },
+      "L0H11": {
+        "patched_logit_diff": -0.09858989715576172,
+        "recovery": 0.8255631239157021
+      },
+      "L1H0": {
+        "patched_logit_diff": -0.06256103515625,
+        "recovery": 0.9598703108557777
+      },
+      "L1H1": {
+        "patched_logit_diff": -0.079620361328125,
+        "recovery": 0.8962771252239697
+      },
+      "L1H2": {
+        "patched_logit_diff": -0.07341575622558594,
+        "recovery": 0.9194064446403686
+      },
+      "L1H3": {
+        "patched_logit_diff": -0.09416007995605469,
+        "recovery": 0.8420764483376468
+      },
+      "L1H4": {
+        "patched_logit_diff": -0.09320354461669922,
+        "recovery": 0.8456421887887148
+      },
+      "L1H5": {
+        "patched_logit_diff": -0.10298538208007812,
+        "recovery": 0.8091777822018714
+      },
+      "L1H6": {
+        "patched_logit_diff": -0.10109329223632812,
+        "recovery": 0.8162310514490486
+      },
+      "L1H7": {
+        "patched_logit_diff": -0.009119033813476562,
+        "recovery": 1.1590896163362816
+      },
+      "L1H8": {
+        "patched_logit_diff": -0.00676727294921875,
+        "recovery": 1.1678564318420979
+      },
+      "L1H9": {
+        "patched_logit_diff": -0.04831504821777344,
+        "recovery": 1.01297602457268
+      },
+      "L1H10": {
+        "patched_logit_diff": -0.11605453491210938,
+        "recovery": 0.7604590313131026
+      },
+      "L1H11": {
+        "patched_logit_diff": -0.11029624938964844,
+        "recovery": 0.7819245755240181
+      },
+      "L2H0": {
+        "patched_logit_diff": -0.023317337036132812,
+        "recovery": 1.1061616563806491
+      },
+      "L2H1": {
+        "patched_logit_diff": -0.10532379150390625,
+        "recovery": 0.8004607377492108
+      },
+      "L2H2": {
+        "patched_logit_diff": -0.0972585678100586,
+        "recovery": 0.830526008930349
+      },
+      "L2H3": {
+        "patched_logit_diff": -0.11606884002685547,
+        "recovery": 0.7604057051847217
+      },
+      "L2H4": {
+        "patched_logit_diff": -0.0986013412475586,
+        "recovery": 0.8255204630129973
+      },
+      "L2H5": {
+        "patched_logit_diff": -0.06620407104492188,
+        "recovery": 0.9462899234947811
+      },
+      "L2H6": {
+        "patched_logit_diff": -0.09157276153564453,
+        "recovery": 0.8517213674241347
+      },
+      "L2H7": {
+        "patched_logit_diff": -0.04095268249511719,
+        "recovery": 1.0404212053127044
+      },
+      "L2H8": {
+        "patched_logit_diff": -0.008983612060546875,
+        "recovery": 1.1595944370182873
+      },
+      "L2H9": {
+        "patched_logit_diff": -0.08272361755371094,
+        "recovery": 0.8847089104405449
+      },
+      "L2H10": {
+        "patched_logit_diff": -0.11479473114013672,
+        "recovery": 0.7651552856858451
+      },
+      "L2H11": {
+        "patched_logit_diff": -0.0967864990234375,
+        "recovery": 0.8322857711669179
+      },
+      "L3H0": {
+        "patched_logit_diff": -0.01771068572998047,
+        "recovery": 1.1270619436307272
+      },
+      "L3H1": {
+        "patched_logit_diff": -0.06957721710205078,
+        "recovery": 0.9337156224225704
+      },
+      "L3H2": {
+        "patched_logit_diff": -0.04581928253173828,
+        "recovery": 1.0222796564375303
+      },
+      "L3H3": {
+        "patched_logit_diff": -0.10157966613769531,
+        "recovery": 0.8144179630840989
+      },
+      "L3H4": {
+        "patched_logit_diff": -0.08850955963134766,
+        "recovery": 0.863140269048093
+      },
+      "L3H5": {
+        "patched_logit_diff": -0.07556629180908203,
+        "recovery": 0.9113897500071102
+      },
+      "L3H6": {
+        "patched_logit_diff": -0.06469535827636719,
+        "recovery": 0.951914052501351
+      },
+      "L3H7": {
+        "patched_logit_diff": -0.056308746337890625,
+        "recovery": 0.9831773840334461
+      },
+      "L3H8": {
+        "patched_logit_diff": -0.03574371337890625,
+        "recovery": 1.0598390261937942
+      },
+      "L3H9": {
+        "patched_logit_diff": -0.09519577026367188,
+        "recovery": 0.8382156366428714
+      },
+      "L3H10": {
+        "patched_logit_diff": -0.09783935546875,
+        "recovery": 0.8283609681180854
+      },
+      "L3H11": {
+        "patched_logit_diff": -0.054383277893066406,
+        "recovery": 0.9903550809135121
+      },
+      "L4H0": {
+        "patched_logit_diff": 0.0009069442749023438,
+        "recovery": 1.1964641221808254
+      },
+      "L4H1": {
+        "patched_logit_diff": -0.054500579833984375,
+        "recovery": 0.989917806660789
+      },
+      "L4H2": {
+        "patched_logit_diff": -0.05574512481689453,
+        "recovery": 0.9852784334916527
+      },
+      "L4H3": {
+        "patched_logit_diff": -0.12072563171386719,
+        "recovery": 0.7430462728591337
+      },
+      "L4H4": {
+        "patched_logit_diff": -0.04412269592285156,
+        "recovery": 1.0286041352635023
+      },
+      "L4H5": {
+        "patched_logit_diff": -0.16411781311035156,
+        "recovery": 0.5812903501038083
+      },
+      "L4H6": {
+        "patched_logit_diff": -0.046975135803222656,
+        "recovery": 1.0179709052643553
+      },
+      "L4H7": {
+        "patched_logit_diff": -0.08270072937011719,
+        "recovery": 0.8847942322459543
+      },
+      "L4H8": {
+        "patched_logit_diff": -0.07796382904052734,
+        "recovery": 0.9024522908904753
+      },
+      "L4H9": {
+        "patched_logit_diff": -0.11376190185546875,
+        "recovery": 0.7690054321549444
+      },
+      "L4H10": {
+        "patched_logit_diff": -0.08115577697753906,
+        "recovery": 0.890553454111089
+      },
+      "L4H11": {
+        "patched_logit_diff": -0.024982452392578125,
+        "recovery": 1.099954495037115
+      },
+      "L5H0": {
+        "patched_logit_diff": 0.03686237335205078,
+        "recovery": 1.3304975683285458
+      },
+      "L5H1": {
+        "patched_logit_diff": -0.062244415283203125,
+        "recovery": 0.9610505958306078
+      },
+      "L5H2": {
+        "patched_logit_diff": -0.1079111099243164,
+        "recovery": 0.7908158186627229
+      },
+      "L5H3": {
+        "patched_logit_diff": -0.1090555191040039,
+        "recovery": 0.7865497283922528
+      },
+      "L5H4": {
+        "patched_logit_diff": -0.09568214416503906,
+        "recovery": 0.8364025482779216
+      },
+      "L5H5": {
+        "patched_logit_diff": -0.09883689880371094,
+        "recovery": 0.8246423594323256
+      },
+      "L5H6": {
+        "patched_logit_diff": -0.1545114517211914,
+        "recovery": 0.6171006228491794
+      },
+      "L5H7": {
+        "patched_logit_diff": -0.029033660888671875,
+        "recovery": 1.0848525354796508
+      },
+      "L5H8": {
+        "patched_logit_diff": -0.0330810546875,
+        "recovery": 1.069764796223088
+      },
+      "L5H9": {
+        "patched_logit_diff": -0.10910987854003906,
+        "recovery": 0.7863470891044054
+      },
+      "L5H10": {
+        "patched_logit_diff": -0.026004791259765625,
+        "recovery": 1.096143454395495
+      },
+      "L5H11": {
+        "patched_logit_diff": -0.06833839416503906,
+        "recovery": 0.9383336651403543
+      },
+      "L6H0": {
+        "patched_logit_diff": 0.07027435302734375,
+        "recovery": 1.4550496288501464
+      },
+      "L6H1": {
+        "patched_logit_diff": -0.07968807220458984,
+        "recovery": 0.896024714882967
+      },
+      "L6H2": {
+        "patched_logit_diff": -0.13376808166503906,
+        "recovery": 0.6944270640766759
+      },
+      "L6H3": {
+        "patched_logit_diff": -0.10097122192382812,
+        "recovery": 0.8166861010778989
+      },
+      "L6H4": {
+        "patched_logit_diff": -0.09736442565917969,
+        "recovery": 0.8301313955803304
+      },
+      "L6H5": {
+        "patched_logit_diff": -0.10995864868164062,
+        "recovery": 0.7831830721538068
+      },
+      "L6H6": {
+        "patched_logit_diff": -0.19547080993652344,
+        "recovery": 0.4644136969938284
+      },
+      "L6H7": {
+        "patched_logit_diff": -0.04987335205078125,
+        "recovery": 1.0071670316543897
+      },
+      "L6H8": {
+        "patched_logit_diff": 0.0046329498291015625,
+        "recovery": 1.210353801086431
+      },
+      "L6H9": {
+        "patched_logit_diff": -0.14476394653320312,
+        "recovery": 0.6534370467279088
+      },
+      "L6H10": {
+        "patched_logit_diff": -0.031620025634765625,
+        "recovery": 1.0752111714683883
+      },
+      "L6H11": {
+        "patched_logit_diff": -0.05924224853515625,
+        "recovery": 0.9722419726401411
+      },
+      "L7H0": {
+        "patched_logit_diff": 0.023082733154296875,
+        "recovery": 1.27913028639686
+      },
+      "L7H1": {
+        "patched_logit_diff": -0.16260433197021484,
+        "recovery": 0.586932254486505
+      },
+      "L7H2": {
+        "patched_logit_diff": -0.1060953140258789,
+        "recovery": 0.7975846818918688
+      },
+      "L7H3": {
+        "patched_logit_diff": -0.1629810333251953,
+        "recovery": 0.5855279997724752
+      },
+      "L7H4": {
+        "patched_logit_diff": -0.09596538543701172,
+        "recovery": 0.8353466909359802
+      },
+      "L7H5": {
+        "patched_logit_diff": -0.1379871368408203,
+        "recovery": 0.6786994112795427
+      },
+      "L7H6": {
+        "patched_logit_diff": -0.10699081420898438,
+        "recovery": 0.794246466255226
+      },
+      "L7H7": {
+        "patched_logit_diff": 0.03898048400878906,
+        "recovery": 1.338393390404141
+      },
+      "L7H8": {
+        "patched_logit_diff": -0.07693290710449219,
+        "recovery": 0.9062953272091238
+      },
+      "L7H9": {
+        "patched_logit_diff": -0.03713035583496094,
+        "recovery": 1.0546699468160747
+      },
+      "L7H10": {
+        "patched_logit_diff": 0.06304359436035156,
+        "recovery": 1.428095048491226
+      },
+      "L7H11": {
+        "patched_logit_diff": -0.04785919189453125,
+        "recovery": 1.0146753505304171
+      },
+      "L8H0": {
+        "patched_logit_diff": 0.09008216857910156,
+        "recovery": 1.5288885412815336
+      },
+      "L8H1": {
+        "patched_logit_diff": -0.25847625732421875,
+        "recovery": 0.22954409715309576
+      },
+      "L8H2": {
+        "patched_logit_diff": -0.028644561767578125,
+        "recovery": 1.0863030061716106
+      },
+      "L8H3": {
+        "patched_logit_diff": -0.20738601684570312,
+        "recovery": 0.41999658712778365
+      },
+      "L8H4": {
+        "patched_logit_diff": -0.015786170959472656,
+        "recovery": 1.1342360854355678
+      },
+      "L8H5": {
+        "patched_logit_diff": -0.016902923583984375,
+        "recovery": 1.130073092346634
+      },
+      "L8H6": {
+        "patched_logit_diff": -0.13399314880371094,
+        "recovery": 0.6935880663234834
+      },
+      "L8H7": {
+        "patched_logit_diff": 0.06904125213623047,
+        "recovery": 1.450452916583715
+      },
+      "L8H8": {
+        "patched_logit_diff": -0.17179393768310547,
+        "recovery": 0.5526755496146298
+      },
+      "L8H9": {
+        "patched_logit_diff": -0.10184383392333984,
+        "recovery": 0.8134332072466653
+      },
+      "L8H10": {
+        "patched_logit_diff": -0.023598670959472656,
+        "recovery": 1.1051129091891585
+      },
+      "L8H11": {
+        "patched_logit_diff": -0.06299400329589844,
+        "recovery": 0.9582563067034499
+      },
+      "L9H0": {
+        "patched_logit_diff": 0.029903411865234375,
+        "recovery": 1.304556184408862
+      },
+      "L9H1": {
+        "patched_logit_diff": -0.1531524658203125,
+        "recovery": 0.6221666050453628
+      },
+      "L9H2": {
+        "patched_logit_diff": 0.04134178161621094,
+        "recovery": 1.347195756662211
+      },
+      "L9H3": {
+        "patched_logit_diff": -0.14040565490722656,
+        "recovery": 0.6696837405079491
+      },
+      "L9H4": {
+        "patched_logit_diff": 0.008841514587402344,
+        "recovery": 1.226042348056085
+      },
+      "L9H5": {
+        "patched_logit_diff": 0.036556243896484375,
+        "recovery": 1.329356389181195
+      },
+      "L9H6": {
+        "patched_logit_diff": -0.09444999694824219,
+        "recovery": 0.8409957054691277
+      },
+      "L9H7": {
+        "patched_logit_diff": 0.033019065856933594,
+        "recovery": 1.316170615170217
+      },
+      "L9H8": {
+        "patched_logit_diff": -0.22542095184326172,
+        "recovery": 0.35276655954039987
+      },
+      "L9H9": {
+        "patched_logit_diff": -0.0875396728515625,
+        "recovery": 0.8667557805523165
+      },
+      "L9H10": {
+        "patched_logit_diff": -0.048134803771972656,
+        "recovery": 1.013647933790279
+      },
+      "L9H11": {
+        "patched_logit_diff": 0.08823394775390625,
+        "recovery": 1.5219988054947242
+      },
+      "L10H0": {
+        "patched_logit_diff": 0.15468788146972656,
+        "recovery": 1.7697235573504735
+      },
+      "L10H1": {
+        "patched_logit_diff": -0.16493797302246094,
+        "recovery": 0.5782329854099713
+      },
+      "L10H2": {
+        "patched_logit_diff": -0.07343387603759766,
+        "recovery": 0.9193388982110862
+      },
+      "L10H3": {
+        "patched_logit_diff": 0.022378921508789062,
+        "recovery": 1.276506640880521
+      },
+      "L10H4": {
+        "patched_logit_diff": -0.05498313903808594,
+        "recovery": 0.9881189385967407
+      },
+      "L10H5": {
+        "patched_logit_diff": -0.05810546875,
+        "recovery": 0.976479622308808
+      },
+      "L10H6": {
+        "patched_logit_diff": -0.09912967681884766,
+        "recovery": 0.8235509513381303
+      },
+      "L10H7": {
+        "patched_logit_diff": -0.12801837921142578,
+        "recovery": 0.7158606126105629
+      },
+      "L10H8": {
+        "patched_logit_diff": -0.08630180358886719,
+        "recovery": 0.871370268194875
+      },
+      "L10H9": {
+        "patched_logit_diff": -0.12726974487304688,
+        "recovery": 0.7186513466624954
+      },
+      "L10H10": {
+        "patched_logit_diff": 0.008481979370117188,
+        "recovery": 1.224702084696112
+      },
+      "L10H11": {
+        "patched_logit_diff": 0.017208099365234375,
+        "recovery": 1.257231023008447
+      },
+      "L11H0": {
+        "patched_logit_diff": 0.16947650909423828,
+        "recovery": 1.8248521088706238
+      },
+      "L11H1": {
+        "patched_logit_diff": -0.17102432250976562,
+        "recovery": 0.555544495321521
+      },
+      "L11H2": {
+        "patched_logit_diff": -0.07635688781738281,
+        "recovery": 0.9084425926452604
+      },
+      "L11H3": {
+        "patched_logit_diff": -0.030938148498535156,
+        "recovery": 1.0777530502545434
+      },
+      "L11H4": {
+        "patched_logit_diff": 0.014911651611328125,
+        "recovery": 1.2486704018657035
+      },
+      "L11H5": {
+        "patched_logit_diff": -0.04423809051513672,
+        "recovery": 1.0281739711612297
+      },
+      "L11H6": {
+        "patched_logit_diff": -0.023677825927734375,
+        "recovery": 1.104817837945451
+      },
+      "L11H7": {
+        "patched_logit_diff": -0.1460418701171875,
+        "recovery": 0.6486732459258838
+      },
+      "L11H8": {
+        "patched_logit_diff": -0.07415199279785156,
+        "recovery": 0.9166619265663661
+      },
+      "L11H9": {
+        "patched_logit_diff": -0.15149974822998047,
+        "recovery": 0.6283275504109667
+      },
+      "L11H10": {
+        "patched_logit_diff": 0.02484130859375,
+        "recovery": 1.2856858451124826
+      },
+      "L11H11": {
+        "patched_logit_diff": -0.0037775039672851562,
+        "recovery": 1.179001592673701
+      }
+    },
+    "vb1_0004": {
+      "L0H0": {
+        "patched_logit_diff": -2.4779186248779297,
+        "recovery": 0.9661765208842275
+      },
+      "L0H1": {
+        "patched_logit_diff": -2.4062881469726562,
+        "recovery": 0.9513276321983057
+      },
+      "L0H2": {
+        "patched_logit_diff": -2.468587875366211,
+        "recovery": 0.964242270759037
+      },
+      "L0H3": {
+        "patched_logit_diff": -2.4149112701416016,
+        "recovery": 0.9531151924632252
+      },
+      "L0H4": {
+        "patched_logit_diff": -2.6373186111450195,
+        "recovery": 0.9992198946244888
+      },
+      "L0H5": {
+        "patched_logit_diff": -2.429473876953125,
+        "recovery": 0.9561339986173195
+      },
+      "L0H6": {
+        "patched_logit_diff": -2.562854766845703,
+        "recovery": 0.9837836534117946
+      },
+      "L0H7": {
+        "patched_logit_diff": -2.597963333129883,
+        "recovery": 0.991061605589714
+      },
+      "L0H8": {
+        "patched_logit_diff": -2.3199520111083984,
+        "recovery": 0.9334302830738682
+      },
+      "L0H9": {
+        "patched_logit_diff": -2.639065742492676,
+        "recovery": 0.9995820722848883
+      },
+      "L0H10": {
+        "patched_logit_diff": -2.6531124114990234,
+        "recovery": 1.0024939253198364
+      },
+      "L0H11": {
+        "patched_logit_diff": -2.676863670349121,
+        "recovery": 1.0074175250099293
+      },
+      "L1H0": {
+        "patched_logit_diff": -2.53151798248291,
+        "recovery": 0.9772875858664517
+      },
+      "L1H1": {
+        "patched_logit_diff": -2.473346710205078,
+        "recovery": 0.9652287699541209
+      },
+      "L1H2": {
+        "patched_logit_diff": -2.4659433364868164,
+        "recovery": 0.9636940618877008
+      },
+      "L1H3": {
+        "patched_logit_diff": -2.1803998947143555,
+        "recovery": 0.9045013424494558
+      },
+      "L1H4": {
+        "patched_logit_diff": -2.258554458618164,
+        "recovery": 0.920702664200221
+      },
+      "L1H5": {
+        "patched_logit_diff": -2.73709774017334,
+        "recovery": 1.019903955703616
+      },
+      "L1H6": {
+        "patched_logit_diff": -2.504549980163574,
+        "recovery": 0.9716971601673372
+      },
+      "L1H7": {
+        "patched_logit_diff": -2.720224380493164,
+        "recovery": 1.016406134008502
+      },
+      "L1H8": {
+        "patched_logit_diff": -2.4405765533447266,
+        "recovery": 0.958435566478876
+      },
+      "L1H9": {
+        "patched_logit_diff": -2.716403007507324,
+        "recovery": 1.015613969223993
+      },
+      "L1H10": {
+        "patched_logit_diff": -2.809284210205078,
+        "recovery": 1.0348681007083222
+      },
+      "L1H11": {
+        "patched_logit_diff": -2.638237953186035,
+        "recovery": 0.9994104728257034
+      },
+      "L2H0": {
+        "patched_logit_diff": -2.1281938552856445,
+        "recovery": 0.8936791101974956
+      },
+      "L2H1": {
+        "patched_logit_diff": -2.1830835342407227,
+        "recovery": 0.9050576568252005
+      },
+      "L2H2": {
+        "patched_logit_diff": -2.638507843017578,
+        "recovery": 0.999466420575645
+      },
+      "L2H3": {
+        "patched_logit_diff": -2.4130496978759766,
+        "recovery": 0.9527292913752886
+      },
+      "L2H4": {
+        "patched_logit_diff": -2.3038644790649414,
+        "recovery": 0.9300953622478422
+      },
+      "L2H5": {
+        "patched_logit_diff": -2.591268539428711,
+        "recovery": 0.9896737850787944
+      },
+      "L2H6": {
+        "patched_logit_diff": -2.644526481628418,
+        "recovery": 1.0007140751688663
+      },
+      "L2H7": {
+        "patched_logit_diff": -2.6062660217285156,
+        "recovery": 0.9927827402575297
+      },
+      "L2H8": {
+        "patched_logit_diff": -2.8441877365112305,
+        "recovery": 1.0421035484119043
+      },
+      "L2H9": {
+        "patched_logit_diff": -2.6977901458740234,
+        "recovery": 1.0117555514303151
+      },
+      "L2H10": {
+        "patched_logit_diff": -2.9074554443359375,
+        "recovery": 1.0552188476305535
+      },
+      "L2H11": {
+        "patched_logit_diff": -2.828603744506836,
+        "recovery": 1.0388730106670414
+      },
+      "L3H0": {
+        "patched_logit_diff": -2.1315670013427734,
+        "recovery": 0.8943783582241512
+      },
+      "L3H1": {
+        "patched_logit_diff": -2.12896728515625,
+        "recovery": 0.8938394410286004
+      },
+      "L3H2": {
+        "patched_logit_diff": -2.598879814147949,
+        "recovery": 0.9912515907052402
+      },
+      "L3H3": {
+        "patched_logit_diff": -2.4945545196533203,
+        "recovery": 0.9696251164672021
+      },
+      "L3H4": {
+        "patched_logit_diff": -2.4948110580444336,
+        "recovery": 0.969678296483931
+      },
+      "L3H5": {
+        "patched_logit_diff": -2.698380470275879,
+        "recovery": 1.0118779247773606
+      },
+      "L3H6": {
+        "patched_logit_diff": -2.6472978591918945,
+        "recovery": 1.0012885775057228
+      },
+      "L3H7": {
+        "patched_logit_diff": -2.452228546142578,
+        "recovery": 0.9608510067926104
+      },
+      "L3H8": {
+        "patched_logit_diff": -2.9163389205932617,
+        "recovery": 1.0570603786931199
+      },
+      "L3H9": {
+        "patched_logit_diff": -2.632807731628418,
+        "recovery": 0.9982847961890686
+      },
+      "L3H10": {
+        "patched_logit_diff": -2.955368995666504,
+        "recovery": 1.0651512536546435
+      },
+      "L3H11": {
+        "patched_logit_diff": -2.88082218170166,
+        "recovery": 1.049697812956985
+      },
+      "L4H0": {
+        "patched_logit_diff": -2.139057159423828,
+        "recovery": 0.8959310565564536
+      },
+      "L4H1": {
+        "patched_logit_diff": -2.3426456451416016,
+        "recovery": 0.9381346387544726
+      },
+      "L4H2": {
+        "patched_logit_diff": -2.714035987854004,
+        "recovery": 1.015123289664434
+      },
+      "L4H3": {
+        "patched_logit_diff": -2.9658212661743164,
+        "recovery": 1.0673179933696975
+      },
+      "L4H4": {
+        "patched_logit_diff": -2.56290340423584,
+        "recovery": 0.9837937358684978
+      },
+      "L4H5": {
+        "patched_logit_diff": -2.833193778991699,
+        "recovery": 1.0398245178065082
+      },
+      "L4H6": {
+        "patched_logit_diff": -2.5933475494384766,
+        "recovery": 0.9901047606790515
+      },
+      "L4H7": {
+        "patched_logit_diff": -2.4802017211914062,
+        "recovery": 0.9666498032635924
+      },
+      "L4H8": {
+        "patched_logit_diff": -2.8560104370117188,
+        "recovery": 1.0445543761717149
+      },
+      "L4H9": {
+        "patched_logit_diff": -2.6827917098999023,
+        "recovery": 1.0086463985563503
+      },
+      "L4H10": {
+        "patched_logit_diff": -2.922471046447754,
+        "recovery": 1.0583315590186488
+      },
+      "L4H11": {
+        "patched_logit_diff": -3.0972843170166016,
+        "recovery": 1.0945700830576968
+      },
+      "L5H0": {
+        "patched_logit_diff": -2.2963428497314453,
+        "recovery": 0.9285361399729671
+      },
+      "L5H1": {
+        "patched_logit_diff": -2.537186622619629,
+        "recovery": 0.9784626863104554
+      },
+      "L5H2": {
+        "patched_logit_diff": -2.5063133239746094,
+        "recovery": 0.9720626986466377
+      },
+      "L5H3": {
+        "patched_logit_diff": -2.8028993606567383,
+        "recovery": 1.0335445311469822
+      },
+      "L5H4": {
+        "patched_logit_diff": -2.7315454483032227,
+        "recovery": 1.0187529740776085
+      },
+      "L5H5": {
+        "patched_logit_diff": -2.6891355514526367,
+        "recovery": 1.009961467222823
+      },
+      "L5H6": {
+        "patched_logit_diff": -2.283395767211914,
+        "recovery": 0.9258522295376047
+      },
+      "L5H7": {
+        "patched_logit_diff": -2.8896255493164062,
+        "recovery": 1.0515227376202754
+      },
+      "L5H8": {
+        "patched_logit_diff": -2.918929100036621,
+        "recovery": 1.0575973189363759
+      },
+      "L5H9": {
+        "patched_logit_diff": -2.6057863235473633,
+        "recovery": 0.9926832995571033
+      },
+      "L5H10": {
+        "patched_logit_diff": -3.096734046936035,
+        "recovery": 1.0944560129102892
+      },
+      "L5H11": {
+        "patched_logit_diff": -2.6304025650024414,
+        "recovery": 0.9977862088203309
+      },
+      "L6H0": {
+        "patched_logit_diff": -2.6480560302734375,
+        "recovery": 1.001445745213156
+      },
+      "L6H1": {
+        "patched_logit_diff": -2.1957006454467773,
+        "recovery": 0.9076731647111643
+      },
+      "L6H2": {
+        "patched_logit_diff": -2.5648117065429688,
+        "recovery": 0.9841893240226788
+      },
+      "L6H3": {
+        "patched_logit_diff": -2.76654052734375,
+        "recovery": 1.0260074005232203
+      },
+      "L6H4": {
+        "patched_logit_diff": -2.553574562072754,
+        "recovery": 0.9818598811337663
+      },
+      "L6H5": {
+        "patched_logit_diff": -2.2912654876708984,
+        "recovery": 0.9274836105712384
+      },
+      "L6H6": {
+        "patched_logit_diff": -2.4352951049804688,
+        "recovery": 0.9573407302980393
+      },
+      "L6H7": {
+        "patched_logit_diff": -3.046292304992676,
+        "recovery": 1.0839995168328591
+      },
+      "L6H8": {
+        "patched_logit_diff": -2.6163482666015625,
+        "recovery": 0.994872774223547
+      },
+      "L6H9": {
+        "patched_logit_diff": -2.985020637512207,
+        "recovery": 1.0712979937295026
+      },
+      "L6H10": {
+        "patched_logit_diff": -2.9122257232666016,
+        "recovery": 1.056207719168391
+      },
+      "L6H11": {
+        "patched_logit_diff": -2.263895034790039,
+        "recovery": 0.921809757485285
+      },
+      "L7H0": {
+        "patched_logit_diff": -2.5154809951782227,
+        "recovery": 0.9739631428875879
+      },
+      "L7H1": {
+        "patched_logit_diff": -1.9615716934204102,
+        "recovery": 0.8591385904844145
+      },
+      "L7H2": {
+        "patched_logit_diff": -2.550973892211914,
+        "recovery": 0.981320766242986
+      },
+      "L7H3": {
+        "patched_logit_diff": -2.764279365539551,
+        "recovery": 1.0255386651341332
+      },
+      "L7H4": {
+        "patched_logit_diff": -2.946361541748047,
+        "recovery": 1.0632840222122453
+      },
+      "L7H5": {
+        "patched_logit_diff": -2.3083152770996094,
+        "recovery": 0.9310180058838055
+      },
+      "L7H6": {
+        "patched_logit_diff": -2.402846336364746,
+        "recovery": 0.9506141501151278
+      },
+      "L7H7": {
+        "patched_logit_diff": -3.4552087783813477,
+        "recovery": 1.1687672773274609
+      },
+      "L7H8": {
+        "patched_logit_diff": -2.6352691650390625,
+        "recovery": 0.9987950475763454
+      },
+      "L7H9": {
+        "patched_logit_diff": -2.6865739822387695,
+        "recovery": 1.009430457836451
+      },
+      "L7H10": {
+        "patched_logit_diff": -3.067315101623535,
+        "recovery": 1.088357510471422
+      },
+      "L7H11": {
+        "patched_logit_diff": -2.4563798904418945,
+        "recovery": 0.9617115741265182
+      },
+      "L8H0": {
+        "patched_logit_diff": -2.1857290267944336,
+        "recovery": 0.9056060633917661
+      },
+      "L8H1": {
+        "patched_logit_diff": -2.453709602355957,
+        "recovery": 0.9611580274839862
+      },
+      "L8H2": {
+        "patched_logit_diff": -2.790654182434082,
+        "recovery": 1.031006124400514
+      },
+      "L8H3": {
+        "patched_logit_diff": -2.804269790649414,
+        "recovery": 1.033828619191739
+      },
+      "L8H4": {
+        "patched_logit_diff": -3.3496627807617188,
+        "recovery": 1.146887753195694
+      },
+      "L8H5": {
+        "patched_logit_diff": -2.2844905853271484,
+        "recovery": 0.9260791836610428
+      },
+      "L8H6": {
+        "patched_logit_diff": -2.71439266204834,
+        "recovery": 1.015197227680258
+      },
+      "L8H7": {
+        "patched_logit_diff": -3.2405595779418945,
+        "recovery": 1.1242708258579825
+      },
+      "L8H8": {
+        "patched_logit_diff": -2.284425735473633,
+        "recovery": 0.9260657403854384
+      },
+      "L8H9": {
+        "patched_logit_diff": -2.752197265625,
+        "recovery": 1.0230340642719054
+      },
+      "L8H10": {
+        "patched_logit_diff": -2.814753532409668,
+        "recovery": 1.0360018828493656
+      },
+      "L8H11": {
+        "patched_logit_diff": -2.07590389251709,
+        "recovery": 0.8828394807653415
+      },
+      "L9H0": {
+        "patched_logit_diff": -2.765080451965332,
+        "recovery": 1.0257047291268928
+      },
+      "L9H1": {
+        "patched_logit_diff": -2.5545787811279297,
+        "recovery": 0.9820680542104042
+      },
+      "L9H2": {
+        "patched_logit_diff": -2.526150703430176,
+        "recovery": 0.9761749571149624
+      },
+      "L9H3": {
+        "patched_logit_diff": -2.6883811950683594,
+        "recovery": 1.0098050902963076
+      },
+      "L9H4": {
+        "patched_logit_diff": -3.1658010482788086,
+        "recovery": 1.1087734968193803
+      },
+      "L9H5": {
+        "patched_logit_diff": -2.4893903732299805,
+        "recovery": 0.968554596799591
+      },
+      "L9H6": {
+        "patched_logit_diff": -2.696864128112793,
+        "recovery": 1.0115635893624941
+      },
+      "L9H7": {
+        "patched_logit_diff": -3.0702600479125977,
+        "recovery": 1.0889679933400431
+      },
+      "L9H8": {
+        "patched_logit_diff": -2.5393457412719727,
+        "recovery": 0.9789102683099885
+      },
+      "L9H9": {
+        "patched_logit_diff": -2.799274444580078,
+        "recovery": 1.032793091579745
+      },
+      "L9H10": {
+        "patched_logit_diff": -2.820781707763672,
+        "recovery": 1.0372515143948815
+      },
+      "L9H11": {
+        "patched_logit_diff": -2.541902542114258,
+        "recovery": 0.9794402892202129
+      },
+      "L10H0": {
+        "patched_logit_diff": -2.765316963195801,
+        "recovery": 1.025753757543803
+      },
+      "L10H1": {
+        "patched_logit_diff": -2.6041297912597656,
+        "recovery": 0.992339902943504
+      },
+      "L10H2": {
+        "patched_logit_diff": -2.7041749954223633,
+        "recovery": 1.013079120991655
+      },
+      "L10H3": {
+        "patched_logit_diff": -2.4426918029785156,
+        "recovery": 0.9588740544978531
+      },
+      "L10H4": {
+        "patched_logit_diff": -2.5509586334228516,
+        "recovery": 0.9813176031193144
+      },
+      "L10H5": {
+        "patched_logit_diff": -2.4755659103393555,
+        "recovery": 0.9656888067531109
+      },
+      "L10H6": {
+        "patched_logit_diff": -2.672872543334961,
+        "recovery": 1.0065901704745732
+      },
+      "L10H7": {
+        "patched_logit_diff": -2.778944969177246,
+        "recovery": 1.028578822373011
+      },
+      "L10H8": {
+        "patched_logit_diff": -2.368901252746582,
+        "recovery": 0.9435773861171688
+      },
+      "L10H9": {
+        "patched_logit_diff": -2.6766042709350586,
+        "recovery": 1.0073637519075118
+      },
+      "L10H10": {
+        "patched_logit_diff": -2.740415573120117,
+        "recovery": 1.0205917374069622
+      },
+      "L10H11": {
+        "patched_logit_diff": -2.29794979095459,
+        "recovery": 0.9288692564346338
+      },
+      "L11H0": {
+        "patched_logit_diff": -2.6414575576782227,
+        "recovery": 1.0000778919204134
+      },
+      "L11H1": {
+        "patched_logit_diff": -2.386446952819824,
+        "recovery": 0.9472145829490632
+      },
+      "L11H2": {
+        "patched_logit_diff": -2.8026123046875,
+        "recovery": 1.0334850248829102
+      },
+      "L11H3": {
+        "patched_logit_diff": -2.701390266418457,
+        "recovery": 1.012501850921586
+      },
+      "L11H4": {
+        "patched_logit_diff": -2.621371269226074,
+        "recovery": 0.9959140349971957
+      },
+      "L11H5": {
+        "patched_logit_diff": -2.374180793762207,
+        "recovery": 0.9446718269075465
+      },
+      "L11H6": {
+        "patched_logit_diff": -2.3509740829467773,
+        "recovery": 0.9398611111934841
+      },
+      "L11H7": {
+        "patched_logit_diff": -2.7093048095703125,
+        "recovery": 1.014142523631005
+      },
+      "L11H8": {
+        "patched_logit_diff": -2.5417299270629883,
+        "recovery": 0.9794045063836778
+      },
+      "L11H9": {
+        "patched_logit_diff": -2.738528251647949,
+        "recovery": 1.0202004985478297
+      },
+      "L11H10": {
+        "patched_logit_diff": -2.8781023025512695,
+        "recovery": 1.0491339861625202
+      },
+      "L11H11": {
+        "patched_logit_diff": -2.453868865966797,
+        "recovery": 0.9611910425873086
+      }
+    }
+  }
+}

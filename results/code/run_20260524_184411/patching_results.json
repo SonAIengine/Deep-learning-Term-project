@@ -1,0 +1,4040 @@
+{
+  "cache_shapes": {
+    "hook_embed": [
+      1,
+      15,
+      768
+    ],
+    "hook_pos_embed": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.0.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.0.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.0.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.0.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.0.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.0.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.0.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.0.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.1.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.1.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.1.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.1.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.1.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.1.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.1.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.1.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.2.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.2.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.2.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.2.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.2.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.2.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.2.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.2.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.3.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.3.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.3.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.3.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.3.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.3.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.3.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.3.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.4.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.4.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.4.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.4.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.4.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.4.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.4.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.4.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.5.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.5.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.5.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.5.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.5.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.5.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.5.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.5.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.6.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.6.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.6.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.6.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.6.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.6.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.6.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.6.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.7.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.7.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.7.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.7.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.7.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.7.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.7.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.7.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.8.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.8.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.8.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.8.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.8.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.8.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.8.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.8.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.9.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.9.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.9.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.9.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.9.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.9.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.9.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.9.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.10.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.10.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.10.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.10.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.10.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.10.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.10.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.10.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.hook_resid_pre": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.ln1.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.11.ln1.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.attn.hook_q": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.attn.hook_k": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.attn.hook_v": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.attn.hook_attn_scores": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.11.attn.hook_pattern": [
+      1,
+      12,
+      15,
+      15
+    ],
+    "blocks.11.attn.hook_z": [
+      1,
+      15,
+      12,
+      64
+    ],
+    "blocks.11.hook_attn_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.hook_resid_mid": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.ln2.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "blocks.11.ln2.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.mlp.hook_pre": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.11.mlp.hook_post": [
+      1,
+      15,
+      3072
+    ],
+    "blocks.11.hook_mlp_out": [
+      1,
+      15,
+      768
+    ],
+    "blocks.11.hook_resid_post": [
+      1,
+      15,
+      768
+    ],
+    "ln_final.hook_scale": [
+      1,
+      15,
+      1
+    ],
+    "ln_final.hook_normalized": [
+      1,
+      15,
+      768
+    ],
+    "unembed.hook_in": [
+      1,
+      15,
+      768
+    ],
+    "unembed.hook_out": [
+      1,
+      15,
+      50257
+    ]
+  },
+  "baseline_logit_diffs": {
+    "vb1_0000": {
+      "clean": 0.13761520385742188,
+      "corrupt": 1.2215938568115234
+    },
+    "vb1_0001": {
+      "clean": 0.6617946624755859,
+      "corrupt": -0.8449325561523438
+    },
+    "vb1_0002": {
+      "clean": 1.108595848083496,
+      "corrupt": -0.6885356903076172
+    },
+    "vb1_0003": {
+      "clean": -0.05179595947265625,
+      "corrupt": -0.3200531005859375
+    },
+    "vb1_0004": {
+      "clean": -2.6410818099975586,
+      "corrupt": 2.182880401611328
+    }
+  },
+  "patch_effects": {
+    "vb1_0000": {
+      "L0H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L0H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L1H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L2H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L3H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L4H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L5H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L6H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L7H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L8H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L9H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L10H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H0": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H1": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H2": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H3": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H4": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H5": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H6": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H7": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H8": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H9": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H10": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      },
+      "L11H11": {
+        "patched_logit_diff": 0.13761520385742188,
+        "recovery": 1.0
+      }
+    },
+    "vb1_0001": {
+      "L0H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L0H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L1H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L2H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L3H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L4H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L5H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L6H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L7H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L8H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L9H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L10H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H0": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H1": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H2": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H3": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H4": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H5": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H6": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H7": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H8": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H9": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H10": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      },
+      "L11H11": {
+        "patched_logit_diff": 0.6617946624755859,
+        "recovery": 1.0
+      }
+    },
+    "vb1_0002": {
+      "L0H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L0H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L1H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L2H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L3H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L4H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L5H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L6H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L7H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L8H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L9H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L10H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H0": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H1": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H2": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H3": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H4": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H5": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H6": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H7": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H8": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H9": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H10": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      },
+      "L11H11": {
+        "patched_logit_diff": 1.108595848083496,
+        "recovery": 1.0
+      }
+    },
+    "vb1_0003": {
+      "L0H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L0H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L1H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L2H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L3H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L4H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L5H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L6H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L7H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L8H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L9H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L10H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H0": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H1": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H2": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H3": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H4": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H5": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H6": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H7": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H8": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H9": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H10": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      },
+      "L11H11": {
+        "patched_logit_diff": -0.05179595947265625,
+        "recovery": 1.0
+      }
+    },
+    "vb1_0004": {
+      "L0H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L0H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L1H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L2H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L3H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L4H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L5H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L6H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L7H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L8H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L9H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L10H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H0": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H1": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H2": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H3": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H4": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H5": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H6": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H7": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H8": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H9": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H10": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      },
+      "L11H11": {
+        "patched_logit_diff": -2.6410818099975586,
+        "recovery": 1.0
+      }
+    }
+  }
+}
