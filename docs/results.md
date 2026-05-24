@@ -1,9 +1,15 @@
 # 실험 결과 리포트
 
-**작성자**: 손성준  ·  **브랜치**: `son`  ·  **최종 커밋**: `126fda2`
+**작성자**: 손성준  ·  **브랜치**: `son`  ·  **최종 커밋**: `f0e8c57`
 
-본 문서는 `sonsj-proposal.md`에 정의된 Step 1~3 및 추가 검증 실험(A, B)의
-전체 결과를 정리한 것이다. 모든 수치는 `results/` 하위 JSON/PNG에서 재현 가능.
+본 문서는 `sonsj-proposal.md`에 정의된 Step 1~3 및 7개 추가 검증 실험
+(Tier 2 일반화, Position-level patching, Polished figures, A: SIH non-transfer,
+B: Direct logit attribution, F: Minimal circuit, D/D2: cross-model on Pythia &
+GPT-2 medium)의 전체 결과를 정리한 것이다.
+모든 수치는 `results/` 하위 JSON/PNG에서 재현 가능.
+
+**실험 인프라**: H100 1장, ~2시간 총 GPU 사용 (grokking 101s + binding 분석 합)
+**총 commits on `son`**: 9개 (Step 1~3 + 7개 extras)
 
 ---
 
@@ -358,9 +364,34 @@ results/
 
 ## 7. 한계 및 향후 과제
 
-- ~~**단일 모델 (GPT-2 small only)**~~ → Pythia-160M에서 재현 완료 (4.6절).
-  추가로 GPT-2 medium, Llama 등 더 큰/다양한 모델에서 검증하면 일반화 강화.
+- ~~**단일 모델 (GPT-2 small only)**~~ → Pythia-160M(4.6) + GPT-2 medium(4.7)에서 재현 완료.
+  Llama, Mistral 등 다른 family로 확장하면 universality framework 일반화 강화.
 - **Tier 3 (멀티홉) 분석 미완** — distractor가 정의되지 않아 logit_diff 메트릭 적용 불가.
 - **회로 간 composition 분석 부재** — DTH→SIH→NMH의 IOI 구조 중
   본 연구는 DTH/NMH의 *존재*만 보였고, head 간 *연결*은 미검증.
-- **Causal scrubbing/minimal circuit 미수행** — top-3 head만으로 충분한지는 추가 검증 필요.
+- ~~**Causal scrubbing/minimal circuit 미수행**~~ → Necessity test로 부분 검증
+  (4.5). 완전한 causal scrubbing은 향후 과제.
+- **Hydra effect의 메커니즘 미규명** — GPT-2 medium에서 ablation이 성능을 높이는
+  현상의 원인(어떤 backup head가 활성화되는지)은 path patching으로 추가 분석 필요.
+
+---
+
+## 8. 산출물 인덱스
+
+| 분석 | 스크립트 | 결과 디렉토리 |
+|---|---|---|
+| Grokking 학습 | `src/grokking/train.py` | `results/grokking_full_*` |
+| Grokking 회로 | `src/grokking/analysis.py` | `results/analysis/grokking_full/` |
+| Baseline | `src/binding/baseline.py` | `results/binding_baseline.json` |
+| Per-head patching | `src/binding/patching.py` | `results/binding_patching/` |
+| IOI 비교 | `src/binding/compare_ioi.py` | `results/binding_compare/` |
+| Tier 일반화 | `src/binding/tier_generalize.py` | `results/binding_tier_generalize/` |
+| Position-level (top) | `src/binding/position_patching.py` | `results/binding_position/` |
+| Polished figures | `src/binding/figures.py` | `results/binding_compare/` |
+| **A**: SIH position | `src/binding/sih_position_patching.py` | `results/binding_position/sih_*` |
+| **B**: Logit attribution | `src/binding/logit_attribution.py` | `results/binding_logit_attr/` |
+| **F**: Minimal circuit | `src/binding/minimal_circuit.py` | `results/binding_minimal_circuit/` |
+| **D**: Pythia | `src/binding/pythia_replication.py` | `results/binding_pythia/` |
+| **D2**: GPT-2 medium | `src/binding/gpt2med_replication.py` | `results/binding_gpt2med/` |
+
+총 13개 분석 스크립트 · 15+ 시각화 PNG · 8 결과 JSON · 5 raw effect arrays (.npy).
