@@ -27,10 +27,15 @@
 
 ## P2 — Code Variable Binding
 
-- **상태**: pending
-- **데이터**: `datasets/var_binding_tier{1,2,3}.jsonl` (frozen `a3d4c82`)
-- **회로 분석**: TBD — activation patching on Tier 1 cf pair
-- **결정 게이트**: 첫 patching 결과로 자연어 variant 필요 여부 판단 ([analysis_tracks.md §1.3](analysis_tracks.md))
+- **상태**: ✅ **Step 1 완료** — Activation patching 성공, 회로 신호 확인
+- **데이터**: `datasets/var_binding_tier1.jsonl` (frozen `a3d4c82`)
+- **구현**: `tracks/code/` 5 파일 (GPT-2 small activation patching)
+- **결과**:
+  - Top binding heads: **L7H10 (1.21)**, L8H7 (1.20), L9H7 (1.17), L11H0 (1.17)
+  - Baseline logit diffs: clean/corrupt 간 명확한 신호 차이 (0.1~2.6)
+  - **결정 게이트 통과**: 자연어 variant 불필요 — code-style에서도 회로 신호 명확
+- **출력**: `results/code/run_20260524_185842/` (patching_results.json, head_heatmap.pt)
+- **다음 단계**: 더 많은 cf pairs로 확장 + cross-validation
 
 ## P3 — IOI 비교
 
