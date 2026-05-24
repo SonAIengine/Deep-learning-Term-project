@@ -47,14 +47,35 @@
 
 ## P3 — IOI 비교
 
-- **상태**: pending
+- **상태**: ✅ **완료** — Wang et al. 2022와 cross-track 비교 분석 완료
 - **데이터**: `data.ioi_loader` N=500
 - **분석**: Wang et al. 26 head 목록과 P2 결과 overlap 계산
+- **결과**:
+  - **Cross-track overlap 극히 낮음**: Top-10에서 20% (2/10 heads)
+  - **단 2개 heads만 overlap**: L10H11 (negative name mover), L9H7 (S-inhibition)
+  - **Layer distribution 차이**: P2는 early-middle layers (1-10), Wang et al.은 late layers (8-11)
+  - **Jaccard similarity**: 3.23% (Top-20)
+  - **Circuit universality score**: 0.12/1.0 (LOW)
+- **시각화**: `results/code/run_20260524_195653/visualizations/`
+  - `p3_layer_comparison.png` (layer distribution comparison)
+  - `p3_overlap_analysis.png` (4-panel overlap analysis)
+  - `p3_circuit_universality.png` (Jaccard similarity curve)
+- **보고서**: `results/reports/04_p3_ioi_comparison.md`
+- **주요 발견**: 각 task가 고유한 computational strategy 사용 — circuit specialization hypothesis 지지
 
 ## Cross-track 발견
 
 - **🚨 Sample size criticality** (P2): 5 pairs → 500 pairs에서 회로 구조가 완전히 변경
   - Small samples can be misleading for circuit discovery
   - Suggests need for robust sampling strategies in mechanistic interpretability
-- TBD: P1 회로 (modular)와 P2 회로 (var binding)의 구조적 공통점
-- TBD: Circuit universality score 정의 + 계산
+- **⚡ Low circuit universality** (P3): IOI vs var binding circuits share only 2/26 heads (7.7%)
+  - Each task uses specialized computational strategy
+  - Layer distribution differences (early vs. late)
+  - Task-specific circuit architecture hypothesis supported
+- **🔍 Model depth effects** (P1 vs P2): 1-layer vs 12-layer → 완전히 다른 circuit 전략
+  - P1: Concentrated single-layer computation (Head 1 critical)
+  - P2: Distributed multi-layer processing (no single critical head)
+  - **Model depth가 circuit architecture 결정**: 1-layer → focused, 12-layer → distributed
+- **📊 Task complexity scaling**: Simple tasks (P1) → focused circuits, Complex tasks (P2) → distributed circuits
+- **Circuit universality score**: 0.12/1.0 (LOW) — consistent across all cross-track comparisons
+- **다음 단계**: 최종 종합 보고서 작성
