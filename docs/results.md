@@ -156,6 +156,32 @@ Top-5 heads와 control 5개 head를 zero-ablate 후 baseline logit_diff 감소�
 > **모든 위치에서 0 또는 음수**. 특히 L8H6는 final 위치에서 −0.20 → 패치 시
 > 오히려 logit_diff가 감소. **SIH 메커니즘 자체가 코드 도메인에 없음**을 강하게 시사.
 
+### 4.5 ⭐ Extra F — Minimal Circuit (Necessity Test, n=500)
+
+발견된 top-K head를 *제거*했을 때 logit_diff가 얼마나 떨어지는가? Random K 대비.
+
+**Baseline**: clean LD = +0.182, all-attention-ablated = +0.049 → **attention 전체 기여 = +0.133**
+
+| Ablate set | k | Drop | Random-K (5 seeds) | 비율 |
+|---|---|---|---|---|
+| top3 | 3 | +0.054 | +0.031 ± 0.070 | **×1.7** |
+| top5 | 5 | +0.051 | +0.005 ± 0.038 | **×10** |
+| top10 | 10 | +0.065 | +0.035 ± 0.043 | ×1.9 |
+| **ioi26** (Wang) | 26 | **+0.116** | +0.046 ± 0.054 | **×2.5** |
+
+![Necessity test](../results/binding_minimal_circuit/necessity.png)
+
+> **결정적 발견**: 144개 attention head 중 **IOI-26 (18%)을 제거하면 attention 전체
+> 기여의 87% (0.116/0.133)가 사라진다**. 즉 GPT-2 small이 코드 변수 바인딩에서
+> 사용하는 attention 회로는 사실상 IOI 회로의 subset.
+
+**Sufficiency 테스트(top-K만 살리고 zero-ablate)** 는 모든 set에서 실패 — random과 구분 안 됨.
+이는 144 중 141을 zero-ablate하는 것이 OOD intervention이라 발생하는 알려진 한계
+(잔차 스트림이 깨져서 살아남은 head의 입력도 무의미해짐). Necessity 테스트가
+이 경우 더 깨끗한 증거.
+
+---
+
 ### 4.4 ⭐ Extra B — Direct Logit Attribution (n=500)
 
 각 head 출력의 final-pos 잔차를 unembed 방향
@@ -197,6 +223,10 @@ Top-5 heads와 control 5개 head를 zero-ablate 후 baseline logit_diff 감소�
 4. **"같은 head, 다른 위치 grammar" 관찰**
    - DTH(L3H0)가 IOI에서와 다른 토큰 위치(final `=`)에서 작동
    - 회로 재사용 ≠ 회로 복사
+
+5. **회로 크기 정량화 — IOI-26이 attention 기여의 87% 담당**
+   - 144개 head 중 18%(IOI-26)만 ablate해도 attention 전체 기여의 87% 소실
+   - GPT-2 small의 코드 바인딩 attention 회로 = IOI 회로의 sub-circuit
 
 ### 한 줄 메시지
 
