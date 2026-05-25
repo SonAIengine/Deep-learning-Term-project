@@ -1,0 +1,198 @@
+[
+  {
+    "text": "I love this product, it's amazing!",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "This is terrible and disappointing.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Great service and friendly staff.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Worst experience ever, never again.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Best experience of my life!",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Poor quality and bad service.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Absolutely wonderful and fantastic.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Absolutely horrible and frustrating.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Highly recommend to everyone.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Complete waste of time and money.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Exceeded all my expectations.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Disappointed with the results.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Outstanding quality and performance.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Unacceptable performance and reliability.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Perfect in every way possible.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Terrible communication and support.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Thrilled with the results.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Regret this purchase entirely.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Amazing transformation and growth.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Awful experience from start to finish.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Brilliant idea and execution.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Disgusting and unacceptable.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Fantastic team collaboration.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Pathetic excuse for a product.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Superb customer support.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Shocking quality and service.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Excellent value for money.",
+    "label": "positive",
+    "sentiment_score": 0.9,
+    "task": "sentiment",
+    "category": "semantic"
+  },
+  {
+    "text": "Horrible customer support.",
+    "label": "negative",
+    "sentiment_score": 0.1,
+    "task": "sentiment",
+    "category": "semantic"
+  }
+]

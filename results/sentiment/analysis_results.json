@@ -1,0 +1,298 @@
+{
+  "activation_patterns": {
+    "top_heads": [],
+    "all_heads": [],
+    "task": "sentiment_classification",
+    "model": "gpt2",
+    "total_analyzed": 0
+  },
+  "predictions": {
+    "results": [
+      {
+        "sample_id": 0,
+        "text": "I love this product, it's amazing!",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.7999999999999999,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 1,
+        "text": "This is terrible and disappointing.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.19999999999999998,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 2,
+        "text": "Great service and friendly staff.",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.75,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 3,
+        "text": "Worst experience ever, never again.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.25,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 4,
+        "text": "Best experience of my life!",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.75,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 5,
+        "text": "Poor quality and bad service.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.19999999999999998,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 6,
+        "text": "Absolutely wonderful and fantastic.",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.7999999999999999,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 7,
+        "text": "Absolutely horrible and frustrating.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.19999999999999998,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 8,
+        "text": "Highly recommend to everyone.",
+        "true_label": "positive",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 9,
+        "text": "Complete waste of time and money.",
+        "true_label": "negative",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 10,
+        "text": "Exceeded all my expectations.",
+        "true_label": "positive",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 11,
+        "text": "Disappointed with the results.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.25,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 12,
+        "text": "Outstanding quality and performance.",
+        "true_label": "positive",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 13,
+        "text": "Unacceptable performance and reliability.",
+        "true_label": "negative",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 14,
+        "text": "Perfect in every way possible.",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.75,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 15,
+        "text": "Terrible communication and support.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.25,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 16,
+        "text": "Thrilled with the results.",
+        "true_label": "positive",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 17,
+        "text": "Regret this purchase entirely.",
+        "true_label": "negative",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 18,
+        "text": "Amazing transformation and growth.",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.75,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 19,
+        "text": "Awful experience from start to finish.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.25,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 20,
+        "text": "Brilliant idea and execution.",
+        "true_label": "positive",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 21,
+        "text": "Disgusting and unacceptable.",
+        "true_label": "negative",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 22,
+        "text": "Fantastic team collaboration.",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.75,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 23,
+        "text": "Pathetic excuse for a product.",
+        "true_label": "negative",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 24,
+        "text": "Superb customer support.",
+        "true_label": "positive",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 25,
+        "text": "Shocking quality and service.",
+        "true_label": "negative",
+        "predicted_label": "neutral",
+        "predicted_score": 0.5,
+        "correct": false,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 26,
+        "text": "Excellent value for money.",
+        "true_label": "positive",
+        "predicted_label": "positive",
+        "predicted_score": 0.75,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      },
+      {
+        "sample_id": 27,
+        "text": "Horrible customer support.",
+        "true_label": "negative",
+        "predicted_label": "negative",
+        "predicted_score": 0.19999999999999998,
+        "correct": true,
+        "task": "sentiment",
+        "category": "semantic"
+      }
+    ],
+    "accuracy": 0.5714285714285714,
+    "total_samples": 28
+  },
+  "task": "sentiment_classification",
+  "model": "gpt2",
+  "dataset_size": 28
+}
