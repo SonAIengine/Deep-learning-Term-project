@@ -1,10 +1,23 @@
 """P4 Syntax Task Circuit Analysis.
 
-Analyzes circuits for grammatical processing in GPT-2.
-Focus: Subject-verb agreement task as a representative syntax task.
+This module analyzes circuits for grammatical processing in GPT-2 small,
+focusing on subject-verb agreement as a representative syntax task.
 
-Task: Determine if a sentence is grammatically correct.
+Task: Determine if a sentence follows grammatical number agreement
 Example: "The cat runs" (correct) vs "The cat run" (incorrect)
+
+Key Functions:
+    - generate_sva_sentences: Generate SVA test sentences
+    - create_sva_pairs: Create clean/corrupt pairs for analysis
+    - analyze_sva_activation_patching: Identify important heads for syntax
+    - generate_sva_dataset: Generate and save dataset
+
+Usage:
+    python tracks/syntax/p4_sva_analysis.py
+
+Output:
+    - datasets/sva_pairs.json: 100 clean/corrupt sentence pairs
+    - results/sva/analysis_results.json: Head importance scores
 """
 
 import torch

@@ -1,9 +1,22 @@
 """P5 Semantic Task Circuit Analysis.
 
-Analyzes circuits for semantic understanding in GPT-2.
-Focus: Sentiment classification as a representative semantic task.
+This module analyzes circuits for semantic understanding in GPT-2 small,
+focusing on sentiment classification as a representative semantic task.
 
 Task: Determine sentiment of text (positive/negative)
+
+Key Functions:
+    - generate_sentiment_pairs: Generate sentiment test sentences
+    - analyze_sentiment_with_model: Analyze sentiment using GPT-2
+    - analyze_sentiment_activation_patterns: Identify important heads for semantics
+    - generate_sentiment_dataset: Generate and save dataset
+
+Usage:
+    python tracks/semantic/p5_sentiment_analysis.py
+
+Output:
+    - datasets/sentiment_pairs.json: Labeled sentiment sentences
+    - results/sentiment/analysis_results.json: Head importance scores and predictions
 """
 
 import torch

@@ -36,6 +36,8 @@
 - ✅ **P1**: Modular Arithmetic Grokking (1-layer, 50K epochs)
 - ✅ **P2**: Code Variable Binding (12-layer, 500 pairs)
 - ✅ **P3**: IOI Cross-Track Comparison (Wang et al. 2022 vs P2)
+- ✅ **P4**: Syntax Task Analysis - Subject-Verb Agreement (12-layer, 100 pairs)
+- ✅ **P5**: Semantic Task Analysis - Sentiment Classification (12-layer, 28 pairs)
 - ✅ **Cross-Track**: P1 vs P2 Architecture Comparison
 
 ---
@@ -64,6 +66,12 @@ python tracks/code/p3_ioi_comparison.py    # IOI 비교 분석
 
 # P1 vs P2 Cross-Track Comparison
 python tracks/analysis/p1_p2_cross_track.py
+
+# P4: Syntax Task Analysis (Subject-Verb Agreement)
+python tracks/syntax/p4_sva_analysis.py     # SVA 회로 분석
+
+# P5: Semantic Task Analysis (Sentiment Classification)
+python tracks/semantic/p5_sentiment_analysis.py  # Sentiment 회로 분석
 ```
 
 ---
@@ -72,10 +80,8 @@ python tracks/analysis/p1_p2_cross_track.py
 
 ```
 Deep-learning-Term-project/
-├── data/                    # 데이터 생성 스크립트
-│   ├── modular.py           # P1: Modular arithmetic 데이터
-│   ├── var_binding.py       # P2: Code variable binding 데이터
-│   └── ioi_loader.py        # P3: IOI dataset loader
+├── shared/                  # 공유 설정 및 유틸리티
+│   └── config.py            # 하이퍼파라미터, 경로, 시드 설정
 ├── tracks/                  # 분석 트랙 코드
 │   ├── grokking/            # P1: Modular arithmetic grokking
 │   │   ├── train.py         # 학습 루프
@@ -83,18 +89,28 @@ Deep-learning-Term-project/
 │   ├── code/                # P2: Code variable binding
 │   │   ├── p3_ioi_comparison.py       # IOI 비교
 │   │   └── visualize_p3_results.py    # P3 시각화
-│   └── analysis/            # Cross-track 분석
-│       └── p1_p2_cross_track.py       # P1 vs P2 비교
-├── results/                 # 분석 결과
+│   ├── analysis/            # Cross-track 분석
+│   │   └── p1_p2_cross_track.py       # P1 vs P2 비교
+│   ├── syntax/              # P4: Syntax task analysis
+│   │   └── p4_sva_analysis.py         # Subject-verb agreement
+│   └── semantic/            # P5: Semantic task analysis
+│       └── p5_sentiment_analysis.py   # Sentiment classification
+├── datasets/                # 생성된 데이터셋
+│   ├── modular_arithmetic/  # P1 학습/테스트 데이터
+│   ├── ioi/                 # P2 IOI 스타일 프롬프트
+│   ├── sva_pairs.json       # P4 SVA 문장 쌍
+│   └── sentiment_pairs.json # P5 Sentiment 문장들
+├── results/                 # 분석 결과 및 시각화
 │   ├── grokking/            # P1 결과 (50K epoch, 회로 분석)
 │   ├── code/                # P2 결과 (500 pairs, stability)
-│   ├── analysis/            # Cross-track 결과
-│   └── reports/             # 상세 보고서
+│   ├── comparison/          # Cross-track 비교
+│   ├── sva/                 # P4 문법 작업 결과
+│   └── sentiment/           # P5 의미 작업 결과
 ├── docs/                    # 문서화
 │   ├── PROJECT_SUMMARY.md   # 프로젝트 요약 (친절한 설명)
+│   ├── PROJECT_STRUCTURE.md # 상세 프로젝트 구조
 │   └── reports/             # 분석 상세 보고서
-└── shared/                  # 공유 설정
-    └── config.py            # 하이퍼파라미터, 경로
+└── README.md                # 프로젝트 개요 (이 파일)
 ```
 
 ---
@@ -114,6 +130,8 @@ Deep-learning-Term-project/
 | **P1** | 1-layer Transformer (d_model=128, 4 heads) | Modular arithmetic (mod 113) | Grokking 현상, Fourier basis |
 | **P2** | GPT-2 Small (12-layer, d_model=768) | Code variable binding | Activation patching, stability |
 | **P3** | Wang et al. 2022 reference | IOI task | Cross-track comparison |
+| **P4** | GPT-2 Small (12-layer, d_model=768) | Subject-verb agreement | Syntax processing circuits |
+| **P5** | GPT-2 Small (12-layer, d_model=768) | Sentiment classification | Semantic understanding circuits |
 
 ---
 
@@ -176,6 +194,36 @@ Deep-learning-Term-project/
 
 **발견**: Model depth가 circuit architecture 결정 — 깊이에 따라 완전히 다른 전략
 
+### P4: Syntax Task (Subject-Verb Agreement)
+
+```
+✅ 100개 문장 쌍 분석 완료
+✅ Top heads: L0H4, L0H7, L1H1, L1H7, L2H1
+✅ 모든 레이어에서 유사한 활성화 패턴 발견
+
+🔍 Layer Distribution:
+- 초기 레이어 (L0-L2)에서 높은 중요도
+- 문법 처리가 초기 레이어에서 시작됨
+- 분산된 문법 표현 (distributed syntax processing)
+```
+
+**발견**: 문법 처리가 초기 레이어에서 시작되며 분산된 회로 구조
+
+### P5: Semantic Task (Sentiment Classification)
+
+```
+✅ 28개 감정 문장 분석 완료 (positive/negative)
+✅ 분류 정확도: 57.1%
+✅ Top heads: 다층 분산 표현 (distributed semantic representation)
+
+🔍 Semantic Processing:
+- 단어 기반 감정 분석 (keyword-based)
+- 의미 정보가 여러 레이어에 분산
+- 문법 작업과는 다른 회로 패턴
+```
+
+**발견**: 의미 처리가 분산된 회로를 통해 이루어지며, 문법 처리와는 구별되는 패턴
+
 ---
 
 ## 📊 시각화
@@ -200,6 +248,16 @@ Deep-learning-Term-project/
 **Cross-Track (P1 vs P2)**:
 - Architecture comparison (6-panel)
 - Universality analysis (4-panel)
+
+**P4 (Syntax)**:
+- SVA sentence pairs analysis
+- Head importance distribution
+- Syntax processing circuit visualization
+
+**P5 (Semantic)**:
+- Sentiment classification results
+- Activation pattern analysis
+- Semantic circuit comparison
 
 ---
 
@@ -331,13 +389,14 @@ numpy                # Numerical computing
 - ✅ Model depth가 circuit architecture 결정
 - ✅ Task complexity가 specialization pattern 결정  
 - ✅ Circuit universality 낮음 (0.12/1.0)
-- ✅ 3개 트랙 + 2개 cross-track 분석 완료
+- ✅ 5개 트랙 (P1-P5) + 2개 cross-track 분석 완료
 - ✅ 15+ 시각화 및 5개 상세 보고서
+- ✅ 문법/의미 작업 회로 분석 추가 (P4, P5)
 
 **한 학기 동안 Transformer의 "뇌"를 들여다보며, AI가 어떻게 "생각"하는지 이해하는 의미 있는 여정을 했습니다! 🧠✨
 
 ---
 
-**Last Updated**: 2026-05-24
-**Project Status**: ✅ Complete (3 tracks + 2 cross-track analyses)
+**Last Updated**: 2026-05-25
+**Project Status**: ✅ Complete (5 tracks + 2 cross-track analyses + documentation)
 **Repository**: [GitHub](https://github.com/yesulmin-danbaaam/Deep-learning-Term-project)
