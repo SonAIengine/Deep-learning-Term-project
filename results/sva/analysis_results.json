@@ -1,0 +1,1156 @@
+{
+  "top_heads": [
+    {
+      "layer": 0,
+      "head": 4,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 0,
+      "head": 7,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 1,
+      "head": 7,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 5,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 7,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 9,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 10,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 2,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 4,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 6,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 9,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 5,
+      "head": 1,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 6,
+      "head": 2,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 6,
+      "head": 5,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 10,
+      "head": 2,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 11,
+      "head": 0,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    }
+  ],
+  "all_heads": [
+    {
+      "layer": 0,
+      "head": 4,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 0,
+      "head": 7,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 1,
+      "head": 7,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 1,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 3,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 5,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 7,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 9,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 2,
+      "head": 10,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 2,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 3,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 4,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 6,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 3,
+      "head": 9,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 5,
+      "head": 1,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 6,
+      "head": 2,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 6,
+      "head": 5,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 10,
+      "head": 2,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 11,
+      "head": 0,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 11,
+      "head": 8,
+      "avg_activation": 0.25,
+      "std_activation": 0.0,
+      "importance": 25000000.0
+    },
+    {
+      "layer": 0,
+      "head": 3,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 0,
+      "head": 9,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 0,
+      "head": 11,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 1,
+      "head": 4,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 1,
+      "head": 6,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 1,
+      "head": 10,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 3,
+      "head": 7,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 3,
+      "head": 8,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 3,
+      "head": 11,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 4,
+      "head": 1,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 4,
+      "head": 6,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 4,
+      "head": 9,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 5,
+      "head": 6,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 5,
+      "head": 10,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 6,
+      "head": 7,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 7,
+      "head": 1,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 7,
+      "head": 5,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 7,
+      "head": 9,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 8,
+      "head": 1,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 8,
+      "head": 10,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 9,
+      "head": 2,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 9,
+      "head": 3,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 9,
+      "head": 8,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 10,
+      "head": 9,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 10,
+      "head": 11,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 11,
+      "head": 1,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 11,
+      "head": 9,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 11,
+      "head": 11,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 4.470348358154297e-09,
+      "importance": 17276709.05510747
+    },
+    {
+      "layer": 0,
+      "head": 0,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 0,
+      "head": 1,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 1,
+      "head": 8,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 2,
+      "head": 0,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 2,
+      "head": 11,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 3,
+      "head": 1,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 4,
+      "head": 10,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 5,
+      "head": 0,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 5,
+      "head": 5,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 6,
+      "head": 0,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 6,
+      "head": 1,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 8,
+      "head": 0,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 8,
+      "head": 5,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 8,
+      "head": 6,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 9,
+      "head": 7,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 9,
+      "head": 9,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 11,
+      "head": 2,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 11,
+      "head": 4,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 11,
+      "head": 7,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 5.960464477539063e-09,
+      "importance": 15663704.3597064
+    },
+    {
+      "layer": 0,
+      "head": 6,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 1,
+      "head": 9,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 2,
+      "head": 4,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 6,
+      "head": 3,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 7,
+      "head": 7,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 8,
+      "head": 4,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 8,
+      "head": 9,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 8,
+      "head": 11,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 9,
+      "head": 0,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 9,
+      "head": 6,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 10,
+      "head": 1,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 10,
+      "head": 3,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 10,
+      "head": 6,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 10,
+      "head": 7,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 10,
+      "head": 8,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.679818962
+    },
+    {
+      "layer": 7,
+      "head": 10,
+      "avg_activation": 0.24999998956918718,
+      "std_activation": 6.828569911354542e-09,
+      "importance": 14855688.325631738
+    },
+    {
+      "layer": 2,
+      "head": 2,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.362135505
+    },
+    {
+      "layer": 7,
+      "head": 0,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.362135505
+    },
+    {
+      "layer": 7,
+      "head": 4,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.362135505
+    },
+    {
+      "layer": 8,
+      "head": 3,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.362135505
+    },
+    {
+      "layer": 9,
+      "head": 10,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.362135505
+    },
+    {
+      "layer": 9,
+      "head": 11,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.362135505
+    },
+    {
+      "layer": 1,
+      "head": 2,
+      "avg_activation": 0.2499999910593033,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.189868229
+    },
+    {
+      "layer": 2,
+      "head": 6,
+      "avg_activation": 0.2499999910593033,
+      "std_activation": 7.300048299977714e-09,
+      "importance": 14450826.189868229
+    },
+    {
+      "layer": 0,
+      "head": 5,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 7.450580596923828e-09,
+      "importance": 14326170.476728389
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 7.450580596923828e-09,
+      "importance": 14326170.476728389
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 7.450580596923828e-09,
+      "importance": 14326170.476728389
+    },
+    {
+      "layer": 6,
+      "head": 8,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 7.450580596923828e-09,
+      "importance": 14326170.476728389
+    },
+    {
+      "layer": 9,
+      "head": 1,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 7.450580596923828e-09,
+      "importance": 14326170.476728389
+    },
+    {
+      "layer": 4,
+      "head": 0,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199092.236399816
+    },
+    {
+      "layer": 4,
+      "head": 4,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199092.236399816
+    },
+    {
+      "layer": 4,
+      "head": 5,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199092.236399816
+    },
+    {
+      "layer": 4,
+      "head": 7,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199092.236399816
+    },
+    {
+      "layer": 5,
+      "head": 2,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199092.236399816
+    },
+    {
+      "layer": 11,
+      "head": 3,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199092.236399816
+    },
+    {
+      "layer": 1,
+      "head": 5,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199091.92170894
+    },
+    {
+      "layer": 4,
+      "head": 2,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199091.92170894
+    },
+    {
+      "layer": 4,
+      "head": 8,
+      "avg_activation": 0.24999999701976777,
+      "std_activation": 8.940696716308593e-09,
+      "importance": 13199091.92170894
+    },
+    {
+      "layer": 2,
+      "head": 8,
+      "avg_activation": 0.24999999552965163,
+      "std_activation": 9.541398640621974e-09,
+      "importance": 12793352.212259792
+    },
+    {
+      "layer": 7,
+      "head": 3,
+      "avg_activation": 0.24999999403953552,
+      "std_activation": 9.8843121241194e-09,
+      "importance": 12572725.296153894
+    },
+    {
+      "layer": 1,
+      "head": 11,
+      "avg_activation": 0.2499999910593033,
+      "std_activation": 9.8843121241194e-09,
+      "importance": 12572725.146275325
+    },
+    {
+      "layer": 8,
+      "head": 7,
+      "avg_activation": 0.2499999910593033,
+      "std_activation": 9.8843121241194e-09,
+      "importance": 12572725.146275325
+    },
+    {
+      "layer": 7,
+      "head": 2,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 9.996002811937584e-09,
+      "importance": 12502498.369332584
+    },
+    {
+      "layer": 0,
+      "head": 2,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 0,
+      "head": 8,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 0,
+      "head": 10,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 1,
+      "head": 0,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 5,
+      "head": 7,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 5,
+      "head": 8,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 5,
+      "head": 9,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 5,
+      "head": 11,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 6,
+      "head": 4,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 7,
+      "head": 8,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 8,
+      "head": 8,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 9,
+      "head": 5,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 10,
+      "head": 5,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 10,
+      "head": 10,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 11,
+      "head": 5,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 11,
+      "head": 10,
+      "avg_activation": 0.25000000149011614,
+      "std_activation": 1.0430812835693359e-08,
+      "importance": 12236419.740156261
+    },
+    {
+      "layer": 4,
+      "head": 3,
+      "avg_activation": 0.24999998807907103,
+      "std_activation": 1.1151007970493858e-08,
+      "importance": 11819767.097049313
+    },
+    {
+      "layer": 3,
+      "head": 5,
+      "avg_activation": 0.25,
+      "std_activation": 1.1542389828584841e-08,
+      "importance": 11605026.275602542
+    },
+    {
+      "layer": 5,
+      "head": 3,
+      "avg_activation": 0.25,
+      "std_activation": 1.1542389828584841e-08,
+      "importance": 11605026.275602542
+    },
+    {
+      "layer": 9,
+      "head": 4,
+      "avg_activation": 0.25,
+      "std_activation": 1.1542389828584841e-08,
+      "importance": 11605026.275602542
+    },
+    {
+      "layer": 10,
+      "head": 0,
+      "avg_activation": 0.25,
+      "std_activation": 1.1542389828584841e-08,
+      "importance": 11605026.275602542
+    },
+    {
+      "layer": 10,
+      "head": 4,
+      "avg_activation": 0.25,
+      "std_activation": 1.1542389828584841e-08,
+      "importance": 11605026.275602542
+    },
+    {
+      "layer": 3,
+      "head": 10,
+      "avg_activation": 0.25000000596046446,
+      "std_activation": 1.1920928955078126e-08,
+      "importance": 11404626.440457046
+    },
+    {
+      "layer": 4,
+      "head": 11,
+      "avg_activation": 0.25000000596046446,
+      "std_activation": 1.1920928955078126e-08,
+      "importance": 11404626.440457046
+    },
+    {
+      "layer": 7,
+      "head": 11,
+      "avg_activation": 0.25000000596046446,
+      "std_activation": 1.1920928955078126e-08,
+      "importance": 11404626.440457046
+    },
+    {
+      "layer": 11,
+      "head": 6,
+      "avg_activation": 0.25000000596046446,
+      "std_activation": 1.1920928955078126e-08,
+      "importance": 11404626.440457046
+    },
+    {
+      "layer": 6,
+      "head": 11,
+      "avg_activation": 0.2499999925494194,
+      "std_activation": 1.2013700229374394e-08,
+      "importance": 11356563.86452593
+    },
+    {
+      "layer": 8,
+      "head": 2,
+      "avg_activation": 0.2499999985098839,
+      "std_activation": 1.2377834115800372e-08,
+      "importance": 11171769.225573344
+    },
+    {
+      "layer": 5,
+      "head": 4,
+      "avg_activation": 0.25000000447034837,
+      "std_activation": 1.3411045074462891e-08,
+      "importance": 10678720.393522799
+    },
+    {
+      "layer": 6,
+      "head": 6,
+      "avg_activation": 0.25000000447034837,
+      "std_activation": 1.3411045074462891e-08,
+      "importance": 10678720.393522799
+    },
+    {
+      "layer": 6,
+      "head": 9,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 1.4600096599955428e-08,
+      "importance": 10162561.840537049
+    },
+    {
+      "layer": 7,
+      "head": 6,
+      "avg_activation": 0.2500000029802322,
+      "std_activation": 1.4600096599955428e-08,
+      "importance": 10162561.840537049
+    },
+    {
+      "layer": 6,
+      "head": 10,
+      "avg_activation": 0.25000000447034837,
+      "std_activation": 1.769414855098414e-08,
+      "importance": 9027177.85347708
+    }
+  ],
+  "task": "subject-verb_agreement",
+  "model": "gpt2"
+}
