@@ -1,0 +1,380 @@
+{
+  "n_pairs": 500,
+  "top26_code_heads": [
+    {
+      "layer": 10,
+      "head": 7,
+      "recovery": 0.49065569043159485,
+      "ioi_class": "NNMH"
+    },
+    {
+      "layer": 10,
+      "head": 2,
+      "recovery": 0.4529193043708801,
+      "ioi_class": "BNMH"
+    },
+    {
+      "layer": 6,
+      "head": 1,
+      "recovery": 0.2057015597820282,
+      "ioi_class": null
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "recovery": 0.15858785808086395,
+      "ioi_class": "DTH"
+    },
+    {
+      "layer": 10,
+      "head": 10,
+      "recovery": 0.10853844881057739,
+      "ioi_class": "BNMH"
+    },
+    {
+      "layer": 5,
+      "head": 0,
+      "recovery": 0.10501328855752945,
+      "ioi_class": null
+    },
+    {
+      "layer": 1,
+      "head": 11,
+      "recovery": 0.1006958857178688,
+      "ioi_class": null
+    },
+    {
+      "layer": 5,
+      "head": 8,
+      "recovery": 0.09762486070394516,
+      "ioi_class": "IH"
+    },
+    {
+      "layer": 11,
+      "head": 10,
+      "recovery": 0.0749250054359436,
+      "ioi_class": "NNMH"
+    },
+    {
+      "layer": 7,
+      "head": 11,
+      "recovery": 0.06721926480531693,
+      "ioi_class": null
+    },
+    {
+      "layer": 9,
+      "head": 6,
+      "recovery": 0.06537490338087082,
+      "ioi_class": "NMH"
+    },
+    {
+      "layer": 5,
+      "head": 2,
+      "recovery": 0.0618748739361763,
+      "ioi_class": null
+    },
+    {
+      "layer": 11,
+      "head": 8,
+      "recovery": 0.05982816591858864,
+      "ioi_class": null
+    },
+    {
+      "layer": 9,
+      "head": 9,
+      "recovery": 0.05546122416853905,
+      "ioi_class": "NMH"
+    },
+    {
+      "layer": 5,
+      "head": 5,
+      "recovery": 0.052518703043460846,
+      "ioi_class": "IH"
+    },
+    {
+      "layer": 0,
+      "head": 10,
+      "recovery": 0.05153777077794075,
+      "ioi_class": "DTH"
+    },
+    {
+      "layer": 7,
+      "head": 7,
+      "recovery": 0.0492849126458168,
+      "ioi_class": null
+    },
+    {
+      "layer": 1,
+      "head": 3,
+      "recovery": 0.045823898166418076,
+      "ioi_class": null
+    },
+    {
+      "layer": 6,
+      "head": 4,
+      "recovery": 0.04288255423307419,
+      "ioi_class": null
+    },
+    {
+      "layer": 7,
+      "head": 1,
+      "recovery": 0.04233330115675926,
+      "ioi_class": null
+    },
+    {
+      "layer": 6,
+      "head": 7,
+      "recovery": 0.041831664741039276,
+      "ioi_class": null
+    },
+    {
+      "layer": 1,
+      "head": 0,
+      "recovery": 0.04162799194455147,
+      "ioi_class": null
+    },
+    {
+      "layer": 6,
+      "head": 0,
+      "recovery": 0.03964802250266075,
+      "ioi_class": null
+    },
+    {
+      "layer": 9,
+      "head": 5,
+      "recovery": 0.03902924433350563,
+      "ioi_class": null
+    },
+    {
+      "layer": 7,
+      "head": 8,
+      "recovery": 0.03842886909842491,
+      "ioi_class": null
+    },
+    {
+      "layer": 2,
+      "head": 4,
+      "recovery": 0.037961505353450775,
+      "ioi_class": null
+    }
+  ],
+  "overlap_top26": [
+    {
+      "layer": 10,
+      "head": 7,
+      "recovery": 0.49065569043159485,
+      "ioi_class": "NNMH"
+    },
+    {
+      "layer": 10,
+      "head": 2,
+      "recovery": 0.4529193043708801,
+      "ioi_class": "BNMH"
+    },
+    {
+      "layer": 3,
+      "head": 0,
+      "recovery": 0.15858785808086395,
+      "ioi_class": "DTH"
+    },
+    {
+      "layer": 10,
+      "head": 10,
+      "recovery": 0.10853844881057739,
+      "ioi_class": "BNMH"
+    },
+    {
+      "layer": 5,
+      "head": 8,
+      "recovery": 0.09762486070394516,
+      "ioi_class": "IH"
+    },
+    {
+      "layer": 11,
+      "head": 10,
+      "recovery": 0.0749250054359436,
+      "ioi_class": "NNMH"
+    },
+    {
+      "layer": 9,
+      "head": 6,
+      "recovery": 0.06537490338087082,
+      "ioi_class": "NMH"
+    },
+    {
+      "layer": 9,
+      "head": 9,
+      "recovery": 0.05546122416853905,
+      "ioi_class": "NMH"
+    },
+    {
+      "layer": 5,
+      "head": 5,
+      "recovery": 0.052518703043460846,
+      "ioi_class": "IH"
+    },
+    {
+      "layer": 0,
+      "head": 10,
+      "recovery": 0.05153777077794075,
+      "ioi_class": "DTH"
+    }
+  ],
+  "overlap_count": 10,
+  "random_baseline_overlap": 4.694444444444445,
+  "ioi_class_stats": {
+    "DTH": {
+      "heads": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "mean_recovery": 0.011223371140658855,
+      "max_recovery": 0.15858785808086395
+    },
+    "PTH": {
+      "heads": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          11
+        ]
+      ],
+      "mean_recovery": -0.013697936199605465,
+      "max_recovery": 0.022885950282216072
+    },
+    "IH": {
+      "heads": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "mean_recovery": -0.012139519676566124,
+      "max_recovery": 0.09762486070394516
+    },
+    "SIH": {
+      "heads": [
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "mean_recovery": -0.04874029755592346,
+      "max_recovery": 0.032110124826431274
+    },
+    "NMH": {
+      "heads": [
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "mean_recovery": 0.041610997170209885,
+      "max_recovery": 0.06537490338087082
+    },
+    "BNMH": {
+      "heads": [
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          9
+        ]
+      ],
+      "mean_recovery": 0.07030481100082397,
+      "max_recovery": 0.4529193043708801
+    },
+    "NNMH": {
+      "heads": [
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "mean_recovery": 0.2827903628349304,
+      "max_recovery": 0.49065569043159485
+    }
+  },
+  "non_ioi_mean_recovery": 0.002813214436173439,
+  "universality": {
+    "spearman_rho": 0.1063496350839965,
+    "spearman_p": 0.6051007416787646,
+    "pearson_r": 0.11339164801350808,
+    "pearson_p": 0.5812673866040902
+  }
+}

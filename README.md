@@ -7,7 +7,6 @@
 > **핵심 발견**: Model depth와 task complexity가 circuit architecture를 결정하며, circuit universality는 낮음 (0.12/1.0)
 
 ---
-
 ## 🎯 프로젝트 개요
 
 이 프로젝트는 **Mechanistic Interpretability** (기계적 해석가능성) 기법을 사용하여 Transformer 모델의 내부 작동 원리를 분석합니다. 
@@ -21,7 +20,74 @@
 
 ---
 
-## 📊 주요 결과
+## 👥 트랙 구성
+
+본 프로젝트는 팀원별 트랙으로 구성됩니다. 팀 공용 분석(P1~P5)은 `tracks/`,
+손성준 트랙의 심화 분석(Grokking + Code Variable Binding × IOI universality)은
+`src/`에 있습니다.
+
+| 트랙 | 위치 | 진입 문서 |
+|---|---|---|
+| 팀 공용 분석 (P1~P5) | `tracks/`, `results/{grokking,code,sva,sentiment}` | 본 README 하단 |
+| **손성준 심화 트랙** | `src/{grokking,binding}`, `results/binding_*` | [docs/results.md](docs/results.md) · [docs/slides.md](docs/slides.md) |
+
+---
+
+## 🧩 손성준 심화 트랙 — IOI Circuit Universality
+
+> 제안서 ([sonsj-proposal.md](docs/candidates/sonsj-proposal.md)) Step 1~4 + 7개 추가 실험.
+> 상세 결과: **[docs/results.md](docs/results.md)** · 발표 슬라이드: **[docs/slides.md](docs/slides.md)** (Marp 23장)
+
+**한 줄 요약**: GPT-2 small의 IOI 회로(Wang 2022)는 코드 변수 바인딩 도메인에서
+*선택적으로* 재사용되며, 출력 단계 head는 *기능적 부호(±)까지 보존*된 채 전이된다.
+Pythia-160M·GPT-2 medium 재현 결과, universality는 *해부학적 수준*이 아닌
+*기능적 수준*에서 성립한다.
+
+**핵심 발견 7개**:
+
+1. **NL↔Code cross-domain 회로 재사용 첫 정량화** (top-26 ∩ IOI-26 = 10, random ×2.1)
+2. **Selective reuse**: 출력 head 전이 ✓ / SIH 비전이 ✗
+3. **기능적 부호 보존** — NNMH(L10H7)의 negative 역할이 코드에서도 −0.31, z=−1.9
+4. **Head ≠ position grammar** — DTH가 예상 외 위치(final `=`)에서 작동
+5. **회로 크기**: IOI-26(18%)이 attention 기여의 **87%** 담당
+6. **Universality 4단계 분해** (functional ✓ / anatomical ✗) — 3 모델 비교
+7. **Scale-dependent hydra effect** — GPT-2 medium ablation이 성능 향상 (−0.121) ⭐ 신규
+
+**핵심 시각화**: [loss_curve.gif](results/analysis/grokking_full/loss_curve.gif) ·
+[heatmap_classes.png](results/binding_compare/heatmap_classes.png) ·
+[universality_summary.png](results/binding_compare/universality_summary.png) ·
+[layer_profile_comparison.png](results/binding_gpt2med/layer_profile_comparison.png) ·
+[necessity.png](results/binding_minimal_circuit/necessity.png)
+
+**재현**:
+
+```bash
+uv sync   # pyproject.toml 기반
+
+# Grokking 학습 + 분석 (40k steps, ~2분 on H100)
+uv run python src/grokking/train.py --tag grokking_full --steps 40000
+uv run python src/grokking/analysis.py
+
+# Step 3 핵심 실험
+uv run python src/binding/baseline.py
+uv run python src/binding/patching.py
+uv run python src/binding/compare_ioi.py
+
+# Extras (독립 실행)
+uv run python src/binding/sih_position_patching.py   # A: SIH non-transfer
+uv run python src/binding/logit_attribution.py       # B: direct logit attribution
+uv run python src/binding/minimal_circuit.py         # F: necessity test
+uv run python src/binding/pythia_replication.py      # D: Pythia-160M
+uv run python src/binding/gpt2med_replication.py     # D2: GPT-2 medium (~70min)
+
+# 시각화
+uv run python src/grokking/animate.py
+uv run python src/grokking/wandb_export.py
+```
+
+---
+
+## 📊 팀 공용 주요 결과
 
 ### 3가지 핵심 발견
 
