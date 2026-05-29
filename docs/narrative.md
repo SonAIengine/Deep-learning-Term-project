@@ -4,7 +4,11 @@
 
 본 문서는 연구의 동기부터 결론까지를 서술형으로 정리한 내용 문서다.
 "왜 시작했는가"에서 출발해 무엇을 어떻게 했고 무엇을 발견했으며 그것이 무슨 의미인지를
-하나의 흐름으로 읽을 수 있도록 구성했다.
+하나의 흐름으로 읽을 수 있도록 구성했다. 각 절에는 해당 결과를 만든 코드와 그림으로의
+링크를 달았고, 문서 하단에 프로젝트 자료 전체를 모아두었다.
+
+관련 문서: [상세 결과 리포트](results.md) · [장표용 보고서](report.md) ·
+[발표 슬라이드(Marp)](slides.md) · [발표 노트](speaker_notes.md)
 
 ---
 
@@ -16,9 +20,9 @@ Interpretability는 이 블랙박스를 열어, 모델 내부의 attention head�
 어떤 알고리즘을 수행하는지를 회로 수준에서 규명하려는 분야다.
 
 이 분야에는 한 가지 핵심 가설이 있다. Circuit Universality, 즉 서로 다른 과제나 서로
-다른 양식(modality)에서도 동일한 회로가 형성된다는 가설이다. 만약 이것이 참이라면,
-모델은 표면적인 단어 패턴이 아니라 추상적인 계산 구조를 학습한 것이고, 한 영역의
-학습이 다른 영역의 능력에도 영향을 준다는 뜻이 된다.
+다른 양식(modality)에서도 동일한 회로가 형성된다는 가설이다(Olah 2020, Chughtai et al.
+2023). 만약 이것이 참이라면, 모델은 표면적인 단어 패턴이 아니라 추상적인 계산 구조를
+학습한 것이고, 한 영역의 학습이 다른 영역의 능력에도 영향을 준다는 뜻이 된다.
 
 본 연구가 던진 질문은 이 가설을 modality 사이에서 검증하는 것이다.
 
@@ -29,6 +33,8 @@ Interpretability는 이 블랙박스를 열어, 모델 내부의 attention head�
 추상적 알고리즘을 학습했다는 증거이고, 다른 회로라면 모델이 양식별로 특화된 회로를
 따로 만든다는 증거다. 실패가 없는 설계다.
 
+제안서 원문은 [docs/candidates/sonsj-proposal.md](candidates/sonsj-proposal.md)에 있다.
+
 ---
 
 ## 2. 비교 대상 — 구조가 동일한 두 과제
@@ -37,30 +43,38 @@ Interpretability는 이 블랙박스를 열어, 모델 내부의 attention head�
 
 첫째는 자연어의 IOI(Indirect Object Identification) 과제다. "Mary and John went to
 the store. John gave a drink to ___"에서 모델은 "Mary"를 예측해야 한다. 두 개체 중
-바인딩 관계로 정답을 골라야 하는 문제다. 2022년 Wang 연구진이 GPT-2 small에서 이
-회로를 완전히 분석해, 26개의 attention head가 7가지 역할로 협업한다는 것을 밝혔다.
-중복 토큰을 탐지하는 head, 정답을 출력으로 옮기는 head, 그리고 정답을 의도적으로
-억제하는 head까지 존재한다.
+바인딩 관계로 정답을 골라야 하는 문제다. 2022년 Wang 연구진(arXiv:2211.00593)이 GPT-2
+small에서 이 회로를 완전히 분석해, 26개의 attention head가 7가지 역할로 협업한다는
+것을 밝혔다.
 
 둘째는 코드의 변수 바인딩 과제다. `x=5; z=9; a=z; a=`에서 모델은 9를 예측해야 한다.
-두 변수 중 바인딩 관계로 정답값을 추적하는 문제다.
+두 변수 중 바인딩 관계로 정답값을 추적하는 문제다. 본 연구는 이 과제를 규칙 기반으로
+자동 생성했으며, 난이도에 따라 세 단계로 나눴다.
+
+| 데이터셋 | 규모 | 형태 | 용도 |
+|---|---|---|---|
+| var_binding Tier 1 | 1,500 (clean/corrupt 쌍) | `x=5; z=9; a=z; a=?` | 주 분석 (patching) |
+| var_binding Tier 2 | 1,000 | 더 긴 코드, distractor 다수 | 일반화 검증 |
+| var_binding Tier 3 | 500 | 멀티홉 `a=b; b=c; c=5; a=?` | 일반화 (정확도) |
+| modular addition | 12,769 (113²) | `(a + b) mod 113` | grokking 학습 |
+
+데이터 생성·검증 기준은 [docs/datasets.md](datasets.md)에 정리되어 있다.
 
 표면 형태는 영어 문장과 파이썬 코드로 완전히 다르지만, 본질은 "여러 후보 중 어느
-것을 가리키는가"라는 동일한 구조다. 따라서 두 과제의 회로를 비교하면 회로가 표면을
-넘어 재사용되는지 검증할 수 있다. 그리고 IOI 회로가 이미 26개 head 단위로 분석되어
+것을 가리키는가"라는 동일한 구조다. 그리고 IOI 회로가 이미 26개 head 단위로 분석되어
 있으므로, 이를 기준선으로 삼아 코드 과제의 head와 직접 대응시킬 수 있다.
 
-IOI 회로의 head 분류는 다음과 같다.
+IOI 회로의 head 분류는 다음과 같다. 본 연구의 비교는 이 7개 클래스를 단위로 한다.
 
-| 분류 | 역할 | 단계 |
-|---|---|---|
-| Duplicate Token Head (DTH) | 중복 토큰 탐지 | 입력 |
-| Previous Token Head (PTH) | 직전 토큰 복사 | 입력 |
-| Induction Head (IH) | 반복 패턴 탐지 | 중간 |
-| S-Inhibition Head (SIH) | 중복 개체 억제 | 구조 |
-| Name Mover Head (NMH) | 정답을 출력으로 이동 | 출력 |
-| Backup Name Mover (BNMH) | NMH 보조 | 출력 |
-| Negative Name Mover (NNMH) | 정답 logit 억제 | 출력 |
+| 분류 | 약어 | 역할 | 단계 |
+|---|---|---|---|
+| Duplicate Token Head | DTH | 중복 토큰 탐지 | 입력 |
+| Previous Token Head | PTH | 직전 토큰 복사 | 입력 |
+| Induction Head | IH | 반복 패턴 탐지 | 중간 |
+| S-Inhibition Head | SIH | 중복 개체 억제 | 구조 |
+| Name Mover Head | NMH | 정답을 출력으로 이동 | 출력 |
+| Backup Name Mover | BNMH | NMH 보조 | 출력 |
+| Negative Name Mover | NNMH | 정답 logit 억제 | 출력 |
 
 ---
 
@@ -68,24 +82,37 @@ IOI 회로의 head 분류는 다음과 같다.
 
 분석은 세 가지 기법을 중심으로 했다.
 
-Activation Patching은 모델을 정답 입력과 변형 입력 두 번 실행하고, 특정 head 하나의
-출력만 정답 쪽에서 변형 쪽으로 이식해 정답 신호가 얼마나 회복되는지 측정한다. head
-하나하나의 인과적 기여를 분리하는 기법이다. 회복량은 (패치 후 logit_diff - 변형
-logit_diff) / (정답 logit_diff - 변형 logit_diff)로 정의한다.
+Activation Patching은 모델을 정답 입력(clean)과 변형 입력(corrupt) 두 번 실행하고,
+특정 head 하나의 출력(`blocks.{L}.attn.hook_z`)만 clean에서 corrupt로 이식해 정답
+신호가 얼마나 회복되는지 측정한다. head 하나하나의 인과적 기여를 분리하는 기법이다.
+회복량은 다음과 같이 정의한다.
 
-Direct Logit Attribution은 한 단계 더 나아가, 각 head의 출력이 정답 점수를 올리는지
-내리는지 부호까지 측정한다.
+```
+recovery = (패치 후 logit_diff − corrupt logit_diff) / (clean logit_diff − corrupt logit_diff)
+```
 
-Head Ablation은 head를 완전히 끄고 성능 변화를 본다.
+Direct Logit Attribution은 한 단계 더 나아가, 각 head의 마지막 위치 출력 잔차를 정답
+방향 W_U[정답] − mean(W_U[방해답])에 투영해, 정답 점수를 올리는지 내리는지 부호까지
+측정한다.
 
-평가 지표는 logit difference, 즉 정답 토큰의 logit에서 방해답 토큰 logit 평균을 뺀
-값이다.
+Head Ablation은 head를 0으로 만들고 성능 변화를 본다.
 
-분석 대상은 세 모델이다. Wang 2022의 기준선이 있는 GPT-2 small(124M, 12층 12head),
-같은 계열의 더 큰 GPT-2 medium(355M, 24층 16head), 그리고 구조와 학습 데이터가
-완전히 다른 Pythia-160M(rotary embedding, parallel attention)이다. 데이터셋은 규칙
-기반으로 생성한 합성 변수 바인딩 과제(counterfactual pair 형태)를 사용했고, 전체
-실험은 H100 GPU 한 장으로 약 3시간이 걸렸다.
+평가 지표 logit difference는 정답 토큰 logit에서 방해답 토큰 logit 평균을 뺀 값이다.
+
+분석 대상은 세 모델이다.
+
+| 모델 | 규모 | 특징 | 역할 |
+|---|---|---|---|
+| GPT-2 small | 124M, 12층 × 12head (144) | Wang 2022 기준선 보유 | 주 분석 |
+| GPT-2 medium | 355M, 24층 × 16head (384) | 같은 계열 큰 모델 | scale 효과 |
+| Pythia-160M | 12층 × 12head | rotary, parallel attn+MLP, Pile 학습 | 아키텍처 효과 |
+
+전체 실험은 H100 GPU 한 장으로 약 3시간이 걸렸으며, 모든 patching 평가는 500개
+counterfactual pair에 대해 전 head를 대상으로 수행했다.
+
+관련 코드: [patching.py](../src/binding/patching.py) ·
+[baseline.py](../src/binding/baseline.py) ·
+[compare_ioi.py](../src/binding/compare_ioi.py)
 
 ---
 
@@ -95,23 +122,50 @@ Head Ablation은 head를 완전히 끄고 성능 변화를 본다.
 알려진 과제에서 도구가 그 알고리즘을 정확히 찾아낸다면, 정답을 모르는 코드 과제에도
 적용할 수 있다.
 
-이를 위해 2-layer 트랜스포머를 modular addition(p=113)에 학습시켜 grokking 현상을
-재현했다. grokking은 모델이 처음에는 암기만 하다가(학습 정확도는 높지만 테스트는
-낮음) 어느 순간 갑자기 일반화로 전환되는 현상이다. 40,000 스텝을 H100에서 101초 만에
-학습했고, 최종 테스트 정확도 99.3%에 도달했다. 학습된 모델을 Fourier 분해와 ablation으로
-분석한 결과, Nanda 2023이 밝힌 삼각함수 기반 modular addition 회로를 그대로 재현했다.
+이를 위해 2-layer 트랜스포머(d_model=128, n_heads=4, d_mlp=512, LayerNorm 없음, bias
+없음, 파라미터 422,784개)를 modular addition(p=113)에 학습시켜 grokking 현상을
+재현했다. 최적화는 AdamW(lr=1e-3, weight_decay=1.0, betas=(0.9, 0.98)), full-batch로
+40,000 스텝을 돌렸고 H100에서 101초가 걸렸다.
 
-즉 정답을 아는 과제에서 도구가 정답을 맞혔으므로, 이후 코드 과제 분석 결과를 신뢰할
-근거를 확보했다.
+grokking은 모델이 처음에는 암기만 하다가(학습 정확도는 높지만 테스트는 낮음) 어느
+순간 갑자기 일반화로 전환되는 현상이다. 본 실험에서 최종 학습 정확도는 1.000, 테스트
+정확도는 0.9928이었고, 두 곡선이 시차를 두고 수렴하는 전형적인 grokking 패턴이
+관찰됐다. 학습 후반(약 35,600 스텝)에 일시적 불안정(slingshot, 테스트 0.93으로 잠시
+하락)이 있었으나 즉시 회복했다.
+
+학습된 모델을 분석한 결과:
+- Fourier 분해: 임베딩이 소수 주파수 모드(k ≈ 14, 31, 35, 52)에 집중
+- Head/MLP ablation: 특정 컴포넌트 제거 시 테스트 손실 급증 → 핵심 회로 식별
+
+이는 Nanda 2023(arXiv:2301.05217)이 밝힌 삼각함수 기반 modular addition 회로를 그대로
+재현한 것이다. 정답을 아는 과제에서 도구가 정답을 맞혔으므로, 이후 코드 과제 분석
+결과를 신뢰할 근거를 확보했다.
+
+관련 그림: [학습 곡선 GIF](../results/analysis/grokking_full/loss_curve.gif) ·
+[attention 진화 GIF](../results/analysis/grokking_full/attention_evolution.gif) ·
+[Fourier 분해](../results/analysis/grokking_full/fourier_final.png) ·
+[학습 곡선 정적 그림](../results/analysis/grokking_full/timeseries.png)
+관련 코드: [train.py](../src/grokking/train.py) · [model.py](../src/grokking/model.py) ·
+[analysis.py](../src/grokking/analysis.py)
+학습 로그: [wandb run n4bnqrak](https://wandb.ai/sonsj97-plateer/grokking-circuits/runs/n4bnqrak)
 
 ---
 
 ## 5. 핵심 결과 1 — 코드 회로의 상당 부분이 IOI 회로였다
 
-GPT-2 small에 코드 변수 바인딩 문제 500개를 넣고 144개 head를 전수 patching했다.
-정답과 변형 입력 사이의 기준 logit difference 차이(gap)는 +0.086이었다.
+GPT-2 small에 코드 변수 바인딩 문제(Tier 1) 500개를 넣고 144개 head를 전수
+patching했다. 기준선 측정 결과는 다음과 같다.
 
-가장 중요한 head 5개 중 4개가 Wang 2022의 IOI 26개 head에 정확히 포함되어 있었다.
+| 지표 | Clean | Corrupt | 차이 |
+|---|---|---|---|
+| logit difference 평균 | +0.182 | +0.097 | +0.086 |
+| 표준편차 | 1.457 | 1.522 | — |
+| Top-1 정확도 | 0.8% | 2.0% | — |
+
+Top-1 정확도는 낮지만, logit difference 신호는 patching으로 회로를 분리하기에 충분하다.
+
+전수 patching 결과, 가장 중요한 head 5개 중 4개가 Wang 2022의 IOI 26개 head에 정확히
+포함되어 있었다.
 
 | 순위 | Head | 회복량 | IOI 분류 |
 |---|---|---|---|
@@ -121,8 +175,14 @@ GPT-2 small에 코드 변수 바인딩 문제 500개를 넣고 144개 head를 �
 | 4 | L3H0 | +0.159 | DTH (중복 탐지) |
 | 5 | L10H10 | +0.109 | BNMH |
 
-상위 26개 코드 head와 IOI 26개 head의 교집합은 10개였다. 무작위 기대값 4.7개의 약
-2.1배다. 우연으로 보기 어려운 중첩이다.
+상위 26개 코드 head와 IOI 26개 head의 교집합은 10개였다. 무작위 기대값
+26 × 26 / 144 ≈ 4.7개의 약 2.1배다. 우연으로 보기 어려운 중첩이다.
+
+관련 그림: [head별 회복 heatmap (IOI 클래스 표시)](../results/binding_compare/heatmap_classes.png) ·
+[코드 vs IOI 대조](../results/binding_compare/code_vs_ioi.png) ·
+[원본 patching heatmap](../results/binding_patching/head_mean.png)
+관련 데이터: [baseline.json](../results/binding_baseline.json) ·
+[top_heads.json](../results/binding_patching/top_heads.json)
 
 ---
 
@@ -130,33 +190,56 @@ GPT-2 small에 코드 변수 바인딩 문제 500개를 넣고 144개 head를 �
 
 IOI의 7가지 head 역할을 클래스별로 묶어 평균 회복량을 계산하자 뚜렷한 패턴이 나타났다.
 
-| IOI 분류 | 평균 회복량 | 전이 여부 |
-|---|---|---|
-| NNMH | +0.283 | 강하게 전이 |
-| BNMH | +0.070 | 전이 |
-| NMH | +0.042 | 전이 |
-| DTH | +0.011 | 부분 전이 |
-| IH | -0.012 | 거의 없음 |
-| PTH | -0.014 | 거의 없음 |
-| SIH | -0.049 | 전이 안 됨 |
+| IOI 분류 | head 수 | 평균 회복량 | 최대 | 전이 여부 |
+|---|---|---|---|---|
+| NNMH | 2 | +0.283 | +0.491 | 강하게 전이 |
+| BNMH | 8 | +0.070 | +0.453 | 전이 |
+| NMH | 3 | +0.042 | +0.065 | 전이 |
+| DTH | 3 | +0.011 | +0.159 | 부분 전이 |
+| IH | 4 | −0.012 | +0.098 | 거의 없음 |
+| PTH | 2 | −0.014 | +0.023 | 거의 없음 |
+| SIH | 4 | −0.049 | +0.032 | 전이 안 됨 |
+| 비IOI | 118 | +0.003 | — | 기준선 |
 
 정답을 출력으로 옮기거나 억제하는 출력 단계 head(NNMH, BNMH, NMH)는 전이됐지만,
 구조적 단계인 S-Inhibition Head는 전이되지 않았고 오히려 음수였다. IOI 회로가 통째로
 복사된 것이 아니라 일부 부품만 선택적으로 재사용된 것이다. 이를 선택적 회로 재사용
 (Selective Reuse)이라 부른다.
 
+(클래스 단위 평균은 위와 같이 명확하지만, head 단위 순위 상관은 약하다.
+Spearman ρ = +0.106, p = 0.61. 따라서 결론은 클래스 단위 평균에 근거한다.)
+
+관련 그림: [클래스별 전이 + Top-K enrichment](../results/binding_compare/universality_summary.png) ·
+[회로 schematic](../results/binding_compare/circuit_diagram.png)
+관련 데이터: [universality_report.json](../results/binding_compare/universality_report.json)
+관련 코드: [compare_ioi.py](../src/binding/compare_ioi.py) · [figures.py](../src/binding/figures.py)
+
 ---
 
 ## 7. 검증 — SIH 비전이는 위치 문제가 아니었다
 
 SIH가 음수로 나온 것이 단지 패치 위치를 잘못 잡았기 때문일 가능성을 배제하기 위해,
-SIH 4개 head를 길이-14 프롬프트의 14개 토큰 위치 전부에서 패치했다. 결과는 모든
-위치에서 0이거나 음수였고, 한 head는 마지막 위치에서 -0.20까지 떨어졌다. 즉 어디서
-패치해도 효과가 없거나 오히려 해롭다.
+SIH 4개 head(L7H3, L7H9, L8H6, L8H10)를 길이-14 프롬프트의 14개 토큰 위치 전부에서
+패치했다(n=250).
+
+| SIH Head | 절대값 최대 위치 | 값 |
+|---|---|---|
+| L7H3 | pos 13 (final =) | −0.093 |
+| L7H9 | pos 13 | −0.019 |
+| L8H6 | pos 13 | −0.204 |
+| L8H10 | pos 13 | −0.172 |
+
+결과는 모든 위치에서 0이거나 음수였고, L8H6는 마지막 위치에서 −0.20까지 떨어졌다.
+즉 어디서 패치해도 효과가 없거나 오히려 해롭다.
 
 이로써 SIH 비전이가 위치 문제가 아니라 과제 구조의 문제임이 확인됐다. IOI에서 SIH는
 같은 이름이 두 번 등장할 때 첫 번째를 억제하는 역할인데, 코드 과제에는 그런 중복
 구조가 없으므로 SIH가 수행할 일 자체가 존재하지 않는다.
+
+관련 그림: [SIH 위치별 회복](../results/binding_position/sih_position_recovery.png) ·
+[Top head 위치별 회복](../results/binding_position/position_recovery.png)
+관련 코드: [sih_position_patching.py](../src/binding/sih_position_patching.py) ·
+[position_patching.py](../src/binding/position_patching.py)
 
 ---
 
@@ -164,54 +247,81 @@ SIH 4개 head를 길이-14 프롬프트의 14개 토큰 위치 전부에서 패�
 
 지금까지의 결과는 "어떤 head가 중요한가"까지였다. 그 head가 정답을 밀어주는지
 깎아내리는지를 확인하기 위해, 각 head 출력이 정답 점수에 직접 기여하는 정도를 부호까지
-측정했다(Direct Logit Attribution).
+측정했다(Direct Logit Attribution, n=500). 전체 head의 직접 기여 합계는 +2.139였다.
 
-| Head | IOI 역할 | 직접 기여 | z-score |
-|---|---|---|---|
-| L10H2 | BNMH (정답 강화) | +1.010 | +3.3 |
-| L10H7 | NNMH (정답 억제) | -0.305 | -1.9 |
-| L3H0 | DTH (간접) | -0.018 | -0.5 |
-| L9H9 | NMH (정답 강화) | +0.303 | — |
+| Head | IOI 역할 | 직접 기여 | z-score | 부호 일치 |
+|---|---|---|---|---|
+| L10H2 | BNMH (정답 강화) | +1.010 | +3.3 | 일치 |
+| L10H7 | NNMH (정답 억제) | −0.305 | −1.9 | 일치 |
+| L3H0 | DTH (간접 경로) | −0.018 | −0.5 | 직접 효과 없음 |
+| L9H9 | NMH (정답 강화) | +0.303 | — | 일치 |
 
 핵심은 L10H7이다. 이 head는 IOI에서 정답을 의도적으로 억제하는 Negative Name Mover인데,
-코드 과제에서도 -0.31로 정답을 똑같이 깎아내렸다. 단순히 같은 head가 재활성화된 것이
-아니라, "정답을 억제한다"는 독특한 기능이 부호까지 그대로 코드로 넘어왔다. 회로가
-표면을 넘어 기능 수준에서 보존된다는 가장 직접적인 증거다.
+코드 과제에서도 −0.31로 정답을 똑같이 깎아내렸다. 반대로 L10H2(BNMH)는 +1.01로 정답을
+강하게 밀었다. 단순히 같은 head가 재활성화된 것이 아니라, "정답을 억제한다" 혹은
+"정답을 민다"는 독특한 기능이 부호까지 그대로 코드로 넘어왔다. 회로가 표면을 넘어
+기능 수준에서 보존된다는 가장 직접적인 증거다.
+
+관련 그림: [head별 직접 기여 heatmap](../results/binding_logit_attr/logit_attr_heatmap.png)
+관련 데이터: [logit_attr/summary.json](../results/binding_logit_attr/summary.json)
+관련 코드: [logit_attribution.py](../src/binding/logit_attribution.py)
 
 ---
 
 ## 9. 회로의 크기 — 18%의 head가 87%의 일을 한다
 
 이 회로가 모델 전체에서 차지하는 비중을 측정했다. 모든 attention head를 끄면 정답
-신호가 0.133 감소한다(attention 전체 기여). 그런데 IOI 26개 head만 제거하면 — 전체
-144개의 18%만 끈 것인데 — 그중 0.116이 사라졌다. 87%다.
+신호가 0.133 감소한다(attention 전체 기여 = clean 0.182 − empty 0.049). 그런데 IOI
+26개 head만 제거하면 — 전체 144개의 18%만 끈 것인데 — 그중 0.116이 사라졌다. 87%다.
 
-같은 크기의 무작위 head 26개를 제거했을 때는 평균 0.046만 사라졌으므로, IOI head의
-제거 효과는 무작위의 2.5배다. 코드 변수 바인딩에 쓰이는 attention 회로는 사실상 IOI
-회로의 부분집합인 셈이다.
+| 제거 대상 | head 수 | logit difference 감소 | 무작위 K 감소 | 배수 |
+|---|---|---|---|---|
+| top3 | 3 | +0.054 | +0.031 ± 0.070 | 1.7배 |
+| top5 | 5 | +0.051 | +0.005 ± 0.038 | 약 10배 |
+| top10 | 10 | +0.065 | +0.035 ± 0.043 | 1.9배 |
+| ioi26 | 26 | +0.116 | +0.046 ± 0.054 | 2.5배 |
 
-(참고로 반대 방향의 검증, 즉 상위 head만 남기고 나머지를 모두 끄는 방식은 실패했다.
+코드 변수 바인딩에 쓰이는 attention 회로는 사실상 IOI 회로의 부분집합인 셈이다.
+
+(반대 방향 검증, 즉 상위 head만 남기고 나머지를 모두 끄는 sufficiency 방식은 실패했다.
 144개 중 141개를 끄는 것은 모델을 정상 분포 밖으로 밀어내는 과격한 개입이라 잔차
-스트림이 깨지기 때문이다. 따라서 제거 기반 검증이 이 경우 더 신뢰할 수 있다.)
+스트림이 깨지기 때문이다. 따라서 제거 기반 necessity 검증이 이 경우 더 신뢰할 수 있다.)
+
+관련 그림: [necessity test](../results/binding_minimal_circuit/necessity.png) ·
+[sufficiency (실패 사례)](../results/binding_minimal_circuit/sufficiency.png)
+관련 데이터: [minimal_circuit/results.json](../results/binding_minimal_circuit/results.json)
+관련 코드: [minimal_circuit.py](../src/binding/minimal_circuit.py)
 
 ---
 
 ## 10. 일반화 — 다른 모델에서는 어떤가
 
-단일 모델의 결과라는 한계를 넘기 위해 두 모델을 추가로 분석했다.
+단일 모델의 결과라는 한계를 넘기 위해 두 모델을 추가로 분석했다. Tier 2 데이터로의
+일반화도 함께 확인해, L10H2(BNMH)가 노이즈가 많은 Tier 2에서도 견고하게 작동함을
+확인했다(ablation 감소량 Tier 1 +0.053 → Tier 2 +0.111).
 
 | 측면 | GPT-2 small | GPT-2 medium | Pythia-160M |
 |---|---|---|---|
-| 구조 | 12층 12head | 24층 16head | 12층 12head (rotary) |
+| 구조 | 12층 × 12head | 24층 × 16head | 12층 × 12head (rotary) |
+| Clean / Corrupt / Gap | +0.182 / +0.097 / +0.086 | +0.156 / −0.050 / +0.206 | +0.157 / +0.019 / +0.138 |
 | Attention 전체 기여 | +0.133 | +0.136 | +0.145 |
 | 최대 회복 head | L10H7 (+0.49) | L17H12 (+5.78) | L5H9 (+1.02) |
-| 우세 층 (상대 깊이) | 83-92% | 71-75% | 42-50% |
-| GPT-2 small과 head 좌표 중첩 | — | (폭 다름) | 1/10 |
+| 우세 층 (상대 깊이) | L10-11 (83-92%) | L17-18 (71-75%) | L5-6 (42-50%) |
+| small과 head 좌표 중첩 | — | (폭 다름) | 1/10 |
 
 소수 head에 집중되는 성질, 그리고 그 head들이 인과적으로 중요하다는 성질은 세 모델
 모두에서 보존됐다. 그러나 그 head들이 몇 번째 층에 있는지, 정확히 어느 좌표인지는
 모델마다 달랐다. Pythia는 중간층, GPT-2 계열은 후반층에 몰려 있었고, head 좌표는 거의
-겹치지 않았다.
+겹치지 않았다(무작위 기대 0.7개 대비 1개).
+
+관련 그림: [Pythia heatmap](../results/binding_pythia/pythia_heatmap.png) ·
+[Pythia necessity](../results/binding_pythia/pythia_necessity.png) ·
+[3-모델 층 분포 비교](../results/binding_gpt2med/layer_profile_comparison.png) ·
+[Tier 일반화](../results/binding_tier_generalize/tier_generalize.png)
+관련 데이터: [pythia/report.json](../results/binding_pythia/report.json) ·
+[gpt2med/report.json](../results/binding_gpt2med/report.json)
+관련 코드: [pythia_replication.py](../src/binding/pythia_replication.py) ·
+[tier_generalize.py](../src/binding/tier_generalize.py)
 
 ---
 
@@ -220,20 +330,24 @@ SIH 4개 head를 길이-14 프롬프트의 14개 토큰 위치 전부에서 패�
 GPT-2 medium에서 가장 흥미로운 결과가 나왔다. 가장 중요한 head들을 제거하자 성능이
 떨어지는 것이 아니라 오히려 올라갔다.
 
-| 제거 대상 | logit difference 변화 |
-|---|---|
-| 상위 3개 | -0.031 (성능 향상) |
-| 상위 5개 | -0.079 (성능 향상) |
-| 상위 10개 | -0.121 (성능 향상) |
+| 제거 대상 | logit difference 변화 | 무작위 K |
+|---|---|---|
+| 상위 3개 | −0.031 (성능 향상) | +0.001 ± 0.016 |
+| 상위 5개 | −0.079 (성능 향상) | −0.007 ± 0.012 |
+| 상위 10개 | −0.121 (성능 향상) | +0.017 ± 0.044 |
 
 이는 Wang 2022가 IOI에서 보고한 Backup Name Mover의 hydra effect가 큰 모델에서
-과보상 형태로 증폭된 것이다. 상위 head 중 정답을 억제하는 suppressor가 포함되어
-있어, 이들을 제거하면 방해답 억제가 풀리면서 정답 점수가 상대적으로 오른다. 동시에
-큰 모델에는 백업 head가 풍부해 주요 head를 꺼도 다른 head가 일을 이어받는다.
+과보상 형태로 증폭된 것이다. 상위 head 중 정답을 억제하는 suppressor(NNMH 계열)가
+포함되어 있어, 이들을 제거하면 방해답 억제가 풀리면서 정답 점수가 상대적으로 오른다.
+동시에 큰 모델에는 백업 head가 풍부해 주요 head를 꺼도 다른 head가 일을 이어받는다.
+참고로 무작위 head 제거는 이런 효과가 없어, 통제군 역할을 한다.
 
 이는 실용적으로 중요한 경고다. 큰 모델을 분석할 때 "head를 껐더니 성능이 올랐으니 이
 head는 불필요하다"고 해석하면 완전히 틀린다. 모델이 클수록 회로 redundancy가 증가하므로
 단순 ablation이 아니라 path patching 같은 정교한 도구가 필요하다.
+
+관련 그림: [GPT-2 medium heatmap](../results/binding_gpt2med/gpt2med_heatmap.png)
+관련 코드: [gpt2med_replication.py](../src/binding/gpt2med_replication.py)
 
 ---
 
@@ -311,16 +425,73 @@ hydra effect가 왜 일어나는지, 정확히 어떤 백업 head가 활성화�
 분해 framework를 제시했다. 그 과정에서 scale에 따라 강해지는 hydra effect라는 예상치
 못한 현상도 발견했다.
 
-모든 코드, 결과, 시각화는 GitHub son 브랜치 및 통합 main 브랜치에 공개되어 있으며,
-학습 과정은 wandb에서 확인할 수 있다.
+---
+
+## 프로젝트 자료 (전체 링크)
+
+모든 경로는 GitHub의 `son` 브랜치(또는 통합본 `main`) 기준이다.
+
+### 문서
+- [docs/results.md](results.md) — 상세 결과 리포트 (수치·해석 전부)
+- [docs/report.md](report.md) — 장표용 보고서 (PPTX 변환용)
+- [docs/slides.md](slides.md) — Marp 발표 슬라이드
+- [docs/speaker_notes.md](speaker_notes.md) — 발표 노트 + 예상 Q&A
+- [docs/candidates/sonsj-proposal.md](candidates/sonsj-proposal.md) — 연구 제안서
+- [docs/datasets.md](datasets.md) — 데이터셋 명세
+
+### Grokking (Step 2)
+- 코드: [train.py](../src/grokking/train.py) · [model.py](../src/grokking/model.py) ·
+  [analysis.py](../src/grokking/analysis.py) · [animate.py](../src/grokking/animate.py) ·
+  [wandb_export.py](../src/grokking/wandb_export.py)
+- 그림: [loss_curve.gif](../results/analysis/grokking_full/loss_curve.gif) ·
+  [attention_evolution.gif](../results/analysis/grokking_full/attention_evolution.gif) ·
+  [timeseries.png](../results/analysis/grokking_full/timeseries.png) ·
+  [fourier_final.png](../results/analysis/grokking_full/fourier_final.png) ·
+  [attn_final.png](../results/analysis/grokking_full/attn_final.png)
+- wandb: [run n4bnqrak](https://wandb.ai/sonsj97-plateer/grokking-circuits/runs/n4bnqrak)
+- wandb 차트(repo 저장): [dashboard](../results/wandb_charts/dashboard.png) ·
+  [accuracy](../results/wandb_charts/accuracy.png) ·
+  [grokking_gap](../results/wandb_charts/grokking_gap.png) ·
+  [loss_log](../results/wandb_charts/loss_log.png)
+
+### Code Variable Binding (Step 3)
+- 코드: [baseline.py](../src/binding/baseline.py) · [patching.py](../src/binding/patching.py) ·
+  [compare_ioi.py](../src/binding/compare_ioi.py) · [figures.py](../src/binding/figures.py)
+- 그림: [heatmap_classes.png](../results/binding_compare/heatmap_classes.png) ·
+  [universality_summary.png](../results/binding_compare/universality_summary.png) ·
+  [circuit_diagram.png](../results/binding_compare/circuit_diagram.png) ·
+  [code_vs_ioi.png](../results/binding_compare/code_vs_ioi.png) ·
+  [head_mean.png](../results/binding_patching/head_mean.png)
+- 데이터: [baseline.json](../results/binding_baseline.json) ·
+  [universality_report.json](../results/binding_compare/universality_report.json) ·
+  [top_heads.json](../results/binding_patching/top_heads.json)
+
+### 심화 실험
+- A (SIH 비전이): [sih_position_patching.py](../src/binding/sih_position_patching.py) ·
+  [sih_position_recovery.png](../results/binding_position/sih_position_recovery.png)
+- B (Logit Attribution): [logit_attribution.py](../src/binding/logit_attribution.py) ·
+  [logit_attr_heatmap.png](../results/binding_logit_attr/logit_attr_heatmap.png)
+- F (Minimal Circuit): [minimal_circuit.py](../src/binding/minimal_circuit.py) ·
+  [necessity.png](../results/binding_minimal_circuit/necessity.png)
+- D (Pythia): [pythia_replication.py](../src/binding/pythia_replication.py) ·
+  [pythia_heatmap.png](../results/binding_pythia/pythia_heatmap.png)
+- D2 (GPT-2 medium): [gpt2med_replication.py](../src/binding/gpt2med_replication.py) ·
+  [layer_profile_comparison.png](../results/binding_gpt2med/layer_profile_comparison.png) ·
+  [gpt2med_heatmap.png](../results/binding_gpt2med/gpt2med_heatmap.png)
+- 위치/일반화: [position_patching.py](../src/binding/position_patching.py) ·
+  [tier_generalize.py](../src/binding/tier_generalize.py)
+
+### 저장소
+- son 브랜치: https://github.com/yesulmin-danbaaam/Deep-learning-Term-project/tree/son
+- 통합본 main: https://github.com/yesulmin-danbaaam/Deep-learning-Term-project/tree/main
 
 ---
 
 ## 참고문헌
 
-- Nanda et al. 2023, Progress Measures for Grokking via Mechanistic Interpretability, ICLR
-- Wang et al. 2022, Interpretability in the Wild: a Circuit for IOI in GPT-2 small, ICLR
-- Chughtai et al. 2023, A Toy Model of Universality, ICML
-- Feng & Steinhardt 2023, How do Language Models Bind Entities in Context
-- Elhage et al. 2021, A Mathematical Framework for Transformer Circuits, Anthropic
-- Bereska & Gavves 2024, Mechanistic Interpretability for Transformer-Based LMs (Review)
+- Nanda et al. 2023, Progress Measures for Grokking via Mechanistic Interpretability, ICLR. [arXiv:2301.05217](https://arxiv.org/abs/2301.05217)
+- Wang et al. 2022, Interpretability in the Wild: a Circuit for IOI in GPT-2 small, ICLR. [arXiv:2211.00593](https://arxiv.org/abs/2211.00593)
+- Chughtai et al. 2023, A Toy Model of Universality, ICML. [arXiv:2302.03025](https://arxiv.org/abs/2302.03025)
+- Feng & Steinhardt 2023, How do Language Models Bind Entities in Context. [arXiv:2310.17191](https://arxiv.org/abs/2310.17191)
+- Elhage et al. 2021, A Mathematical Framework for Transformer Circuits, Anthropic. [link](https://transformer-circuits.pub/2021/framework/index.html)
+- Bereska & Gavves 2024, Mechanistic Interpretability for Transformer-Based LMs (Review). [arXiv:2407.02646](https://arxiv.org/abs/2407.02646)
