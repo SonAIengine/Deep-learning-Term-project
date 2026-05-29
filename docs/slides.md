@@ -270,6 +270,34 @@ GPT-2 medium에서 top-K head 제거 시 **logit_diff가 오히려 증가** (−
 
 ---
 
+## 이 연구의 의미 (So What)
+
+**학술적 의미**
+- Circuit Universality 가설의 **정밀화** — "전이된다/안 된다" 이분법 → **부품 단위 분해**
+- 같은 *좌표*가 아니라 같은 *역할*이 전이된다는 **기능적 universality**의 데이터 근거
+
+**실용적 의미**
+- <span class="accent">코드 fine-tuning이 자연어 능력에 영향</span> 가능 — 출력 회로(NMH/NNMH) 공유
+- <span class="accent">큰 모델 해석에 단순 ablation은 위험</span> — hydra로 인한 오해석, path patching 필요
+
+---
+
+## 차별화 — 선행 연구 대비
+
+| 선행 연구 | 한 일 | 본 연구가 추가 |
+|---|---|---|
+| Wang 2022 (IOI) | 자연어 26 head 회로 발견 | **코드에서도 작동하는지 첫 검증** |
+| Feng & Steinhardt 2023 | binding 메커니즘 분석 | **IOI 회로와 head-level 매핑** |
+| Chughtai 2023 | toy model universality 제안 | **실제 모델·task·modality 정량 검증** |
+| 일반 universality 논의 | "전이/비전이" 이분법 | **4축 분해** |
+
+**고유 발견 3가지**: ① 기능적 부호 보존 · ② Selective reuse 비대칭성 · ③ Scale-dependent hydra
+
+> <span class="accent">**기존이 회로를 "있다/없다"로 봤다면, 본 연구는 부품·기능·인과·해부학 축으로 쪼개**
+> **무엇이 도메인·모델을 넘어 전이되는지를 처음으로 다차원 정량화했다.**</span>
+
+---
+
 ## 한계 및 향후 과제
 
 - **Hydra mechanism 미규명** — 어떤 backup head가 활성화되는지 path patching 필요
@@ -281,13 +309,12 @@ GPT-2 medium에서 top-K head 제거 시 **logit_diff가 오히려 증가** (−
 
 ## 산출물
 
-**총 9개 git commits on `son` branch · ~2시간 GPU (H100)**
+**`son` branch · ~3시간 GPU (H100) · 모델 3종**
 
-- 13개 분석 스크립트 (`src/{grokking,binding}/`)
-- 15+ 시각화 PNG + 2 GIF
-- 8 결과 JSON + 5 raw `.npy` arrays
-- `docs/results.md` — 전체 결과 리포트
-- 본 슬라이드 (`docs/slides.md`)
+- 17개 분석 스크립트 (`src/{grokking,binding}/`)
+- 17+ 시각화 PNG + 2 GIF + wandb 차트 5
+- 8 결과 JSON + 5 raw `.npy` + 2 CSV
+- `docs/results.md` (상세) · `docs/report.md` (장표용) · 본 슬라이드
 
 GitHub: https://github.com/yesulmin-danbaaam/Deep-learning-Term-project/tree/son
 
